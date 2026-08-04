@@ -46,6 +46,7 @@
         }
         return { ok: true };
       } catch (err) {
+        console.error('EDForm submit failed:', err);
         mailtoFallback(fields, subject);
         return { ok: false, fallback: true };
       }
