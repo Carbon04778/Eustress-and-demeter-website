@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+  html,body{margin:0;padding:0;background:#FBF7F0;}
+  *{box-sizing:border-box;}
+  a{color:#C4714C;text-decoration:none;border-bottom:1px solid rgba(196,113,76,0.35);}
+  a:hover{color:#A85B39;border-bottom-color:#A85B39;}
+  p{text-wrap:pretty;}
+</style>
+</helmet>
+
+<div style="background:#FBF7F0;font-family:Jost,sans-serif;color:#2E2823;padding:0 0 120px;">
+
+  <!-- MASTHEAD -->
+  <header style="background:#1A1613;color:#fff;padding:88px 72px 76px;">
+    <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.3fr 0.7fr;gap:72px;align-items:end;">
+      <div>
+        <div style="display:flex;align-items:center;gap:22px;margin-bottom:32px;">
+          <img src="assets/logo-seal.png" alt="Eustress and Demeter seal" style="width:64px;height:64px;display:block;filter:brightness(1.6);">
+          <div style="font-size:10px;letter-spacing:0.32em;text-transform:uppercase;color:#B8964A;font-weight:500;">Revision 02 &middot; July 2026</div>
+        </div>
+        <h1 style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:82px;line-height:1.02;letter-spacing:0.01em;margin:0 0 28px;">Eustress <span style="font-style:italic;color:#D4AD6A;">&amp;</span> Demeter</h1>
+        <div style="width:64px;height:1px;background:#B8964A;margin-bottom:28px;"></div>
+        <p style="font-size:17px;font-weight:300;line-height:1.75;color:rgba(255,255,255,0.72);max-width:600px;margin:0;">The system, revisited. Warmer palette, an editorial typographic voice, the hand-drawn marks brought in as accents, and the patterns we were missing for social, one-sheets and proposals.</p>
+      </div>
+      <div style="border-left:1px solid rgba(255,255,255,0.14);padding-left:36px;display:flex;flex-direction:column;gap:22px;">
+        <div>
+          <div style="font-size:9px;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:8px;">Direction</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:400;">Editorial, not corporate</div>
+        </div>
+        <div>
+          <div style="font-size:9px;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:8px;">Audience</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:400;">Operators &amp; franchise buyers</div>
+        </div>
+        <div>
+          <div style="font-size:9px;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:8px;">Carried forward</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:400;">Gold, Cormorant, hairlines</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 01 PALETTE -->
+  <section style="max-width:1180px;margin:0 auto;padding:96px 72px 0;">
+    <div style="display:flex;align-items:baseline;gap:20px;border-bottom:1px solid #DFD6C8;padding-bottom:18px;margin-bottom:48px;">
+      <span style="font-family:'Cormorant Garamond',serif;font-size:13px;font-weight:400;letter-spacing:0.18em;color:#B8964A;">01</span>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:36px;letter-spacing:0.02em;margin:0;color:#1A1613;">Colour, warmed</h2>
+      <span style="margin-left:auto;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#8A7F73;">Cooler greys retired</span>
+    </div>
+
+    <p style="font-size:16px;font-weight:300;line-height:1.85;color:#5B534B;max-width:660px;margin:0 0 48px;">The old neutrals were photographic greys — technically fine, emotionally cold. Every neutral now carries a warm cast, and two new accents give us somewhere to go besides gold: clay for energy, olive for the culinary work.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:#DFD6C8;border:1px solid #DFD6C8;margin-bottom:14px;">
+      <div style="background:#fff;">
+        <div style="height:132px;background:#1A1613;"></div>
+        <div style="padding:16px 18px 18px;">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:18px;color:#1A1613;margin-bottom:6px;">Charcoal</div>
+          <div style="font-size:11px;letter-spacing:0.1em;color:#8A7F73;">#1A1613</div>
+          <div style="font-size:11px;font-weight:300;line-height:1.6;color:#5B534B;margin-top:10px;">Inverse bands, covers, headlines on dark.</div>
+        </div>
+      </div>
+      <div style="background:#fff;">
+        <div style="height:132px;background:#2E2823;"></div>
+        <div style="padding:16px 18px 18px;">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:18px;color:#1A1613;margin-bottom:6px;">Ink</div>
+          <div style="font-size:11px;letter-spacing:0.1em;color:#8A7F73;">#2E2823</div>
+          <div style="font-size:11px;font-weight:300;line-height:1.6;color:#5B534B;margin-top:10px;">Body copy. Warm black, never pure.</div>
+        </div>
+      </div>
+      <div style="background:#fff;">
+        <div style="height:132px;background:#5B534B;"></div>
+        <div style="padding:16px 18px 18px;">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:18px;color:#1A1613;margin-bottom:6px;">Slate</div>
+          <div style="font-size:11px;letter-spacing:0.1em;color:#8A7F73;">#5B534B</div>
+          <div style="font-size:11px;font-weight:300;line-height:1.6;color:#5B534B;margin-top:10px;">Secondary copy, ledes, captions.</div>
+        </div>
+      </div>
+      <div style="background:#fff;">
+        <div style="height:132px;background:#8A7F73;"></div>
+        <div style="padding:16px 18px 18px;">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:18px;color:#1A1613;margin-bottom:6px;">Stone</div>
+          <div style="font-size:11px;letter-spacing:0.1em;color:#8A7F73;">#8A7F73</div>
+          <div style="font-size:11px;font-weight:300;line-height:1.6;color:#5B534B;margin-top:10px;">Meta labels, page numbers, disabled.</div>
+        </div>
+      </div>
+      <div style="background:#fff;">
+        <div style="height:132px;background:#DFD6C8;"></div>
+        <div style="padding:16px 18px 18px;">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:18px;color:#1A1613;margin-bottom:6px;">Linen</div>
+          <div style="font-size:11px;letter-spacing:0.1em;color:#8A7F73;">#DFD6C8</div>
+          <div style="font-size:11px;font-weight:300;line-height:1.6;color:#5B534B;margin-top:10px;">Every hairline rule and grid gap.</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:#DFD6C8;border:1px solid #DFD6C8;margin-bottom:40px;">
+      <div style="background:#fff;">
+        <div style="height:132px;background:#B8964A;"></div>
+        <div style="padding:16px 18px 18px;">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:18px;color:#1A1613;margin-bottom:6px;">Gold</div>
+          <div style="font-size:11px;letter-spacing:0.1em;color:#8A7F73;">#B8964A &middot; unchanged</div>
+          <div style="font-size:11px;font-weight:300;line-height:1.6;color:#5B534B;margin-top:10px;">The equity colour. Rules, numerals, seal.</div>
+        </div>
+      </div>
+      <div style="background:#fff;">
+        <div style="height:132px;background:#C4714C;"></div>
+        <div style="padding:16px 18px 18px;">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:18px;color:#1A1613;margin-bottom:6px;">Clay <span style="font-size:10px;font-family:Jost,sans-serif;letter-spacing:0.16em;color:#C4714C;vertical-align:middle;">NEW</span></div>
+          <div style="font-size:11px;letter-spacing:0.1em;color:#8A7F73;">#C4714C</div>
+          <div style="font-size:11px;font-weight:300;line-height:1.6;color:#5B534B;margin-top:10px;">Primary action, links, the heart mark.</div>
+        </div>
+      </div>
+      <div style="background:#fff;">
+        <div style="height:132px;background:#6E7355;"></div>
+        <div style="padding:16px 18px 18px;">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:18px;color:#1A1613;margin-bottom:6px;">Olive <span style="font-size:10px;font-family:Jost,sans-serif;letter-spacing:0.16em;color:#6E7355;vertical-align:middle;">NEW</span></div>
+          <div style="font-size:11px;letter-spacing:0.1em;color:#8A7F73;">#6E7355</div>
+          <div style="font-size:11px;font-weight:300;line-height:1.6;color:#5B534B;margin-top:10px;">Culinary &amp; bar work. Never with clay.</div>
+        </div>
+      </div>
+      <div style="background:#fff;">
+        <div style="height:132px;background:#EBD7CC;"></div>
+        <div style="padding:16px 18px 18px;">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:18px;color:#1A1613;margin-bottom:6px;">Blush <span style="font-size:10px;font-family:Jost,sans-serif;letter-spacing:0.16em;color:#C4714C;vertical-align:middle;">NEW</span></div>
+          <div style="font-size:11px;letter-spacing:0.1em;color:#8A7F73;">#EBD7CC</div>
+          <div style="font-size:11px;font-weight:300;line-height:1.6;color:#5B534B;margin-top:10px;">Quote panels, social tiles, highlights.</div>
+        </div>
+      </div>
+      <div style="background:#fff;">
+        <div style="height:132px;background:#F4EEE3;border-right:1px solid #DFD6C8;"></div>
+        <div style="padding:16px 18px 18px;">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:18px;color:#1A1613;margin-bottom:6px;">Cream / Paper</div>
+          <div style="font-size:11px;letter-spacing:0.1em;color:#8A7F73;">#F4EEE3 &middot; #FBF7F0</div>
+          <div style="font-size:11px;font-weight:300;line-height:1.6;color:#5B534B;margin-top:10px;">Page and raised surfaces. Paper is default.</div>
+        </div>
+      </div>
+    </div>
+
+    <sc-if value="{{ showLegacy }}" hint-placeholder-val="{{ true }}">
+      <div style="border:1px solid #DFD6C8;background:#F4EEE3;padding:26px 30px;display:flex;align-items:center;gap:36px;flex-wrap:wrap;">
+        <div style="font-size:10px;letter-spacing:0.28em;text-transform:uppercase;color:#8A7F73;">Retiring</div>
+        <div style="display:flex;gap:2px;">
+          <div style="width:52px;height:52px;background:#1C1C1C;"></div>
+          <div style="width:52px;height:52px;background:#333333;"></div>
+          <div style="width:52px;height:52px;background:#4A4A4A;"></div>
+          <div style="width:52px;height:52px;background:#D8D3CC;"></div>
+          <div style="width:52px;height:52px;background:#F2EFE9;"></div>
+        </div>
+        <p style="font-size:13px;font-weight:300;line-height:1.7;color:#5B534B;margin:0;max-width:520px;">The Services 2.0 neutrals. Neutral-cool and evenly spaced — they read as a finance deck. The replacements sit at the same lightness so nothing needs relaying out.</p>
+      </div>
+    </sc-if>
+  </section>
+
+  <!-- 02 TYPE -->
+  <section style="max-width:1180px;margin:0 auto;padding:96px 72px 0;">
+    <div style="display:flex;align-items:baseline;gap:20px;border-bottom:1px solid #DFD6C8;padding-bottom:18px;margin-bottom:48px;">
+      <span style="font-family:'Cormorant Garamond',serif;font-size:13px;font-weight:400;letter-spacing:0.18em;color:#B8964A;">02</span>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:36px;letter-spacing:0.02em;margin:0;color:#1A1613;">Type, given room</h2>
+      <span style="margin-left:auto;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#8A7F73;">Cormorant Garamond &middot; Jost</span>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 320px;gap:64px;align-items:start;">
+      <div style="display:flex;flex-direction:column;gap:38px;">
+        <div style="border-bottom:1px solid #DFD6C8;padding-bottom:32px;">
+          <div style="font-size:10px;letter-spacing:0.28em;text-transform:uppercase;color:#8A7F73;margin-bottom:18px;">Display 1 &middot; 82/1.02 &middot; light 300</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:82px;line-height:1.02;color:#1A1613;letter-spacing:0.01em;">Empowering brands<br><span style="font-style:italic;">across</span> industries</div>
+        </div>
+        <div style="border-bottom:1px solid #DFD6C8;padding-bottom:32px;">
+          <div style="font-size:10px;letter-spacing:0.28em;text-transform:uppercase;color:#8A7F73;margin-bottom:18px;">Display 2 &middot; 48/1.12 &middot; regular 400</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:48px;line-height:1.12;color:#1A1613;">We don't just consult&mdash;we roll up our sleeves</div>
+        </div>
+        <div style="border-bottom:1px solid #DFD6C8;padding-bottom:32px;">
+          <div style="font-size:10px;letter-spacing:0.28em;text-transform:uppercase;color:#8A7F73;margin-bottom:18px;">Lede &middot; Jost 19/1.75 &middot; light 300</div>
+          <p style="font-family:Jost,sans-serif;font-weight:300;font-size:19px;line-height:1.75;color:#5B534B;margin:0;max-width:620px;">With deep roots in the restaurant and hospitality industry, we build profitable takeout, delivery and catering programs&mdash;then the marketing and operations to keep them running.</p>
+        </div>
+        <div>
+          <div style="font-size:10px;letter-spacing:0.28em;text-transform:uppercase;color:#8A7F73;margin-bottom:18px;">Body &middot; Jost 15/1.8 &middot; light 300</div>
+          <p style="font-family:Jost,sans-serif;font-weight:300;font-size:15px;line-height:1.8;color:#2E2823;margin:0;max-width:620px;">Our team crafts customised strategies tailored to the unique needs of multi-unit restaurant groups, independent operators, and businesses across sectors. Backed by a proven track record, we bring powerful, sustainable growth to every client we serve.</p>
+        </div>
+      </div>
+
+      <div style="border:1px solid #DFD6C8;background:#fff;padding:32px 30px;display:flex;flex-direction:column;gap:26px;">
+        <div style="font-size:10px;letter-spacing:0.28em;text-transform:uppercase;color:#1A1613;font-weight:500;">What changed</div>
+        <div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:19px;color:#1A1613;margin-bottom:8px;">Bigger display, fewer weights</div>
+          <p style="font-size:12.5px;font-weight:300;line-height:1.75;color:#5B534B;margin:0;">Display 1 goes 56 &rarr; 82px. Magazine covers commit; consulting decks hedge.</p>
+        </div>
+        <div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:19px;color:#1A1613;margin-bottom:8px;">Italic as emphasis</div>
+          <p style="font-size:12.5px;font-weight:300;line-height:1.75;color:#5B534B;margin:0;">One italic word per headline, maximum. It echoes the site's &ldquo;Email <span style="font-style:italic;">Us</span> Today&rdquo;.</p>
+        </div>
+        <div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:19px;color:#1A1613;margin-bottom:8px;">Tracking, dialled back</div>
+          <p style="font-size:12.5px;font-weight:300;line-height:1.75;color:#5B534B;margin:0;">Labels 0.28em, CTAs 0.20em, eyebrows 0.12em. Body loses its 0.02em &mdash; it was making paragraphs feel stiff.</p>
+        </div>
+        <div style="border-top:1px solid #DFD6C8;padding-top:22px;">
+          <div style="font-size:10px;letter-spacing:0.28em;text-transform:uppercase;color:#8A7F73;margin-bottom:14px;">Labels in use</div>
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            <span style="font-size:10px;letter-spacing:0.28em;text-transform:uppercase;color:#1A1613;font-weight:500;">Who We Are</span>
+            <span style="font-size:11px;letter-spacing:0.20em;text-transform:uppercase;color:#C4714C;font-weight:500;">Get In Touch</span>
+            <span style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#B8964A;font-weight:400;">Expertise</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 ORNAMENT -->
+  <section style="max-width:1180px;margin:0 auto;padding:96px 72px 0;">
+    <div style="display:flex;align-items:baseline;gap:20px;border-bottom:1px solid #DFD6C8;padding-bottom:18px;margin-bottom:48px;">
+      <span style="font-family:'Cormorant Garamond',serif;font-size:13px;font-weight:400;letter-spacing:0.18em;color:#B8964A;">03</span>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:36px;letter-spacing:0.02em;margin:0;color:#1A1613;">Marks &amp; rules</h2>
+      <span style="margin-left:auto;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#8A7F73;">Sparingly &mdash; one per view</span>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#DFD6C8;border:1px solid #DFD6C8;">
+      <div style="background:#F4EEE3;padding:36px 32px 32px;display:flex;flex-direction:column;gap:20px;">
+        <div style="font-size:10px;letter-spacing:0.28em;text-transform:uppercase;color:#8A7F73;">Seal</div>
+        <div style="height:64px;display:flex;align-items:center;"><img src="assets/logo-seal.png" alt="Eustress and Demeter seal" style="width:64px;height:64px;display:block;"></div>
+        <p style="font-size:12.5px;font-weight:300;line-height:1.75;color:#5B534B;margin:0;">The one real mark we hold. 64px minimum, gold on cream or charcoal, generous clear space. Not a substitute for the wordmark lockup.</p>
+      </div>
+      <div style="background:#fff;padding:36px 32px 32px;display:flex;flex-direction:column;gap:20px;">
+        <div style="font-size:10px;letter-spacing:0.28em;text-transform:uppercase;color:#8A7F73;">Hairline rule</div>
+        <div style="height:64px;display:flex;align-items:center;"><div style="width:64px;height:1px;background:#B8964A;"></div></div>
+        <p style="font-size:12.5px;font-weight:300;line-height:1.75;color:#5B534B;margin:0;">The default separator. 64px under a headline, 28px inside a card. Gold on light, gold on dark.</p>
+      </div>
+      <div style="background:#fff;padding:36px 32px 32px;display:flex;flex-direction:column;gap:20px;">
+        <div style="font-size:10px;letter-spacing:0.28em;text-transform:uppercase;color:#8A7F73;">Squiggle</div>
+        <div style="height:64px;display:flex;align-items:center;">
+          <svg width="120" height="18" viewBox="0 0 120 18" fill="none" aria-hidden="true"><path d="M2 11C10 3 18 3 26 11s16 8 24 0 16-8 24 0 16 8 24 0" stroke="#C4714C" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </div>
+        <p style="font-size:12.5px;font-weight:300;line-height:1.75;color:#5B534B;margin:0;">Stands in for the site's hand-drawn squiggle under value headings. Replace with the real PNG when we have it.</p>
+      </div>
+      <div style="background:#fff;padding:36px 32px 32px;display:flex;flex-direction:column;gap:20px;">
+        <div style="font-size:10px;letter-spacing:0.28em;text-transform:uppercase;color:#8A7F73;">Heart</div>
+        <div style="height:64px;display:flex;align-items:center;">
+          <svg width="34" height="30" viewBox="0 0 34 30" fill="none" aria-hidden="true"><path d="M17 27C17 27 3 19 3 10.5 3 6 6.2 3 10 3c2.9 0 5.4 1.8 7 4.4C18.6 4.8 21.1 3 24 3c3.8 0 7 3 7 7.5C31 19 17 27 17 27z" stroke="#C4714C" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        </div>
+        <p style="font-size:12.5px;font-weight:300;line-height:1.75;color:#5B534B;margin:0;">Sign-off only &mdash; footer, thank-you slide, the last line of a proposal. Never decorative, never more than one.</p>
+      </div>
+    </div>
+
+    <div style="display:flex;gap:16px;margin-top:32px;flex-wrap:wrap;">
+      <div style="flex:1;min-width:280px;border-left:3px solid #6E7355;background:#fff;border-top:1px solid #DFD6C8;border-right:1px solid #DFD6C8;border-bottom:1px solid #DFD6C8;padding:22px 26px;">
+        <div style="font-size:10px;letter-spacing:0.28em;text-transform:uppercase;color:#6E7355;margin-bottom:10px;">Do</div>
+        <p style="font-size:13px;font-weight:300;line-height:1.7;color:#2E2823;margin:0;">One mark per view, at the emotional beat &mdash; the closing line, not the header.</p>
+      </div>
+      <div style="flex:1;min-width:280px;border-left:3px solid #C4714C;background:#fff;border-top:1px solid #DFD6C8;border-right:1px solid #DFD6C8;border-bottom:1px solid #DFD6C8;padding:22px 26px;">
+        <div style="font-size:10px;letter-spacing:0.28em;text-transform:uppercase;color:#C4714C;margin-bottom:10px;">Don't</div>
+        <p style="font-size:13px;font-weight:300;line-height:1.7;color:#2E2823;margin:0;">Squiggle under every heading, hearts as bullets, or an ornament on a pricing page.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 PHOTOGRAPHY -->
+  <section style="max-width:1180px;margin:0 auto;padding:96px 72px 0;">
+    <div style="display:flex;align-items:baseline;gap:20px;border-bottom:1px solid #DFD6C8;padding-bottom:18px;margin-bottom:48px;">
+      <span style="font-family:'Cormorant Garamond',serif;font-size:13px;font-weight:400;letter-spacing:0.18em;color:#B8964A;">04</span>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:36px;letter-spacing:0.02em;margin:0;color:#1A1613;">Photography</h2>
+      <span style="margin-left:auto;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#8A7F73;">Drop real images into these slots</span>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:16px;margin-bottom:16px;">
+      <div style="display:flex;flex-direction:column;gap:12px;min-width:0;">
+        <div style="height:340px;min-width:0;"><image-slot id="ed-photo-hero" shape="rect" placeholder="HERO — team mid-work, warm natural light, 3:2"></image-slot></div>
+        <div style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#8A7F73;">Hero &middot; people over plates</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px;min-width:0;">
+        <div style="height:340px;min-width:0;"><image-slot id="ed-photo-food" shape="rect" placeholder="FOOD — overhead, single dish, hard-ish light"></image-slot></div>
+        <div style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#8A7F73;">Food &middot; one dish, not a spread</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px;min-width:0;">
+        <div style="height:340px;min-width:0;"><image-slot id="ed-photo-portrait" shape="rect" placeholder="PORTRAIT — 4:5, eye contact, cream backdrop"></image-slot></div>
+        <div style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#8A7F73;">Portrait &middot; team &amp; testimonials</div>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:36px;border:1px solid #DFD6C8;background:#fff;padding:34px 38px;">
+      <div>
+        <div style="font-size:10px;letter-spacing:0.28em;text-transform:uppercase;color:#1A1613;font-weight:500;margin-bottom:16px;">Art direction</div>
+        <ul style="margin:0;padding-left:18px;font-size:13px;font-weight:300;line-height:1.9;color:#5B534B;">
+          <li>Daylight or warm practicals. No blue-cast kitchens.</li>
+          <li>Hands in frame &mdash; work in progress beats a finished plate.</li>
+          <li>Full-bleed or hairline-framed. Never a rounded corner.</li>
+          <li>Charcoal scrim at 45% when type sits on the image.</li>
+        </ul>
+      </div>
+      <div style="border-left:1px solid #DFD6C8;padding-left:36px;">
+        <div style="font-size:10px;letter-spacing:0.28em;text-transform:uppercase;color:#1A1613;font-weight:500;margin-bottom:16px;">Still needed from you</div>
+        <p style="font-size:13px;font-weight:300;line-height:1.8;color:#5B534B;margin:0 0 14px;">We have the seal. Everything else is still missing &mdash; drop it in and every component above picks it up.</p>
+        <div style="display:flex;flex-direction:column;gap:8px;font-size:12.5px;font-weight:300;color:#2E2823;">
+          <div style="display:flex;gap:10px;"><span style="color:#C4714C;">&mdash;</span> Horizontal wordmark lockup, vector</div>
+          <div style="display:flex;gap:10px;"><span style="color:#C4714C;">&mdash;</span> Heart &amp; squiggle ornament artwork</div>
+          <div style="display:flex;gap:10px;"><span style="color:#C4714C;">&mdash;</span> Team portraits and 6&ndash;8 client photos</div>
+          <div style="display:flex;gap:10px;"><span style="color:#C4714C;">&mdash;</span> Client logo wall at full resolution</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 COMPONENTS -->
+  <section style="max-width:1180px;margin:0 auto;padding:96px 72px 0;">
+    <div style="display:flex;align-items:baseline;gap:20px;border-bottom:1px solid #DFD6C8;padding-bottom:18px;margin-bottom:48px;">
+      <span style="font-family:'Cormorant Garamond',serif;font-size:13px;font-weight:400;letter-spacing:0.18em;color:#B8964A;">05</span>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:36px;letter-spacing:0.02em;margin:0;color:#1A1613;">Components, rewarmed</h2>
+      <span style="margin-left:auto;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#8A7F73;">Existing 20, new palette</span>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:16px;">
+      <div style="border:1px solid #DFD6C8;background:#fff;padding:32px;">
+        <div style="font-size:10px;letter-spacing:0.28em;text-transform:uppercase;color:#8A7F73;margin-bottom:24px;">Buttons</div>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center;">
+          <button style="font-family:Jost,sans-serif;font-size:11px;font-weight:500;letter-spacing:0.20em;text-transform:uppercase;color:#fff;background:#C4714C;border:1px solid #C4714C;padding:15px 30px;cursor:pointer;" style-hover="background:#A85B39;border-color:#A85B39;">Get In Touch</button>
+          <button style="font-family:Jost,sans-serif;font-size:11px;font-weight:500;letter-spacing:0.20em;text-transform:uppercase;color:#1A1613;background:transparent;border:1px solid #1A1613;padding:15px 30px;cursor:pointer;" style-hover="background:#1A1613;color:#fff;">Learn More</button>
+          <button style="font-family:Jost,sans-serif;font-size:11px;font-weight:500;letter-spacing:0.20em;text-transform:uppercase;color:#B8964A;background:transparent;border:none;border-bottom:1px solid #B8964A;padding:6px 0;cursor:pointer;" style-hover="color:#1A1613;border-bottom-color:#1A1613;">View Services &rarr;</button>
+        </div>
+        <p style="font-size:12px;font-weight:300;line-height:1.7;color:#8A7F73;margin:24px 0 0;">Clay replaces gold as the filled button. Gold stayed hard to read at 11px on cream.</p>
+      </div>
+
+      <div style="border:1px solid #DFD6C8;background:#1A1613;padding:32px;">
+        <div style="font-size:10px;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:24px;">On charcoal</div>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center;">
+          <button style="font-family:Jost,sans-serif;font-size:11px;font-weight:500;letter-spacing:0.20em;text-transform:uppercase;color:#1A1613;background:#D4AD6A;border:1px solid #D4AD6A;padding:15px 30px;cursor:pointer;" style-hover="background:#fff;border-color:#fff;">Book A Call</button>
+          <button style="font-family:Jost,sans-serif;font-size:11px;font-weight:500;letter-spacing:0.20em;text-transform:uppercase;color:#fff;background:transparent;border:1px solid rgba(255,255,255,0.3);padding:15px 30px;cursor:pointer;" style-hover="border-color:#fff;">Our Work</button>
+        </div>
+        <p style="font-size:12px;font-weight:300;line-height:1.7;color:rgba(255,255,255,0.5);margin:24px 0 0;">Gold-light on charcoal is the only place gold still carries a fill.</p>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:16px;">
+      <article style="background:#fff;border:1px solid #DFD6C8;padding:30px 32px 28px;display:flex;flex-direction:column;">
+        <span style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:12px;letter-spacing:0.18em;color:#B8964A;margin-bottom:12px;">01</span>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:21px;letter-spacing:0.02em;color:#1A1613;line-height:1.2;margin:0 0 5px;">Off-Premise Revenue</h3>
+        <div style="font-size:11px;font-weight:300;letter-spacing:0.10em;text-transform:uppercase;color:#C4714C;margin-bottom:16px;">Takeout &middot; Delivery &middot; Catering</div>
+        <div style="width:28px;height:1px;background:#B8964A;margin-bottom:16px;"></div>
+        <p style="font-size:12.5px;font-weight:300;line-height:1.8;color:#2E2823;margin:0 0 20px;">Channel strategy, menu engineering for travel, third-party negotiation and a catering program that actually books.</p>
+        <div style="display:flex;flex-direction:column;gap:7px;margin-bottom:22px;">
+          <div style="display:flex;gap:10px;font-size:11.5px;font-weight:300;color:#5B534B;"><span style="color:#B8964A;">&mdash;</span> Channel &amp; margin audit</div>
+          <div style="display:flex;gap:10px;font-size:11.5px;font-weight:300;color:#5B534B;"><span style="color:#B8964A;">&mdash;</span> Virtual brand build-out</div>
+          <div style="display:flex;gap:10px;font-size:11.5px;font-weight:300;color:#5B534B;"><span style="color:#B8964A;">&mdash;</span> Catering sales playbook</div>
+        </div>
+        <div style="margin-top:auto;border-top:1px solid #DFD6C8;padding-top:16px;display:flex;align-items:baseline;gap:8px;">
+          <span style="font-family:'Cormorant Garamond',serif;font-size:24px;color:#1A1613;">$7,500</span>
+          <span style="font-size:9.5px;letter-spacing:0.20em;text-transform:uppercase;color:#8A7F73;">/ month</span>
+        </div>
+      </article>
+
+      <article style="background:#1A1613;border:1px solid #1A1613;padding:30px 32px 28px;display:flex;flex-direction:column;">
+        <span style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:12px;letter-spacing:0.18em;color:#D4AD6A;margin-bottom:12px;">02</span>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:21px;letter-spacing:0.02em;color:#fff;line-height:1.2;margin:0 0 5px;">Franchise Development</h3>
+        <div style="font-size:11px;font-weight:300;letter-spacing:0.10em;text-transform:uppercase;color:#D4AD6A;margin-bottom:16px;">Featured Engagement</div>
+        <div style="width:28px;height:1px;background:#D4AD6A;margin-bottom:16px;"></div>
+        <p style="font-size:12.5px;font-weight:300;line-height:1.8;color:rgba(255,255,255,0.62);margin:0 0 20px;">FDD readiness, unit economics, franchisee recruitment and the operations manual behind them.</p>
+        <div style="display:flex;flex-direction:column;gap:7px;margin-bottom:22px;">
+          <div style="display:flex;gap:10px;font-size:11.5px;font-weight:300;color:rgba(255,255,255,0.62);"><span style="color:#D4AD6A;">&mdash;</span> Unit economic model</div>
+          <div style="display:flex;gap:10px;font-size:11.5px;font-weight:300;color:rgba(255,255,255,0.62);"><span style="color:#D4AD6A;">&mdash;</span> Recruitment funnel</div>
+          <div style="display:flex;gap:10px;font-size:11.5px;font-weight:300;color:rgba(255,255,255,0.62);"><span style="color:#D4AD6A;">&mdash;</span> Ops manual &amp; training</div>
+        </div>
+        <div style="margin-top:auto;border-top:1px solid rgba(255,255,255,0.12);padding-top:16px;display:flex;align-items:baseline;gap:8px;">
+          <span style="font-family:'Cormorant Garamond',serif;font-size:24px;color:#fff;">Custom</span>
+          <span style="font-size:9.5px;letter-spacing:0.20em;text-transform:uppercase;color:rgba(255,255,255,0.4);">/ scoped</span>
+        </div>
+      </article>
+
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div style="background:#EBD7CC;border:1px solid #E0C7B8;padding:30px 32px;">
+          <svg width="26" height="23" viewBox="0 0 34 30" fill="none" aria-hidden="true" style="margin-bottom:16px;"><path d="M17 27C17 27 3 19 3 10.5 3 6 6.2 3 10 3c2.9 0 5.4 1.8 7 4.4C18.6 4.8 21.1 3 24 3c3.8 0 7 3 7 7.5C31 19 17 27 17 27z" stroke="#C4714C" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          <p style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:21px;line-height:1.45;color:#1A1613;margin:0 0 18px;">&ldquo;They didn't hand us a deck. They worked our Friday night line.&rdquo;</p>
+          <div style="font-size:10px;letter-spacing:0.20em;text-transform:uppercase;color:#8A7F73;">Operator, 14-unit group</div>
+        </div>
+        <div style="background:#fff;border:1px solid #DFD6C8;padding:26px 32px;display:grid;grid-template-columns:1fr 1fr;gap:24px;">
+          <div>
+            <div style="font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:300;color:#C4714C;line-height:1;">60+</div>
+            <div style="font-size:10px;letter-spacing:0.20em;text-transform:uppercase;color:#8A7F73;margin-top:8px;">Years combined</div>
+          </div>
+          <div>
+            <div style="font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:300;color:#C4714C;line-height:1;">35</div>
+            <div style="font-size:10px;letter-spacing:0.20em;text-transform:uppercase;color:#8A7F73;margin-top:8px;">Brands served</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 NEW PATTERNS -->
+  <section style="max-width:1180px;margin:0 auto;padding:96px 72px 0;">
+    <div style="display:flex;align-items:baseline;gap:20px;border-bottom:1px solid #DFD6C8;padding-bottom:18px;margin-bottom:20px;">
+      <span style="font-family:'Cormorant Garamond',serif;font-size:13px;font-weight:400;letter-spacing:0.18em;color:#B8964A;">06</span>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:36px;letter-spacing:0.02em;margin:0;color:#1A1613;">New patterns</h2>
+      <span style="margin-left:auto;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#8A7F73;">Social &middot; one-sheet &middot; proposal</span>
+    </div>
+    <p style="font-size:16px;font-weight:300;line-height:1.85;color:#5B534B;max-width:660px;margin:0 0 48px;">The gaps you flagged. Each one is a full-size template, not a thumbnail &mdash; drop copy and photography straight in.</p>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;">
+      <div>
+        <div style="font-size:10px;letter-spacing:0.28em;text-transform:uppercase;color:#1A1613;font-weight:500;margin-bottom:20px;">Instagram &middot; 1080&times;1080</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+          <div style="aspect-ratio:1/1;background:#1A1613;padding:34px 30px;display:flex;flex-direction:column;justify-content:space-between;">
+            <div style="font-size:9px;letter-spacing:0.32em;text-transform:uppercase;color:#B8964A;">Eustress &amp; Demeter</div>
+            <div>
+              <div style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:34px;line-height:1.12;color:#fff;">Your catering line is <span style="font-style:italic;color:#D4AD6A;">leaking</span> margin.</div>
+              <div style="width:40px;height:1px;background:#B8964A;margin:20px 0 14px;"></div>
+              <div style="font-size:9.5px;letter-spacing:0.20em;text-transform:uppercase;color:rgba(255,255,255,0.55);">Off-premise audit &middot; Link in bio</div>
+            </div>
+          </div>
+          <div style="aspect-ratio:1/1;background:#EBD7CC;padding:34px 30px;display:flex;flex-direction:column;justify-content:space-between;">
+            <svg width="26" height="23" viewBox="0 0 34 30" fill="none" aria-hidden="true"><path d="M17 27C17 27 3 19 3 10.5 3 6 6.2 3 10 3c2.9 0 5.4 1.8 7 4.4C18.6 4.8 21.1 3 24 3c3.8 0 7 3 7 7.5C31 19 17 27 17 27z" stroke="#C4714C" stroke-width="1.6" stroke-linejoin="round"/></svg>
+            <div>
+              <div style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:26px;line-height:1.35;color:#1A1613;">&ldquo;We're more than consultants&mdash;we're your partners.&rdquo;</div>
+              <div style="font-size:9.5px;letter-spacing:0.20em;text-transform:uppercase;color:#8A7F73;margin-top:18px;">Monica Challingsworth</div>
+            </div>
+          </div>
+          <div style="aspect-ratio:1/1;position:relative;overflow:hidden;min-width:0;">
+            <image-slot id="ed-ig-photo" shape="rect" placeholder="Square food or team photo"></image-slot>
+            <div style="position:absolute;inset:auto 0 0 0;height:58%;background:linear-gradient(to top,rgba(26,22,19,0.88),transparent);pointer-events:none;"></div>
+            <div style="position:absolute;inset:auto 0 0 0;padding:26px 28px;pointer-events:none;">
+              <div style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:28px;line-height:1.15;color:#fff;">Five nights, one <span style="font-style:italic;">new</span> menu</div>
+              <div style="font-size:9px;letter-spacing:0.24em;text-transform:uppercase;color:#D4AD6A;margin-top:12px;">Culinary &amp; Bar</div>
+            </div>
+          </div>
+          <div style="aspect-ratio:1/1;background:#FBF7F0;border:1px solid #DFD6C8;padding:34px 30px;display:flex;flex-direction:column;justify-content:center;gap:14px;">
+            <div style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:62px;line-height:1;color:#C4714C;">+31%</div>
+            <div style="font-family:'Cormorant Garamond',serif;font-size:20px;line-height:1.4;color:#1A1613;">catering revenue in two quarters</div>
+            <div style="width:40px;height:1px;background:#B8964A;"></div>
+            <div style="font-size:9px;letter-spacing:0.24em;text-transform:uppercase;color:#8A7F73;">Multi-unit fast casual</div>
+          </div>
+        </div>
+        <p style="font-size:12px;font-weight:300;line-height:1.75;color:#8A7F73;margin:18px 0 0;">Four tile types &mdash; hook, quote, photo, proof. A grid row should never be two of the same.</p>
+      </div>
+
+      <div>
+        <div style="font-size:10px;letter-spacing:0.28em;text-transform:uppercase;color:#1A1613;font-weight:500;margin-bottom:20px;">Proposal cover &middot; Letter</div>
+        <div style="aspect-ratio:8.5/11;background:#F4EEE3;border:1px solid #DFD6C8;padding:56px 52px;display:flex;flex-direction:column;">
+          <div style="display:flex;align-items:center;gap:16px;">
+            <img src="assets/logo-seal.png" alt="Eustress and Demeter seal" style="width:52px;height:52px;display:block;">
+            <div>
+              <div style="font-size:9px;letter-spacing:0.32em;text-transform:uppercase;color:#1A1613;font-weight:500;">Eustress &amp; Demeter</div>
+              <div style="font-size:9px;letter-spacing:0.20em;text-transform:uppercase;color:#8A7F73;margin-top:6px;">Restaurant &amp; Hospitality Consulting</div>
+            </div>
+          </div>
+          <div style="margin-top:auto;">
+            <div style="font-size:10px;letter-spacing:0.28em;text-transform:uppercase;color:#C4714C;margin-bottom:20px;">Prepared for HummusFit</div>
+            <div style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:52px;line-height:1.05;color:#1A1613;">Franchise <span style="font-style:italic;">Program</span> Proposal</div>
+            <div style="width:64px;height:1px;background:#B8964A;margin:28px 0;"></div>
+            <div style="display:flex;justify-content:space-between;align-items:flex-end;">
+              <div style="font-size:10px;letter-spacing:0.20em;text-transform:uppercase;color:#5B534B;line-height:2;">Monica Challingsworth<br>July 2026</div>
+              <svg width="30" height="26" viewBox="0 0 34 30" fill="none" aria-hidden="true"><path d="M17 27C17 27 3 19 3 10.5 3 6 6.2 3 10 3c2.9 0 5.4 1.8 7 4.4C18.6 4.8 21.1 3 24 3c3.8 0 7 3 7 7.5C31 19 17 27 17 27z" stroke="#C4714C" stroke-width="1.6" stroke-linejoin="round"/></svg>
+            </div>
+          </div>
+        </div>
+        <p style="font-size:12px;font-weight:300;line-height:1.75;color:#8A7F73;margin:18px 0 0;">Cream cover, charcoal type, one italic word, heart at the sign-off. Same grid for capability decks.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 APPLIED -->
+  <section style="max-width:1180px;margin:0 auto;padding:96px 72px 0;">
+    <div style="display:flex;align-items:baseline;gap:20px;border-bottom:1px solid #DFD6C8;padding-bottom:18px;margin-bottom:48px;">
+      <span style="font-family:'Cormorant Garamond',serif;font-size:13px;font-weight:400;letter-spacing:0.18em;color:#B8964A;">07</span>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:36px;letter-spacing:0.02em;margin:0;color:#1A1613;">Applied &mdash; service one-sheet</h2>
+      <span style="margin-left:auto;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#8A7F73;">Proof the system holds</span>
+    </div>
+
+    <div style="border:1px solid #DFD6C8;background:#fff;">
+      <div style="background:#1A1613;padding:52px 56px;display:grid;grid-template-columns:1.2fr 0.8fr;gap:48px;align-items:end;">
+        <div>
+          <div style="font-size:9px;letter-spacing:0.32em;text-transform:uppercase;color:#B8964A;margin-bottom:24px;">Eustress &amp; Demeter &middot; Service Overview</div>
+          <h3 style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:56px;line-height:1.04;color:#fff;margin:0;">Off-Premise <span style="font-style:italic;color:#D4AD6A;">Revenue</span></h3>
+          <div style="width:64px;height:1px;background:#B8964A;margin:26px 0 22px;"></div>
+          <p style="font-size:15px;font-weight:300;line-height:1.8;color:rgba(255,255,255,0.68);margin:0;max-width:520px;">Takeout, delivery and catering built as a real P&amp;L line&mdash;not a channel you tolerate. We start in your kitchen, on your busiest night.</p>
+        </div>
+        <div style="border-left:1px solid rgba(255,255,255,0.14);padding-left:36px;display:flex;flex-direction:column;gap:20px;">
+          <div>
+            <div style="font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:300;color:#D4AD6A;line-height:1;">90 days</div>
+            <div style="font-size:9px;letter-spacing:0.24em;text-transform:uppercase;color:rgba(255,255,255,0.45);margin-top:8px;">Typical engagement</div>
+          </div>
+          <div>
+            <div style="font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:300;color:#D4AD6A;line-height:1;">$7,500</div>
+            <div style="font-size:9px;letter-spacing:0.24em;text-transform:uppercase;color:rgba(255,255,255,0.45);margin-top:8px;">Per month, retainer</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#DFD6C8;">
+        <div style="background:#fff;padding:38px 36px;">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:12px;letter-spacing:0.18em;color:#B8964A;margin-bottom:14px;">01</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:22px;color:#1A1613;margin-bottom:14px;">Audit</div>
+          <p style="font-size:13px;font-weight:300;line-height:1.8;color:#5B534B;margin:0;">Two weeks on-site. Channel mix, packaging, third-party economics, ticket times, and where the margin actually goes.</p>
+        </div>
+        <div style="background:#fff;padding:38px 36px;">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:12px;letter-spacing:0.18em;color:#B8964A;margin-bottom:14px;">02</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:22px;color:#1A1613;margin-bottom:14px;">Build</div>
+          <p style="font-size:13px;font-weight:300;line-height:1.8;color:#5B534B;margin:0;">Menu engineered for travel, repriced for commission, catering sales motion, and a virtual brand if the kitchen has room.</p>
+        </div>
+        <div style="background:#fff;padding:38px 36px;">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:12px;letter-spacing:0.18em;color:#B8964A;margin-bottom:14px;">03</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:22px;color:#1A1613;margin-bottom:14px;">Hand off</div>
+          <p style="font-size:13px;font-weight:300;line-height:1.8;color:#5B534B;margin:0;">Your team runs it. We leave the playbook, the dashboard and a standing call for the first quarter.</p>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;">
+        <div style="background:#EBD7CC;padding:44px 48px;display:flex;flex-direction:column;justify-content:center;">
+          <p style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:26px;line-height:1.4;color:#1A1613;margin:0 0 20px;">&ldquo;Let's build something that not only works but wows.&rdquo;</p>
+          <div style="width:40px;height:1px;background:#C4714C;margin-bottom:16px;"></div>
+          <div style="font-size:10px;letter-spacing:0.24em;text-transform:uppercase;color:#8A7F73;">info@eustressanddemeter.com &middot; 213-222-3849</div>
+        </div>
+        <div style="min-height:260px;min-width:0;"><image-slot id="ed-onesheet-photo" shape="rect" placeholder="Kitchen or packing-line photo, 4:3"></image-slot></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSE -->
+  <section style="max-width:1180px;margin:0 auto;padding:96px 72px 0;">
+    <div style="background:#1A1613;padding:64px 72px;display:grid;grid-template-columns:1.2fr 0.8fr;gap:64px;align-items:center;">
+      <div>
+        <div style="font-size:10px;letter-spacing:0.28em;text-transform:uppercase;color:#B8964A;margin-bottom:22px;">Next</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:44px;line-height:1.1;color:#fff;">Send the brand files and I'll <span style="font-style:italic;color:#D4AD6A;">wire</span> them through.</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        <div style="display:flex;gap:14px;font-size:13px;font-weight:300;color:rgba(255,255,255,0.7);border-bottom:1px solid rgba(255,255,255,0.12);padding-bottom:14px;"><span style="color:#B8964A;">01</span> Wordmark lockup + ornament artwork</div>
+        <div style="display:flex;gap:14px;font-size:13px;font-weight:300;color:rgba(255,255,255,0.7);border-bottom:1px solid rgba(255,255,255,0.12);padding-bottom:14px;"><span style="color:#B8964A;">02</span> Photography library</div>
+        <div style="display:flex;gap:14px;font-size:13px;font-weight:300;color:rgba(255,255,255,0.7);border-bottom:1px solid rgba(255,255,255,0.12);padding-bottom:14px;"><span style="color:#B8964A;">03</span> Website refresh, on this system</div>
+        <div style="display:flex;gap:14px;font-size:13px;font-weight:300;color:rgba(255,255,255,0.7);"><span style="color:#B8964A;">04</span> Capability deck + franchise pitch</div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showLegacy&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Guide&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return { showLegacy: this.props.showLegacy ?? true };
+  }
+}
+</script>
+</body>
+</html>

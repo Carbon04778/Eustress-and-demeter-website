@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Restaurant Opening Checklist: The Final 90 Days | Eustress &amp; Demeter</title>
+<meta name="description" content="A week-by-week restaurant opening checklist covering the ninety days before doors open: hiring, training, permits, systems, marketing, friends and family, and the first week live.">
+<meta name="robots" content="index, follow">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    { "@type": "BreadcrumbList", "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.eustressanddemeter.com/" },
+      { "@type": "ListItem", "position": 2, "name": "The E&D Playbook", "item": "https://www.eustressanddemeter.com/playbook" },
+      { "@type": "ListItem", "position": 3, "name": "Restaurant Opening Checklist", "item": "https://www.eustressanddemeter.com/playbook/restaurant-opening-checklist" }
+    ] },
+    { "@type": "Article", "headline": "Restaurant Opening Checklist", "description": "A week-by-week restaurant opening checklist covering the ninety days before doors open: hiring, training, permits, systems, marketing, friends and family, and the first week live.", "articleSection": "Restaurant Operations", "publisher": { "@id": "https://www.eustressanddemeter.com/#org" } },
+    { "@type": "FAQPage", "mainEntity": [
+        { "@type": "Question", "name": "How long before opening should we start hiring?", "acceptedAnswer": { "@type": "Answer", "text": "Management at sixty days, hourly staff at forty-five to thirty. Over-hire by fifteen to twenty percent because attrition between offer and opening is normal." } },
+        { "@type": "Question", "name": "How many training days does a new restaurant need?", "acceptedAnswer": { "@type": "Answer", "text": "Two to three weeks for a full-service concept, less for limited service. The compressed four-day version is the single most common opening mistake and shows up immediately in ticket times and early reviews." } },
+        { "@type": "Question", "name": "Should we do a soft opening?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, and treat it as a test rather than an event. Limited hours, limited covers, no marketing spend, and a written fix list afterwards. Three graduated rehearsals is better than one large party." } },
+        { "@type": "Question", "name": "What if we are not ready on the planned opening date?", "acceptedAnswer": { "@type": "Answer", "text": "Delay. The cost of two more weeks of rent is almost always lower than the cost of two hundred early reviews describing a restaurant that was not ready, because those reviews do not expire." } }
+    ] },
+    { "@type": "Organization", "@id": "https://www.eustressanddemeter.com/#org", "name": "Eustress & Demeter", "url": "https://www.eustressanddemeter.com/", "email": "info@eustressanddemeter.com", "telephone": "+1-213-222-3849" }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Archivo:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *{ box-sizing: border-box; }
+  body { margin: 0; background: #F2F0E9; color: #17190F; font-family: 'Archivo', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: #38452C; text-decoration: none; }
+  a:hover { color: #A33F14; }
+  h1, h2, h3 { font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; }
+  html { scroll-behavior: smooth; }
+  .ed-menu-panel { display: none; }
+  .ed-menu:hover .ed-menu-panel, .ed-menu:focus-within .ed-menu-panel { display: block; }
+  a:focus-visible, button:focus-visible, [tabindex]:focus-visible { outline: 3px solid #C4501E; outline-offset: 3px; }
+  .ed-skip { position: absolute; left: -9999px; top: 0; z-index: 200; background: #F2F0E9; color: #17190F; padding: 14px 22px; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; border: 2px solid #17190F; }
+  .ed-skip:focus { left: 12px; top: 12px; }
+  /* mobile */
+  table { display: block; overflow-x: auto; max-width: 100%; }
+  img, video { max-width: 100%; }
+  @media (max-width: 900px) {
+    header { position: static !important; }
+    header > div { height: auto !important; flex-wrap: wrap !important; padding: 12px 20px !important; gap: 10px !important; }
+    nav[aria-label="Primary"] { margin-left: 0 !important; width: 100%; overflow-x: auto; gap: 18px !important; padding-bottom: 2px; -webkit-overflow-scrolling: touch; }
+    nav[aria-label="Primary"] a { padding: 8px 0 !important; }
+    .ed-menu-panel { display: none !important; }
+    [style*="grid-template-columns"] { grid-template-columns: minmax(0,1fr) !important; }
+    [style*="max-width:1320px"] { padding-left: 20px !important; padding-right: 20px !important; }
+    h1 { font-size: clamp(32px, 8.6vw, 70px) !important; }
+    h2 { font-size: clamp(27px, 7vw, 52px) !important; }
+    h3 { font-size: clamp(20px, 5vw, 36px) !important; }
+    [style*="font-size:19px"], [style*="font-size:18px"], [style*="font-size:17px"] { font-size: 16.5px !important; }
+    [style*="padding:104px 40px"], [style*="padding:100px 40px"], [style*="padding:96px 40px"], [style*="padding:88px 40px"], [style*="padding:80px 40px"] { padding: 56px 20px !important; }
+    [style*="padding:64px 56px"], [style*="padding:64px 48px"] { padding: 40px 24px !important; }
+    [style*="padding:72px 40px"], [style*="padding:76px 40px"] { padding: 48px 20px !important; }
+    [style*="padding:38px 34px"], [style*="padding:34px 32px"], [style*="padding:34px 30px"] { padding: 26px 22px !important; }
+    [style*="gap:72px"], [style*="gap:80px"], [style*="gap:56px"] { gap: 32px !important; }
+    [style*="column-gap:80px"], [style*="column-gap:56px"], [style*="column-gap:44px"] { column-gap: 0 !important; }
+    [style*="min-height:460px"] { min-height: 260px !important; }
+    [style*="height:620px"], [style*="height:560px"], [style*="height:440px"] { height: 260px !important; }
+    figure img { height: 260px !important; }
+  }
+  @media (max-width: 560px) {
+    [style*="max-width:1320px"] { padding-left: 16px !important; padding-right: 16px !important; }
+    [style*="padding:104px 40px"], [style*="padding:100px 40px"], [style*="padding:96px 40px"], [style*="padding:88px 40px"], [style*="padding:80px 40px"] { padding: 44px 16px !important; }
+    input, select, textarea { font-size: 16px !important; }
+  }
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; } }
+</style>
+</helmet>
+
+<div id="top" style="background:#F2F0E9;">
+  <a href="#main" class="ed-skip">Skip to main content</a>
+
+<header style="position:sticky;top:0;z-index:60;background:#17190F;">
+    <div style="max-width:1320px;margin:0 auto;padding:0 40px;height:74px;display:flex;align-items:center;gap:32px;">
+      <a href="E&D Website v2.dc.html" aria-label="Eustress and Demeter, home" style="display:flex;align-items:center;gap:14px;">
+        <img src="assets/logo-seal.png" alt="Eustress and Demeter seal" style="width:38px;height:38px;display:block;filter:brightness(1.7);">
+        <span style="font-family:'Instrument Serif',Georgia,serif;font-size:19px;letter-spacing:0.01em;color:#F2F0E9;white-space:nowrap;">Eustress &amp; Demeter</span>
+      </a>
+      <nav aria-label="Primary" style="margin-left:auto;display:flex;align-items:center;gap:26px;">
+        <div class="ed-menu" style="position:relative;display:flex;align-items:center;">
+          <a href="Restaurant Consulting.dc.html" style="display:flex;align-items:center;gap:7px;font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(242,240,233,0.78);font-weight:500;white-space:nowrap;padding:26px 0;" style-hover="color:#F2F0E9;">Services<span aria-hidden="true" style="font-size:8px;line-height:1;">&#9660;</span></a>
+          <div class="ed-menu-panel" style="position:absolute;top:100%;right:0;width:340px;background:#17190F;border:1px solid rgba(242,240,233,0.22);padding:10px;z-index:80;">
+            <a href="Restaurant Consulting.dc.html" style="display:block;padding:13px 16px;text-decoration:none;transition:background 160ms;" style-hover="background:#38452C;"><span style="display:block;font-size:14px;font-weight:500;letter-spacing:0.01em;color:#F2F0E9;margin-bottom:3px;">Restaurant Consulting</span><span style="display:block;font-size:11.5px;font-weight:300;line-height:1.5;color:rgba(242,240,233,0.72);">Unit economics, operations, menu, training</span></a>
+            <a href="Restaurant Catering Consulting.dc.html" style="display:block;padding:13px 16px;text-decoration:none;transition:background 160ms;" style-hover="background:#38452C;"><span style="display:block;font-size:14px;font-weight:500;letter-spacing:0.01em;color:#F2F0E9;margin-bottom:3px;">Catering &amp; Off-Premise</span><span style="display:block;font-size:11.5px;font-weight:300;line-height:1.5;color:rgba(242,240,233,0.72);">The fastest revenue in most restaurants</span></a>
+            <a href="Local Store Marketing.dc.html" style="display:block;padding:13px 16px;text-decoration:none;transition:background 160ms;" style-hover="background:#38452C;"><span style="display:block;font-size:14px;font-weight:500;letter-spacing:0.01em;color:#F2F0E9;margin-bottom:3px;">Local Store Marketing</span><span style="display:block;font-size:11.5px;font-weight:300;line-height:1.5;color:rgba(242,240,233,0.72);">Trade-area programs and grand openings</span></a>
+            <a href="Franchise Consulting.dc.html" style="display:block;padding:13px 16px;text-decoration:none;transition:background 160ms;" style-hover="background:#38452C;"><span style="display:block;font-size:14px;font-weight:500;letter-spacing:0.01em;color:#F2F0E9;margin-bottom:3px;">Franchise Consulting</span><span style="display:block;font-size:11.5px;font-weight:300;line-height:1.5;color:rgba(242,240,233,0.72);">Build the system, then sell the territories</span></a>
+            <a href="Franchise Readiness Assessment.dc.html" style="display:block;padding:13px 16px;text-decoration:none;transition:background 160ms;" style-hover="background:#38452C;"><span style="display:block;font-size:14px;font-weight:500;letter-spacing:0.01em;color:#F2F0E9;margin-bottom:3px;">Franchise Readiness</span><span style="display:block;font-size:11.5px;font-weight:300;line-height:1.5;color:rgba(242,240,233,0.72);">The twelve-point diagnostic</span></a>
+            <a href="Franchise Sales Support.dc.html" style="display:block;padding:13px 16px;text-decoration:none;transition:background 160ms;" style-hover="background:#38452C;"><span style="display:block;font-size:14px;font-weight:500;letter-spacing:0.01em;color:#F2F0E9;margin-bottom:3px;">Franchise Sales Support</span><span style="display:block;font-size:11.5px;font-weight:300;line-height:1.5;color:rgba(242,240,233,0.72);">Qualified candidates, disciplined pacing</span></a>
+          </div>
+        </div>
+        <a href="Methodology.dc.html" style="font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(242,240,233,0.78);font-weight:500;white-space:nowrap;" style-hover="color:#F2F0E9;">Methodology</a>
+        <a href="The E&D Playbook.dc.html" style="font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(242,240,233,0.78);font-weight:500;white-space:nowrap;" style-hover="color:#F2F0E9;">Playbook</a>
+        <a href="E&D Clients.dc.html" style="font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(242,240,233,0.78);font-weight:500;white-space:nowrap;" style-hover="color:#F2F0E9;">Clients</a>
+        <a href="Contact.dc.html" style="font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:#F2F0E9;background:#A33F14;padding:14px 24px;font-weight:600;white-space:nowrap;" style-hover="background:#F2F0E9;color:#17190F;">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+
+  <article>
+  <section style="border-bottom:1px solid #17190F;">
+    <div style="max-width:1320px;margin:0 auto;padding:88px 40px 68px;">
+      <div style="display:flex;align-items:center;gap:14px;margin-bottom:34px;">
+        <span style="width:34px;height:1px;background:#C4501E;"></span>
+        <a href="The E&D Playbook.dc.html" style="font-size:10px;letter-spacing:0.24em;text-transform:uppercase;color:#38452C;font-weight:600;">The E&amp;D Playbook</a>
+        <span aria-hidden="true" style="font-size:10px;color:#8A8574;">/</span>
+        <span style="font-size:10px;letter-spacing:0.24em;text-transform:uppercase;color:#5B5F4E;font-weight:600;">Restaurant Operations</span>
+      </div>
+      <h1 style="font-size:64px;line-height:1.03;letter-spacing:-0.02em;margin:0 0 30px;color:#17190F;max-width:1000px;text-wrap:pretty;">The ninety days before a restaurant <span style="font-style:italic;color:#38452C;">opens</span></h1>
+      <p style="font-size:19px;font-weight:300;line-height:1.8;color:#3D4034;margin:0;max-width:820px;text-wrap:pretty;">Openings fail on schedule, not on concept. The kitchen is not the problem; the problem is that hiring started too late, training was compressed into four days, and nobody ran a full-volume rehearsal before real guests walked in. This is the sequence that prevents it.</p>
+    </div>
+  </section>
+
+  <section style="background:#EAE7DC;border-bottom:1px solid #17190F;">
+    <div style="max-width:1320px;margin:0 auto;padding:44px 40px;display:grid;grid-template-columns:200px 1fr;gap:40px;align-items:start;">
+      <div style="font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#A33F14;font-weight:600;padding-top:6px;">The short answer</div>
+      <p style="font-size:20px;font-weight:300;line-height:1.7;color:#17190F;margin:0;max-width:900px;text-wrap:pretty;">A restaurant opening needs ninety days of structured preparation before doors open. Hiring begins at day sixty, training at day thirty, and the last two weeks are rehearsal at real volume. The most common failure is compressing training to make a lease date; the cost of opening two weeks late is almost always lower than the cost of opening badly, because the first two hundred reviews are permanent.</p>
+    </div>
+  </section>
+
+  <div style="max-width:1320px;margin:0 auto;padding:72px 40px 0;">
+    <section style="margin-bottom:64px;">
+      <div style="display:grid;grid-template-columns:64px 1fr;gap:24px;border-bottom:1px solid #17190F;padding-bottom:20px;margin-bottom:32px;">
+        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:20px;color:#A33F14;line-height:1.5;">01</div>
+        <h2 style="font-size:40px;line-height:1.08;letter-spacing:-0.015em;margin:0;color:#17190F;">Ninety to sixty days out</h2>
+      </div>
+      <p style="font-size:17px;font-weight:300;line-height:1.85;color:#3D4034;margin:0 0 22px;max-width:840px;text-wrap:pretty;">This period is about everything that has a lead time you cannot compress. Permits and equipment do not care about your opening date.</p>
+      <ul style="list-style:none;margin:6px 0 22px;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:64px;">
+        <li style="border-top:1px solid #DDD8CB;padding:20px 0;"><span style="display:block;font-family:'Instrument Serif',Georgia,serif;font-size:23px;line-height:1.2;color:#17190F;margin-bottom:8px;">Confirm the permit path</span><span style="display:block;font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;">Health, building, occupancy, liquor, signage. Establish the actual inspection sequence and who signs off. Liquor licensing is the most common cause of a delayed opening and the least controllable.</span></li>
+        <li style="border-top:1px solid #DDD8CB;padding:20px 0;"><span style="display:block;font-family:'Instrument Serif',Georgia,serif;font-size:23px;line-height:1.2;color:#17190F;margin-bottom:8px;">Lock equipment delivery</span><span style="display:block;font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;">Confirm lead times in writing. A single piece of long-lead equipment arriving late reshapes everything downstream.</span></li>
+        <li style="border-top:1px solid #DDD8CB;padding:20px 0;"><span style="display:block;font-family:'Instrument Serif',Georgia,serif;font-size:23px;line-height:1.2;color:#17190F;margin-bottom:8px;">Finalise the opening menu</span><span style="display:block;font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;">Smaller than you want it. Every additional item is another spec, another training module and another thing to execute badly in week one. You can extend the menu in month three.</span></li>
+        <li style="border-top:1px solid #DDD8CB;padding:20px 0;"><span style="display:block;font-family:'Instrument Serif',Georgia,serif;font-size:23px;line-height:1.2;color:#17190F;margin-bottom:8px;">Cost every item</span><span style="display:block;font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;">Plate cost, theoretical food cost, contribution margin. Pricing decided after this, not before.</span></li>
+        <li style="border-top:1px solid #DDD8CB;padding:20px 0;"><span style="display:block;font-family:'Instrument Serif',Georgia,serif;font-size:23px;line-height:1.2;color:#17190F;margin-bottom:8px;">Set up vendors and accounts</span><span style="display:block;font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;">Distributor agreement, produce, protein, beverage, smallwares, linen, waste. Credit applications take longer than anyone expects.</span></li>
+        <li style="border-top:1px solid #DDD8CB;padding:20px 0;"><span style="display:block;font-family:'Instrument Serif',Georgia,serif;font-size:23px;line-height:1.2;color:#17190F;margin-bottom:8px;">Order the technology</span><span style="display:block;font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;">POS, kitchen display, scheduling, payroll, inventory. Installation and configuration is a two-week job, not an afternoon.</span></li>
+        <li style="border-top:1px solid #DDD8CB;padding:20px 0;"><span style="display:block;font-family:'Instrument Serif',Georgia,serif;font-size:23px;line-height:1.2;color:#17190F;margin-bottom:8px;">Post the leadership roles</span><span style="display:block;font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;">General manager and kitchen leadership must be hired before hourly recruitment starts, because they should be hiring their own teams.</span></li>
+      </ul>
+    </section>
+    <section style="margin-bottom:64px;">
+      <div style="display:grid;grid-template-columns:64px 1fr;gap:24px;border-bottom:1px solid #17190F;padding-bottom:20px;margin-bottom:32px;">
+        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:20px;color:#A33F14;line-height:1.5;">02</div>
+        <h2 style="font-size:40px;line-height:1.08;letter-spacing:-0.015em;margin:0;color:#17190F;">Sixty to thirty days out</h2>
+      </div>
+      <p style="font-size:17px;font-weight:300;line-height:1.85;color:#3D4034;margin:0 0 22px;max-width:840px;text-wrap:pretty;">Hiring and documentation. This is the phase most commonly shortened, and the one where shortening does the most damage.</p>
+      <ol style="list-style:none;margin:6px 0 22px;padding:0;display:flex;flex-direction:column;">
+        <li style="border-top:1px solid #17190F;padding:22px 0;display:grid;grid-template-columns:52px 1fr 1.5fr;gap:22px;align-items:start;"><span style="font-size:11px;color:#A33F14;font-weight:600;font-variant-numeric:tabular-nums;padding-top:7px;">01</span><h3 style="font-size:23px;line-height:1.15;margin:0;color:#17190F;">Hire above-store and management first</h3><p style="font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;margin:0;">They need time in the building before they are teaching anyone. A general manager hired three weeks before opening is learning alongside the staff rather than leading them.</p></li>
+        <li style="border-top:1px solid #DDD8CB;padding:22px 0;display:grid;grid-template-columns:52px 1fr 1.5fr;gap:22px;align-items:start;"><span style="font-size:11px;color:#A33F14;font-weight:600;font-variant-numeric:tabular-nums;padding-top:7px;">02</span><h3 style="font-size:23px;line-height:1.15;margin:0;color:#17190F;">Write the training program</h3><p style="font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;margin:0;">Station by station, with a written standard and a test. If the SOPs are not documented yet, this is the deadline. See the <a href="Restaurant SOP Guide.dc.html" style="color:#38452C;border-bottom:1px solid #C4B79A;">SOP guide</a>.</p></li>
+        <li style="border-top:1px solid #DDD8CB;padding:22px 0;display:grid;grid-template-columns:52px 1fr 1.5fr;gap:22px;align-items:start;"><span style="font-size:11px;color:#A33F14;font-weight:600;font-variant-numeric:tabular-nums;padding-top:7px;">03</span><h3 style="font-size:23px;line-height:1.15;margin:0;color:#17190F;">Recruit hourly staff</h3><p style="font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;margin:0;">Over-hire by fifteen to twenty percent. Attrition between offer and opening week is normal and planning for it prevents a scramble.</p></li>
+        <li style="border-top:1px solid #DDD8CB;padding:22px 0;display:grid;grid-template-columns:52px 1fr 1.5fr;gap:22px;align-items:start;"><span style="font-size:11px;color:#A33F14;font-weight:600;font-variant-numeric:tabular-nums;padding-top:7px;">04</span><h3 style="font-size:23px;line-height:1.15;margin:0;color:#17190F;">Build the opening schedule</h3><p style="font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;margin:0;">Every day from training start to two weeks post-opening, with names on it. Opening weeks need more labor than the model allows; budget for it deliberately.</p></li>
+        <li style="border-top:1px solid #DDD8CB;padding:22px 0;display:grid;grid-template-columns:52px 1fr 1.5fr;gap:22px;align-items:start;"><span style="font-size:11px;color:#A33F14;font-weight:600;font-variant-numeric:tabular-nums;padding-top:7px;">05</span><h3 style="font-size:23px;line-height:1.15;margin:0;color:#17190F;">Configure the POS</h3><p style="font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;margin:0;">Menu, modifiers, pricing, routing, reporting. Then have someone who was not involved test every item and every modifier combination.</p></li>
+        <li style="border-top:1px solid #DDD8CB;padding:22px 0;display:grid;grid-template-columns:52px 1fr 1.5fr;gap:22px;align-items:start;"><span style="font-size:11px;color:#A33F14;font-weight:600;font-variant-numeric:tabular-nums;padding-top:7px;">06</span><h3 style="font-size:23px;line-height:1.15;margin:0;color:#17190F;">Start local marketing</h3><p style="font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;margin:0;">Signage on the building, neighbouring businesses, local press, community accounts. The <a href="Local Store Marketing.dc.html" style="color:#38452C;border-bottom:1px solid #C4B79A;">local store marketing</a> work starts now, not at opening.</p></li>
+        <li style="border-top:1px solid #DDD8CB;padding:22px 0;display:grid;grid-template-columns:52px 1fr 1.5fr;gap:22px;align-items:start;"><span style="font-size:11px;color:#A33F14;font-weight:600;font-variant-numeric:tabular-nums;padding-top:7px;">07</span><h3 style="font-size:23px;line-height:1.15;margin:0;color:#17190F;">Book the inspections</h3><p style="font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;margin:0;">Health and occupancy scheduled, with slack. Failing an inspection and waiting for a re-visit is a two-week delay.</p></li>
+      </ol>
+    </section>
+    <section style="margin-bottom:64px;">
+      <div style="display:grid;grid-template-columns:64px 1fr;gap:24px;border-bottom:1px solid #17190F;padding-bottom:20px;margin-bottom:32px;">
+        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:20px;color:#A33F14;line-height:1.5;">03</div>
+        <h2 style="font-size:40px;line-height:1.08;letter-spacing:-0.015em;margin:0;color:#17190F;">Thirty to seven days out</h2>
+      </div>
+      <p style="font-size:17px;font-weight:300;line-height:1.85;color:#3D4034;margin:0 0 22px;max-width:840px;text-wrap:pretty;">Training and rehearsal. The whole point of the previous sixty days was to arrive here with time to practice.</p>
+      <ul style="list-style:none;margin:6px 0 22px;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:64px;">
+        <li style="border-top:1px solid #DDD8CB;padding:20px 0;"><span style="display:block;font-family:'Instrument Serif',Georgia,serif;font-size:23px;line-height:1.2;color:#17190F;margin-bottom:8px;">Classroom then station</span><span style="display:block;font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;">Two days on brand, standards, safety and service; then station training with a written test at the end of each. Nobody works a station uncertified.</span></li>
+        <li style="border-top:1px solid #DDD8CB;padding:20px 0;"><span style="display:block;font-family:'Instrument Serif',Georgia,serif;font-size:23px;line-height:1.2;color:#17190F;margin-bottom:8px;">Cook the whole menu repeatedly</span><span style="display:block;font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;">Every item, every cook, until specs are consistent without reference. Photograph the correct plate and post it at the station.</span></li>
+        <li style="border-top:1px solid #DDD8CB;padding:20px 0;"><span style="display:block;font-family:'Instrument Serif',Georgia,serif;font-size:23px;line-height:1.2;color:#17190F;margin-bottom:8px;">Run timed volume drills</span><span style="display:block;font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;">Not a leisurely walk-through. Fire tickets at the volume you expect on a Friday and find where the line breaks while it is still free to find out.</span></li>
+        <li style="border-top:1px solid #DDD8CB;padding:20px 0;"><span style="display:block;font-family:'Instrument Serif',Georgia,serif;font-size:23px;line-height:1.2;color:#17190F;margin-bottom:8px;">Test off-premise separately</span><span style="display:block;font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;">Packaging, hold times, delivery handoff. Off-premise is usually a third of opening volume and is almost never rehearsed.</span></li>
+        <li style="border-top:1px solid #DDD8CB;padding:20px 0;"><span style="display:block;font-family:'Instrument Serif',Georgia,serif;font-size:23px;line-height:1.2;color:#17190F;margin-bottom:8px;">Complete final inspections</span><span style="display:block;font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;">Health, occupancy, fire. Everything signed before friends and family.</span></li>
+        <li style="border-top:1px solid #DDD8CB;padding:20px 0;"><span style="display:block;font-family:'Instrument Serif',Georgia,serif;font-size:23px;line-height:1.2;color:#17190F;margin-bottom:8px;">Stock to par</span><span style="display:block;font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;">First full order placed and received with time to correct what is missing. Do not receive your opening order the night before.</span></li>
+      </ul>
+    </section>
+    <section style="margin-bottom:64px;">
+      <div style="display:grid;grid-template-columns:64px 1fr;gap:24px;border-bottom:1px solid #17190F;padding-bottom:20px;margin-bottom:32px;">
+        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:20px;color:#A33F14;line-height:1.5;">04</div>
+        <h2 style="font-size:40px;line-height:1.08;letter-spacing:-0.015em;margin:0;color:#17190F;">The final week</h2>
+      </div>
+      <p style="font-size:17px;font-weight:300;line-height:1.85;color:#3D4034;margin:0 0 22px;max-width:840px;text-wrap:pretty;">Three rehearsals with real people. Each is a genuine test, not a party, and each should produce a written fix list.</p>
+      <ol style="list-style:none;margin:6px 0 22px;padding:0;display:flex;flex-direction:column;">
+        <li style="border-top:1px solid #17190F;padding:22px 0;display:grid;grid-template-columns:52px 1fr 1.5fr;gap:22px;align-items:start;"><span style="font-size:11px;color:#A33F14;font-weight:600;font-variant-numeric:tabular-nums;padding-top:7px;">01</span><h3 style="font-size:23px;line-height:1.15;margin:0;color:#17190F;">Friends and family, seated slowly</h3><p style="font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;margin:0;">Half capacity, limited menu, staff and family. The purpose is to find the obvious breaks in service flow.</p></li>
+        <li style="border-top:1px solid #DDD8CB;padding:22px 0;display:grid;grid-template-columns:52px 1fr 1.5fr;gap:22px;align-items:start;"><span style="font-size:11px;color:#A33F14;font-weight:600;font-variant-numeric:tabular-nums;padding-top:7px;">02</span><h3 style="font-size:23px;line-height:1.15;margin:0;color:#17190F;">Friends and family at volume</h3><p style="font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;margin:0;">Full capacity, full menu, timed. This is where ticket times, expo and the pass are genuinely tested.</p></li>
+        <li style="border-top:1px solid #DDD8CB;padding:22px 0;display:grid;grid-template-columns:52px 1fr 1.5fr;gap:22px;align-items:start;"><span style="font-size:11px;color:#A33F14;font-weight:600;font-variant-numeric:tabular-nums;padding-top:7px;">03</span><h3 style="font-size:23px;line-height:1.15;margin:0;color:#17190F;">Soft opening to the public</h3><p style="font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;margin:0;">Limited hours, limited covers, no marketing. Real guests with real expectations and a controlled ceiling.</p></li>
+        <li style="border-top:1px solid #DDD8CB;padding:22px 0;display:grid;grid-template-columns:52px 1fr 1.5fr;gap:22px;align-items:start;"><span style="font-size:11px;color:#A33F14;font-weight:600;font-variant-numeric:tabular-nums;padding-top:7px;">04</span><h3 style="font-size:23px;line-height:1.15;margin:0;color:#17190F;">Debrief after each</h3><p style="font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;margin:0;">Thirty minutes, written fix list, owners and deadlines. A rehearsal without a debrief was just a free meal.</p></li>
+        <li style="border-top:1px solid #DDD8CB;padding:22px 0;display:grid;grid-template-columns:52px 1fr 1.5fr;gap:22px;align-items:start;"><span style="font-size:11px;color:#A33F14;font-weight:600;font-variant-numeric:tabular-nums;padding-top:7px;">05</span><h3 style="font-size:23px;line-height:1.15;margin:0;color:#17190F;">Decide honestly on the date</h3><p style="font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;margin:0;">If the third rehearsal goes badly, delay. Opening badly is far more expensive than opening late, and the reviews from week one do not expire.</p></li>
+      </ol>
+      <div style="background:#17190F;padding:34px 38px;margin:8px 0 22px;max-width:900px;"><p style="font-family:'Instrument Serif',Georgia,serif;font-size:25px;line-height:1.4;color:#F2F0E9;margin:0;">The first two hundred reviews are permanent. Everything in the final week exists to protect them.</p></div>
+    </section>
+    <section style="margin-bottom:64px;">
+      <div style="display:grid;grid-template-columns:64px 1fr;gap:24px;border-bottom:1px solid #17190F;padding-bottom:20px;margin-bottom:32px;">
+        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:20px;color:#A33F14;line-height:1.5;">05</div>
+        <h2 style="font-size:40px;line-height:1.08;letter-spacing:-0.015em;margin:0;color:#17190F;">The first two weeks live</h2>
+      </div>
+      <p style="font-size:17px;font-weight:300;line-height:1.85;color:#3D4034;margin:0 0 22px;max-width:840px;text-wrap:pretty;">Opening day is not the finish line. The two weeks after it determine whether the operation stabilises or entrenches bad habits.</p>
+      <ul style="list-style:none;margin:6px 0 22px;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:64px;">
+        <li style="border-top:1px solid #DDD8CB;padding:20px 0;"><span style="display:block;font-family:'Instrument Serif',Georgia,serif;font-size:23px;line-height:1.2;color:#17190F;margin-bottom:8px;">Over-staff deliberately</span><span style="display:block;font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;">Run above model for two weeks. Speed and accuracy matter more than labor percentage while the team is still learning.</span></li>
+        <li style="border-top:1px solid #DDD8CB;padding:20px 0;"><span style="display:block;font-family:'Instrument Serif',Georgia,serif;font-size:23px;line-height:1.2;color:#17190F;margin-bottom:8px;">Leadership on the floor for every shift</span><span style="display:block;font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;">Both openings and closings, every day. Standards set in week one are the standards you keep.</span></li>
+        <li style="border-top:1px solid #DDD8CB;padding:20px 0;"><span style="display:block;font-family:'Instrument Serif',Georgia,serif;font-size:23px;line-height:1.2;color:#17190F;margin-bottom:8px;">Daily debrief</span><span style="display:block;font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;">Fifteen minutes after close. What broke, what to change tomorrow. Daily until the fix list is empty.</span></li>
+        <li style="border-top:1px solid #DDD8CB;padding:20px 0;"><span style="display:block;font-family:'Instrument Serif',Georgia,serif;font-size:23px;line-height:1.2;color:#17190F;margin-bottom:8px;">Read and respond to every review</span><span style="display:block;font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;">All of them, within twenty-four hours. Early reviews carry disproportionate weight and early responses shape the pattern.</span></li>
+        <li style="border-top:1px solid #DDD8CB;padding:20px 0;"><span style="display:block;font-family:'Instrument Serif',Georgia,serif;font-size:23px;line-height:1.2;color:#17190F;margin-bottom:8px;">Watch food variance from week one</span><span style="display:block;font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;">New teams over-portion. Catching it in week two is a conversation; catching it in month three is a habit.</span></li>
+        <li style="border-top:1px solid #DDD8CB;padding:20px 0;"><span style="display:block;font-family:'Instrument Serif',Georgia,serif;font-size:23px;line-height:1.2;color:#17190F;margin-bottom:8px;">Do not extend the menu yet</span><span style="display:block;font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;">The pressure to add items starts immediately. Wait until the current menu is executed consistently for a month.</span></li>
+      </ul>
+    </section>
+    <section style="margin-bottom:64px;">
+      <div style="display:grid;grid-template-columns:64px 1fr;gap:24px;border-bottom:1px solid #17190F;padding-bottom:20px;margin-bottom:32px;">
+        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:20px;color:#A33F14;line-height:1.5;">FAQ</div>
+        <h2 style="font-size:40px;line-height:1.08;letter-spacing:-0.015em;margin:0;color:#17190F;">Common questions</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:72px;">
+        <article style="border-top:1px solid #DDD8CB;padding:26px 0;">
+          <h3 style="font-size:24px;line-height:1.18;margin:0 0 11px;color:#17190F;">How long before opening should we start hiring?</h3>
+          <p style="font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;margin:0;">Management at sixty days, hourly staff at forty-five to thirty. Over-hire by fifteen to twenty percent because attrition between offer and opening is normal.</p>
+        </article>
+        <article style="border-top:1px solid #DDD8CB;padding:26px 0;">
+          <h3 style="font-size:24px;line-height:1.18;margin:0 0 11px;color:#17190F;">How many training days does a new restaurant need?</h3>
+          <p style="font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;margin:0;">Two to three weeks for a full-service concept, less for limited service. The compressed four-day version is the single most common opening mistake and shows up immediately in ticket times and early reviews.</p>
+        </article>
+        <article style="border-top:1px solid #DDD8CB;padding:26px 0;">
+          <h3 style="font-size:24px;line-height:1.18;margin:0 0 11px;color:#17190F;">Should we do a soft opening?</h3>
+          <p style="font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;margin:0;">Yes, and treat it as a test rather than an event. Limited hours, limited covers, no marketing spend, and a written fix list afterwards. Three graduated rehearsals is better than one large party.</p>
+        </article>
+        <article style="border-top:1px solid #DDD8CB;padding:26px 0;">
+          <h3 style="font-size:24px;line-height:1.18;margin:0 0 11px;color:#17190F;">What if we are not ready on the planned opening date?</h3>
+          <p style="font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;margin:0;">Delay. The cost of two more weeks of rent is almost always lower than the cost of two hundred early reviews describing a restaurant that was not ready, because those reviews do not expire.</p>
+        </article>
+      </div>
+    </section>
+
+    <section style="margin-bottom:0;">
+      <div style="display:grid;grid-template-columns:64px 1fr;gap:24px;border-bottom:1px solid #17190F;padding-bottom:20px;margin-bottom:32px;">
+        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:20px;color:#A33F14;line-height:1.5;">&rarr;</div>
+        <h2 style="font-size:40px;line-height:1.08;letter-spacing:-0.015em;margin:0;color:#17190F;">Read next</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:#DDD8CB;border:1px solid #DDD8CB;">
+        <a href="Restaurant SOP Guide.dc.html" style="background:#F2F0E9;padding:32px 28px;display:block;text-decoration:none;transition:background 160ms;" style-hover="background:#EAE7DC;"><span style="display:block;font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#A33F14;font-weight:600;margin-bottom:13px;">Guide</span><span style="display:block;font-family:'Instrument Serif',Georgia,serif;font-size:24px;line-height:1.14;color:#17190F;margin-bottom:9px;">Restaurant SOP Guide</span><span style="display:block;font-size:13.5px;font-weight:300;line-height:1.7;color:#3D4034;">The documentation that has to exist before training starts.</span></a>
+        <a href="Local Store Marketing.dc.html" style="background:#F2F0E9;padding:32px 28px;display:block;text-decoration:none;transition:background 160ms;" style-hover="background:#EAE7DC;"><span style="display:block;font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#A33F14;font-weight:600;margin-bottom:13px;">Service</span><span style="display:block;font-family:'Instrument Serif',Georgia,serif;font-size:24px;line-height:1.14;color:#17190F;margin-bottom:9px;">Local Store Marketing</span><span style="display:block;font-size:13.5px;font-weight:300;line-height:1.7;color:#3D4034;">The 90/60/30 grand opening timeline and trade-area program.</span></a>
+        <a href="Restaurant KPI Dashboard Guide.dc.html" style="background:#F2F0E9;padding:32px 28px;display:block;text-decoration:none;transition:background 160ms;" style-hover="background:#EAE7DC;"><span style="display:block;font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#A33F14;font-weight:600;margin-bottom:13px;">Guide</span><span style="display:block;font-family:'Instrument Serif',Georgia,serif;font-size:24px;line-height:1.14;color:#17190F;margin-bottom:9px;">Restaurant KPI Dashboard Guide</span><span style="display:block;font-size:13.5px;font-weight:300;line-height:1.7;color:#3D4034;">What to measure from week one so problems surface early.</span></a>
+      </div>
+    </section>
+  </div>
+  </article>
+
+  <section style="max-width:1320px;margin:80px auto 0;padding:0 40px;">
+    <div style="background:#38452C;padding:60px 52px;display:grid;grid-template-columns:1.15fr 0.85fr;gap:52px;align-items:center;">
+      <div>
+        <h2 style="font-size:40px;line-height:1.06;letter-spacing:-0.015em;margin:0 0 16px;color:#F2F0E9;text-wrap:pretty;">Opening something new this <span style="font-style:italic;color:#E0A87C;">year</span>?</h2>
+        <p style="font-size:16px;font-weight:300;line-height:1.8;color:rgba(242,240,233,0.88);margin:0;max-width:520px;">Tell us what you have built. We will tell you honestly where it stands. No pitch, no fee.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start;">
+        <a href="Contact.dc.html" style="font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#17190F;background:#E0A87C;padding:18px 34px;font-weight:600;" style-hover="background:#F2F0E9;">Talk to us</a>
+        <a href="mailto:info@eustressanddemeter.com" style="font-family:'Instrument Serif',Georgia,serif;font-size:22px;color:#F2F0E9;" style-hover="color:#E0A87C;">info@eustressanddemeter.com</a>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <footer style="max-width:1320px;margin:0 auto;padding:64px 40px 56px;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:56px;">
+    <div>
+      <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;">
+        <img src="assets/logo-seal.png" alt="Eustress and Demeter seal" style="width:44px;height:44px;display:block;">
+        <span style="font-family:'Instrument Serif',Georgia,serif;font-size:21px;color:#17190F;">Eustress &amp; Demeter</span>
+      </div>
+      <p style="font-size:14px;font-weight:300;line-height:1.75;color:#3D4034;margin:0;max-width:400px;">Brand expansion and franchise growth for restaurant and hospitality brands. One team, from the first P&amp;L review to the fortieth opening.</p>
+    </div>
+    <div>
+      <h2 style="font-size:10px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:#5B5F4E;margin:0 0 18px;">Services</h2>
+      <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:11px;">
+        <li><a href="Restaurant Consulting.dc.html" style="font-size:14px;font-weight:300;color:#17190F;">Restaurant Consulting</a></li>
+        <li><a href="Restaurant Catering Consulting.dc.html" style="font-size:14px;font-weight:300;color:#17190F;">Catering &amp; Off-Premise</a></li>
+        <li><a href="Local Store Marketing.dc.html" style="font-size:14px;font-weight:300;color:#17190F;">Local Store Marketing</a></li>
+        <li><a href="Franchise Consulting.dc.html" style="font-size:14px;font-weight:300;color:#17190F;">Franchise Consulting</a></li>
+        <li><a href="Franchise Readiness Assessment.dc.html" style="font-size:14px;font-weight:300;color:#17190F;">Franchise Readiness</a></li>
+        <li><a href="Franchise Sales Support.dc.html" style="font-size:14px;font-weight:300;color:#17190F;">Franchise Sales Support</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2 style="font-size:10px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:#5B5F4E;margin:0 0 18px;">Company</h2>
+      <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:11px;">
+        <li><a href="Methodology.dc.html" style="font-size:14px;font-weight:300;color:#17190F;">Methodology</a></li>
+        <li><a href="The E&D Playbook.dc.html" style="font-size:14px;font-weight:300;color:#17190F;">The E&amp;D Playbook</a></li>
+        <li><a href="E&D Clients.dc.html" style="font-size:14px;font-weight:300;color:#17190F;">Clients</a></li>
+        <li><a href="Contact.dc.html" style="font-size:14px;font-weight:300;color:#17190F;">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <div style="border-top:1px solid #CFCBBC;">
+    <div style="max-width:1320px;margin:0 auto;padding:24px 40px;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;">
+      <span style="font-size:11px;font-weight:300;color:#5B5F4E;">&copy; 2026 Eustress &amp; Demeter LLC</span>
+      <span style="font-size:11px;font-weight:300;color:#5B5F4E;">Growth is not about how fast a brand expands, but how long it succeeds.</span>
+    </div>
+  </div>
+
+</div>
+
+</x-dc>
+</body>
+</html>

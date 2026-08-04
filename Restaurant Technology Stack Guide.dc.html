@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Restaurant Technology Stack Guide: What to Run and What to Skip | Eustress &amp; Demeter</title>
+<meta name="description" content="How to choose a restaurant technology stack: POS, back office, scheduling, inventory, online ordering and reporting. What integration actually requires and where operators overspend.">
+<meta name="robots" content="index, follow">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    { "@type": "BreadcrumbList", "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.eustressanddemeter.com/" },
+      { "@type": "ListItem", "position": 2, "name": "The E&D Playbook", "item": "https://www.eustressanddemeter.com/playbook" },
+      { "@type": "ListItem", "position": 3, "name": "Restaurant Technology Stack Guide", "item": "https://www.eustressanddemeter.com/playbook/restaurant-technology-stack" }
+    ] },
+    { "@type": "Article", "headline": "Restaurant Technology Stack Guide", "description": "How to choose a restaurant technology stack: POS, back office, scheduling, inventory, online ordering and reporting. What integration actually requires and where operators overspend.", "articleSection": "Restaurant Operations", "publisher": { "@id": "https://www.eustressanddemeter.com/#org" } },
+    { "@type": "FAQPage", "mainEntity": [
+        { "@type": "Question", "name": "Which restaurant POS is best?", "acceptedAnswer": { "@type": "Answer", "text": "There is no universal answer; it depends on service model, off-premise volume, number of locations and what you need to integrate. What matters more than brand is that it is configured properly, that reporting is trustworthy, and that your other systems connect to it without manual export." } },
+        { "@type": "Question", "name": "When should a restaurant add inventory software?", "acceptedAnswer": { "@type": "Answer", "text": "Once recipes are documented, receiving is consistent and counts happen on a schedule. Software will report variance accurately only if those three disciplines already exist; installing it first produces numbers nobody believes." } },
+        { "@type": "Question", "name": "How much should a restaurant spend on technology?", "acceptedAnswer": { "@type": "Answer", "text": "Less than most vendors propose, and more than most operators allocate to configuration and training. Judge each system by the manual hours it removes and the margin it protects, not by its feature list." } },
+        { "@type": "Question", "name": "Should we use third-party delivery tablets or POS integration?", "acceptedAnswer": { "@type": "Answer", "text": "Integration, wherever available. Tablet farms require manual re-entry, which produces missed and incorrect orders, and they make it far harder to see true off-premise contribution." } }
+    ] },
+    { "@type": "Organization", "@id": "https://www.eustressanddemeter.com/#org", "name": "Eustress & Demeter", "url": "https://www.eustressanddemeter.com/", "email": "info@eustressanddemeter.com", "telephone": "+1-213-222-3849" }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Archivo:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *{ box-sizing: border-box; }
+  body { margin: 0; background: #F2F0E9; color: #17190F; font-family: 'Archivo', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: #38452C; text-decoration: none; }
+  a:hover { color: #A33F14; }
+  h1, h2, h3 { font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; }
+  html { scroll-behavior: smooth; }
+  .ed-menu-panel { display: none; }
+  .ed-menu:hover .ed-menu-panel, .ed-menu:focus-within .ed-menu-panel { display: block; }
+  a:focus-visible, button:focus-visible, [tabindex]:focus-visible { outline: 3px solid #C4501E; outline-offset: 3px; }
+  .ed-skip { position: absolute; left: -9999px; top: 0; z-index: 200; background: #F2F0E9; color: #17190F; padding: 14px 22px; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; border: 2px solid #17190F; }
+  .ed-skip:focus { left: 12px; top: 12px; }
+  /* mobile */
+  table { display: block; overflow-x: auto; max-width: 100%; }
+  img, video { max-width: 100%; }
+  @media (max-width: 900px) {
+    header { position: static !important; }
+    header > div { height: auto !important; flex-wrap: wrap !important; padding: 12px 20px !important; gap: 10px !important; }
+    nav[aria-label="Primary"] { margin-left: 0 !important; width: 100%; overflow-x: auto; gap: 18px !important; padding-bottom: 2px; -webkit-overflow-scrolling: touch; }
+    nav[aria-label="Primary"] a { padding: 8px 0 !important; }
+    .ed-menu-panel { display: none !important; }
+    [style*="grid-template-columns"] { grid-template-columns: minmax(0,1fr) !important; }
+    [style*="max-width:1320px"] { padding-left: 20px !important; padding-right: 20px !important; }
+    h1 { font-size: clamp(32px, 8.6vw, 70px) !important; }
+    h2 { font-size: clamp(27px, 7vw, 52px) !important; }
+    h3 { font-size: clamp(20px, 5vw, 36px) !important; }
+    [style*="font-size:19px"], [style*="font-size:18px"], [style*="font-size:17px"] { font-size: 16.5px !important; }
+    [style*="padding:104px 40px"], [style*="padding:100px 40px"], [style*="padding:96px 40px"], [style*="padding:88px 40px"], [style*="padding:80px 40px"] { padding: 56px 20px !important; }
+    [style*="padding:64px 56px"], [style*="padding:64px 48px"] { padding: 40px 24px !important; }
+    [style*="padding:72px 40px"], [style*="padding:76px 40px"] { padding: 48px 20px !important; }
+    [style*="padding:38px 34px"], [style*="padding:34px 32px"], [style*="padding:34px 30px"] { padding: 26px 22px !important; }
+    [style*="gap:72px"], [style*="gap:80px"], [style*="gap:56px"] { gap: 32px !important; }
+    [style*="column-gap:80px"], [style*="column-gap:56px"], [style*="column-gap:44px"] { column-gap: 0 !important; }
+    [style*="min-height:460px"] { min-height: 260px !important; }
+    [style*="height:620px"], [style*="height:560px"], [style*="height:440px"] { height: 260px !important; }
+    figure img { height: 260px !important; }
+  }
+  @media (max-width: 560px) {
+    [style*="max-width:1320px"] { padding-left: 16px !important; padding-right: 16px !important; }
+    [style*="padding:104px 40px"], [style*="padding:100px 40px"], [style*="padding:96px 40px"], [style*="padding:88px 40px"], [style*="padding:80px 40px"] { padding: 44px 16px !important; }
+    input, select, textarea { font-size: 16px !important; }
+  }
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; } }
+</style>
+</helmet>
+
+<div id="top" style="background:#F2F0E9;">
+  <a href="#main" class="ed-skip">Skip to main content</a>
+
+<header style="position:sticky;top:0;z-index:60;background:#17190F;">
+    <div style="max-width:1320px;margin:0 auto;padding:0 40px;height:74px;display:flex;align-items:center;gap:32px;">
+      <a href="E&D Website v2.dc.html" aria-label="Eustress and Demeter, home" style="display:flex;align-items:center;gap:14px;">
+        <img src="assets/logo-seal.png" alt="Eustress and Demeter seal" style="width:38px;height:38px;display:block;filter:brightness(1.7);">
+        <span style="font-family:'Instrument Serif',Georgia,serif;font-size:19px;letter-spacing:0.01em;color:#F2F0E9;white-space:nowrap;">Eustress &amp; Demeter</span>
+      </a>
+      <nav aria-label="Primary" style="margin-left:auto;display:flex;align-items:center;gap:26px;">
+        <div class="ed-menu" style="position:relative;display:flex;align-items:center;">
+          <a href="Restaurant Consulting.dc.html" style="display:flex;align-items:center;gap:7px;font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(242,240,233,0.78);font-weight:500;white-space:nowrap;padding:26px 0;" style-hover="color:#F2F0E9;">Services<span aria-hidden="true" style="font-size:8px;line-height:1;">&#9660;</span></a>
+          <div class="ed-menu-panel" style="position:absolute;top:100%;right:0;width:340px;background:#17190F;border:1px solid rgba(242,240,233,0.22);padding:10px;z-index:80;">
+            <a href="Restaurant Consulting.dc.html" style="display:block;padding:13px 16px;text-decoration:none;transition:background 160ms;" style-hover="background:#38452C;"><span style="display:block;font-size:14px;font-weight:500;letter-spacing:0.01em;color:#F2F0E9;margin-bottom:3px;">Restaurant Consulting</span><span style="display:block;font-size:11.5px;font-weight:300;line-height:1.5;color:rgba(242,240,233,0.72);">Unit economics, operations, menu, training</span></a>
+            <a href="Restaurant Catering Consulting.dc.html" style="display:block;padding:13px 16px;text-decoration:none;transition:background 160ms;" style-hover="background:#38452C;"><span style="display:block;font-size:14px;font-weight:500;letter-spacing:0.01em;color:#F2F0E9;margin-bottom:3px;">Catering &amp; Off-Premise</span><span style="display:block;font-size:11.5px;font-weight:300;line-height:1.5;color:rgba(242,240,233,0.72);">The fastest revenue in most restaurants</span></a>
+            <a href="Local Store Marketing.dc.html" style="display:block;padding:13px 16px;text-decoration:none;transition:background 160ms;" style-hover="background:#38452C;"><span style="display:block;font-size:14px;font-weight:500;letter-spacing:0.01em;color:#F2F0E9;margin-bottom:3px;">Local Store Marketing</span><span style="display:block;font-size:11.5px;font-weight:300;line-height:1.5;color:rgba(242,240,233,0.72);">Trade-area programs and grand openings</span></a>
+            <a href="Franchise Consulting.dc.html" style="display:block;padding:13px 16px;text-decoration:none;transition:background 160ms;" style-hover="background:#38452C;"><span style="display:block;font-size:14px;font-weight:500;letter-spacing:0.01em;color:#F2F0E9;margin-bottom:3px;">Franchise Consulting</span><span style="display:block;font-size:11.5px;font-weight:300;line-height:1.5;color:rgba(242,240,233,0.72);">Build the system, then sell the territories</span></a>
+            <a href="Franchise Readiness Assessment.dc.html" style="display:block;padding:13px 16px;text-decoration:none;transition:background 160ms;" style-hover="background:#38452C;"><span style="display:block;font-size:14px;font-weight:500;letter-spacing:0.01em;color:#F2F0E9;margin-bottom:3px;">Franchise Readiness</span><span style="display:block;font-size:11.5px;font-weight:300;line-height:1.5;color:rgba(242,240,233,0.72);">The twelve-point diagnostic</span></a>
+            <a href="Franchise Sales Support.dc.html" style="display:block;padding:13px 16px;text-decoration:none;transition:background 160ms;" style-hover="background:#38452C;"><span style="display:block;font-size:14px;font-weight:500;letter-spacing:0.01em;color:#F2F0E9;margin-bottom:3px;">Franchise Sales Support</span><span style="display:block;font-size:11.5px;font-weight:300;line-height:1.5;color:rgba(242,240,233,0.72);">Qualified candidates, disciplined pacing</span></a>
+          </div>
+        </div>
+        <a href="Methodology.dc.html" style="font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(242,240,233,0.78);font-weight:500;white-space:nowrap;" style-hover="color:#F2F0E9;">Methodology</a>
+        <a href="The E&D Playbook.dc.html" style="font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(242,240,233,0.78);font-weight:500;white-space:nowrap;" style-hover="color:#F2F0E9;">Playbook</a>
+        <a href="E&D Clients.dc.html" style="font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(242,240,233,0.78);font-weight:500;white-space:nowrap;" style-hover="color:#F2F0E9;">Clients</a>
+        <a href="Contact.dc.html" style="font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:#F2F0E9;background:#A33F14;padding:14px 24px;font-weight:600;white-space:nowrap;" style-hover="background:#F2F0E9;color:#17190F;">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+
+  <article>
+  <section style="border-bottom:1px solid #17190F;">
+    <div style="max-width:1320px;margin:0 auto;padding:88px 40px 68px;">
+      <div style="display:flex;align-items:center;gap:14px;margin-bottom:34px;">
+        <span style="width:34px;height:1px;background:#C4501E;"></span>
+        <a href="The E&D Playbook.dc.html" style="font-size:10px;letter-spacing:0.24em;text-transform:uppercase;color:#38452C;font-weight:600;">The E&amp;D Playbook</a>
+        <span aria-hidden="true" style="font-size:10px;color:#8A8574;">/</span>
+        <span style="font-size:10px;letter-spacing:0.24em;text-transform:uppercase;color:#5B5F4E;font-weight:600;">Restaurant Operations</span>
+      </div>
+      <h1 style="font-size:64px;line-height:1.03;letter-spacing:-0.02em;margin:0 0 30px;color:#17190F;max-width:1000px;text-wrap:pretty;">What to run, and what to <span style="font-style:italic;color:#38452C;">skip</span></h1>
+      <p style="font-size:19px;font-weight:300;line-height:1.8;color:#3D4034;margin:0;max-width:820px;text-wrap:pretty;">Restaurant technology is sold as transformation and usually delivers a subscription. The operators who get value from it buy in a specific order, insist on integration before features, and accept that any system nobody is trained on is worse than no system.</p>
+    </div>
+  </section>
+
+  <section style="background:#EAE7DC;border-bottom:1px solid #17190F;">
+    <div style="max-width:1320px;margin:0 auto;padding:44px 40px;display:grid;grid-template-columns:200px 1fr;gap:40px;align-items:start;">
+      <div style="font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#A33F14;font-weight:600;padding-top:6px;">The short answer</div>
+      <p style="font-size:20px;font-weight:300;line-height:1.7;color:#17190F;margin:0;max-width:900px;text-wrap:pretty;">A restaurant technology stack has six layers: point of sale, back office and accounting, scheduling and labor, inventory and purchasing, online ordering, and reporting. Choose the POS first because everything integrates to it, insist that each addition writes to a single source of truth, and add layers only when the manual version has become the constraint. Most operators overspend on features and underspend on training and configuration.</p>
+    </div>
+  </section>
+
+  <div style="max-width:1320px;margin:0 auto;padding:72px 40px 0;">
+    <section style="margin-bottom:64px;">
+      <div style="display:grid;grid-template-columns:64px 1fr;gap:24px;border-bottom:1px solid #17190F;padding-bottom:20px;margin-bottom:32px;">
+        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:20px;color:#A33F14;line-height:1.5;">01</div>
+        <h2 style="font-size:40px;line-height:1.08;letter-spacing:-0.015em;margin:0;color:#17190F;">The six layers</h2>
+      </div>
+      <p style="font-size:17px;font-weight:300;line-height:1.85;color:#3D4034;margin:0 0 22px;max-width:840px;text-wrap:pretty;">Every restaurant runs these functions whether or not software is involved. The question is only which are worth systemizing at your size.</p>
+      <ul style="list-style:none;margin:6px 0 22px;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:64px;">
+        <li style="border-top:1px solid #DDD8CB;padding:20px 0;"><span style="display:block;font-family:'Instrument Serif',Georgia,serif;font-size:23px;line-height:1.2;color:#17190F;margin-bottom:8px;">Point of sale</span><span style="display:block;font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;">The center of the stack. Every other system integrates to it, so it is the one decision that constrains all the others. Change it last and choose it first.</span></li>
+        <li style="border-top:1px solid #DDD8CB;padding:20px 0;"><span style="display:block;font-family:'Instrument Serif',Georgia,serif;font-size:23px;line-height:1.2;color:#17190F;margin-bottom:8px;">Back office and accounting</span><span style="display:block;font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;">Invoices, payables, payroll interface, financial close. Where the P&amp;L actually comes from, and where most manual effort hides.</span></li>
+        <li style="border-top:1px solid #DDD8CB;padding:20px 0;"><span style="display:block;font-family:'Instrument Serif',Georgia,serif;font-size:23px;line-height:1.2;color:#17190F;margin-bottom:8px;">Scheduling and labor</span><span style="display:block;font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;">Forecast-based scheduling, time and attendance, overtime alerts. Pays for itself quickly once you are past a handful of locations.</span></li>
+        <li style="border-top:1px solid #DDD8CB;padding:20px 0;"><span style="display:block;font-family:'Instrument Serif',Georgia,serif;font-size:23px;line-height:1.2;color:#17190F;margin-bottom:8px;">Inventory and purchasing</span><span style="display:block;font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;">Order guides, receiving, counts, theoretical versus actual food cost. The layer that produces your variance number.</span></li>
+        <li style="border-top:1px solid #DDD8CB;padding:20px 0;"><span style="display:block;font-family:'Instrument Serif',Georgia,serif;font-size:23px;line-height:1.2;color:#17190F;margin-bottom:8px;">Online ordering</span><span style="display:block;font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;">First-party ordering, third-party integration, order routing to the kitchen. Directly affects margin because commission and manual re-entry both cost money.</span></li>
+        <li style="border-top:1px solid #DDD8CB;padding:20px 0;"><span style="display:block;font-family:'Instrument Serif',Georgia,serif;font-size:23px;line-height:1.2;color:#17190F;margin-bottom:8px;">Reporting</span><span style="display:block;font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;">Consolidation across locations and systems into the weekly numbers you actually manage from. See the <a href="Restaurant KPI Dashboard Guide.dc.html" style="color:#38452C;border-bottom:1px solid #C4B79A;">KPI dashboard guide</a>.</span></li>
+      </ul>
+    </section>
+    <section style="margin-bottom:64px;">
+      <div style="display:grid;grid-template-columns:64px 1fr;gap:24px;border-bottom:1px solid #17190F;padding-bottom:20px;margin-bottom:32px;">
+        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:20px;color:#A33F14;line-height:1.5;">02</div>
+        <h2 style="font-size:40px;line-height:1.08;letter-spacing:-0.015em;margin:0;color:#17190F;">The order to buy in</h2>
+      </div>
+      <p style="font-size:17px;font-weight:300;line-height:1.85;color:#3D4034;margin:0 0 22px;max-width:840px;text-wrap:pretty;">Sequence matters more than selection. Buying a sophisticated inventory system before the POS reports reliably produces expensive nonsense.</p>
+      <ol style="list-style:none;margin:6px 0 22px;padding:0;display:flex;flex-direction:column;">
+        <li style="border-top:1px solid #17190F;padding:22px 0;display:grid;grid-template-columns:52px 1fr 1.5fr;gap:22px;align-items:start;"><span style="font-size:11px;color:#A33F14;font-weight:600;font-variant-numeric:tabular-nums;padding-top:7px;">01</span><h3 style="font-size:23px;line-height:1.15;margin:0;color:#17190F;">Get the POS right</h3><p style="font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;margin:0;">Reliable, well configured, with clean menu and modifier structure. A badly configured good POS produces worse data than a well configured simple one.</p></li>
+        <li style="border-top:1px solid #DDD8CB;padding:22px 0;display:grid;grid-template-columns:52px 1fr 1.5fr;gap:22px;align-items:start;"><span style="font-size:11px;color:#A33F14;font-weight:600;font-variant-numeric:tabular-nums;padding-top:7px;">02</span><h3 style="font-size:23px;line-height:1.15;margin:0;color:#17190F;">Fix reporting from the POS</h3><p style="font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;margin:0;">Before adding anything, make sure you can trust sales, mix and labor data. Everything downstream inherits these numbers.</p></li>
+        <li style="border-top:1px solid #DDD8CB;padding:22px 0;display:grid;grid-template-columns:52px 1fr 1.5fr;gap:22px;align-items:start;"><span style="font-size:11px;color:#A33F14;font-weight:600;font-variant-numeric:tabular-nums;padding-top:7px;">03</span><h3 style="font-size:23px;line-height:1.15;margin:0;color:#17190F;">Add back office and accounting</h3><p style="font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;margin:0;">Automate invoice capture and the payables workflow. This is usually the largest recovery of administrative time available.</p></li>
+        <li style="border-top:1px solid #DDD8CB;padding:22px 0;display:grid;grid-template-columns:52px 1fr 1.5fr;gap:22px;align-items:start;"><span style="font-size:11px;color:#A33F14;font-weight:600;font-variant-numeric:tabular-nums;padding-top:7px;">04</span><h3 style="font-size:23px;line-height:1.15;margin:0;color:#17190F;">Add scheduling</h3><p style="font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;margin:0;">Once you have several locations, forecast-based scheduling recovers labor points quickly and reduces overtime leakage.</p></li>
+        <li style="border-top:1px solid #DDD8CB;padding:22px 0;display:grid;grid-template-columns:52px 1fr 1.5fr;gap:22px;align-items:start;"><span style="font-size:11px;color:#A33F14;font-weight:600;font-variant-numeric:tabular-nums;padding-top:7px;">05</span><h3 style="font-size:23px;line-height:1.15;margin:0;color:#17190F;">Add inventory</h3><p style="font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;margin:0;">Last of the core layers, because it depends on accurate recipes, consistent receiving and disciplined counts. Software does not create those.</p></li>
+        <li style="border-top:1px solid #DDD8CB;padding:22px 0;display:grid;grid-template-columns:52px 1fr 1.5fr;gap:22px;align-items:start;"><span style="font-size:11px;color:#A33F14;font-weight:600;font-variant-numeric:tabular-nums;padding-top:7px;">06</span><h3 style="font-size:23px;line-height:1.15;margin:0;color:#17190F;">Consolidate reporting</h3><p style="font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;margin:0;">Only once the underlying systems are trustworthy. A dashboard built on unreliable inputs is worse than a spreadsheet.</p></li>
+      </ol>
+    </section>
+    <section style="margin-bottom:64px;">
+      <div style="display:grid;grid-template-columns:64px 1fr;gap:24px;border-bottom:1px solid #17190F;padding-bottom:20px;margin-bottom:32px;">
+        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:20px;color:#A33F14;line-height:1.5;">03</div>
+        <h2 style="font-size:40px;line-height:1.08;letter-spacing:-0.015em;margin:0;color:#17190F;">Integration is the whole question</h2>
+      </div>
+      <p style="font-size:17px;font-weight:300;line-height:1.85;color:#3D4034;margin:0 0 22px;max-width:840px;text-wrap:pretty;">Every vendor claims integration. What that word covers ranges from genuine two-way synchronization to a nightly file you download and import by hand.</p>
+      <p style="font-size:17px;font-weight:300;line-height:1.85;color:#3D4034;margin:0 0 22px;max-width:840px;text-wrap:pretty;">Ask three specific questions before signing anything. Does data move automatically or does someone export it? Does it move both directions or only one? What happens when a menu item changes, does it update everywhere or in each system separately?</p>
+      <p style="font-size:17px;font-weight:300;line-height:1.85;color:#3D4034;margin:0 0 22px;max-width:840px;text-wrap:pretty;">The cost of poor integration is not the subscription. It is the person spending six hours a week re-keying data between systems, and the errors that person inevitably introduces. That cost is invisible on the invoice and substantial on the payroll.</p>
+      <div style="background:#17190F;padding:34px 38px;margin:8px 0 22px;max-width:900px;"><p style="font-family:'Instrument Serif',Georgia,serif;font-size:25px;line-height:1.4;color:#F2F0E9;margin:0;">Any system nobody has been trained on is worse than no system, because it creates the impression the work is being done.</p></div>
+    </section>
+    <section style="margin-bottom:64px;">
+      <div style="display:grid;grid-template-columns:64px 1fr;gap:24px;border-bottom:1px solid #17190F;padding-bottom:20px;margin-bottom:32px;">
+        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:20px;color:#A33F14;line-height:1.5;">04</div>
+        <h2 style="font-size:40px;line-height:1.08;letter-spacing:-0.015em;margin:0;color:#17190F;">Where operators overspend</h2>
+      </div>
+      <p style="font-size:17px;font-weight:300;line-height:1.85;color:#3D4034;margin:0 0 22px;max-width:840px;text-wrap:pretty;"><strong style="font-weight:500;">Features nobody uses.</strong> Buying the enterprise tier for two features that never get configured. Buy what you will implement in ninety days.</p>
+      <p style="font-size:17px;font-weight:300;line-height:1.85;color:#3D4034;margin:0 0 22px;max-width:840px;text-wrap:pretty;"><strong style="font-weight:500;">Software instead of process.</strong> Inventory software will not fix inventory if nobody counts consistently. Systems amplify discipline; they do not supply it.</p>
+      <p style="font-size:17px;font-weight:300;line-height:1.85;color:#3D4034;margin:0 0 22px;max-width:840px;text-wrap:pretty;"><strong style="font-weight:500;">Too many vendors.</strong> Six systems from six suppliers means six integrations, six support relationships and six renewal negotiations. Fewer, better connected is nearly always cheaper in total.</p>
+      <p style="font-size:17px;font-weight:300;line-height:1.85;color:#3D4034;margin:0 0 22px;max-width:840px;text-wrap:pretty;"><strong style="font-weight:500;">Underspending on configuration.</strong> The implementation is where value is created or lost. Paying for proper configuration and training is the highest-return line in the budget and the first one cut.</p>
+      <p style="font-size:17px;font-weight:300;line-height:1.85;color:#3D4034;margin:0 0 22px;max-width:840px;text-wrap:pretty;"><strong style="font-weight:500;">Changing POS too readily.</strong> A POS migration is disruptive, expensive and consumes months of management attention. Exhaust configuration and training before concluding the platform is the problem.</p>
+    </section>
+    <section style="margin-bottom:64px;">
+      <div style="display:grid;grid-template-columns:64px 1fr;gap:24px;border-bottom:1px solid #17190F;padding-bottom:20px;margin-bottom:32px;">
+        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:20px;color:#A33F14;line-height:1.5;">05</div>
+        <h2 style="font-size:40px;line-height:1.08;letter-spacing:-0.015em;margin:0;color:#17190F;">What to skip</h2>
+      </div>
+      <p style="font-size:17px;font-weight:300;line-height:1.85;color:#3D4034;margin:0 0 22px;max-width:840px;text-wrap:pretty;">Not every available tool earns its place, particularly below ten locations.</p>
+      <ul style="list-style:none;margin:6px 0 22px;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:64px;">
+        <li style="border-top:1px solid #DDD8CB;padding:20px 0;"><span style="display:block;font-family:'Instrument Serif',Georgia,serif;font-size:23px;line-height:1.2;color:#17190F;margin-bottom:8px;">Standalone loyalty at small scale</span><span style="display:block;font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;">Unless it is native to your POS, the integration burden usually exceeds the incremental visits it produces.</span></li>
+        <li style="border-top:1px solid #DDD8CB;padding:20px 0;"><span style="display:block;font-family:'Instrument Serif',Georgia,serif;font-size:23px;line-height:1.2;color:#17190F;margin-bottom:8px;">Separate business intelligence platforms</span><span style="display:block;font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;">Below fifteen locations, a well-built weekly spreadsheet fed by clean POS data does the job at no cost.</span></li>
+        <li style="border-top:1px solid #DDD8CB;padding:20px 0;"><span style="display:block;font-family:'Instrument Serif',Georgia,serif;font-size:23px;line-height:1.2;color:#17190F;margin-bottom:8px;">Kitchen automation ahead of process</span><span style="display:block;font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;">A kitchen display system will not fix ticket times if the station layout and prep discipline are the constraint.</span></li>
+        <li style="border-top:1px solid #DDD8CB;padding:20px 0;"><span style="display:block;font-family:'Instrument Serif',Georgia,serif;font-size:23px;line-height:1.2;color:#17190F;margin-bottom:8px;">Multiple third-party tablets</span><span style="display:block;font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;">Consolidate delivery platforms into the POS. Tablet farms cause missed orders and are a known source of guest complaints.</span></li>
+        <li style="border-top:1px solid #DDD8CB;padding:20px 0;"><span style="display:block;font-family:'Instrument Serif',Georgia,serif;font-size:23px;line-height:1.2;color:#17190F;margin-bottom:8px;">Anything with a long contract at small scale</span><span style="display:block;font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;">Your requirements will change substantially between five and fifteen locations. Preserve the ability to move.</span></li>
+      </ul>
+    </section>
+    <section style="margin-bottom:64px;">
+      <div style="display:grid;grid-template-columns:64px 1fr;gap:24px;border-bottom:1px solid #17190F;padding-bottom:20px;margin-bottom:32px;">
+        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:20px;color:#A33F14;line-height:1.5;">06</div>
+        <h2 style="font-size:40px;line-height:1.08;letter-spacing:-0.015em;margin:0;color:#17190F;">Before you buy anything</h2>
+      </div>
+      <p style="font-size:17px;font-weight:300;line-height:1.85;color:#3D4034;margin:0 0 22px;max-width:840px;text-wrap:pretty;">Three questions, answered honestly, prevent most bad technology decisions.</p>
+      <p style="font-size:17px;font-weight:300;line-height:1.85;color:#3D4034;margin:0 0 22px;max-width:840px;text-wrap:pretty;"><strong style="font-weight:500;">What manual process is this replacing, and how many hours does it take today?</strong> If you cannot answer, you do not yet know whether the purchase is justified.</p>
+      <p style="font-size:17px;font-weight:300;line-height:1.85;color:#3D4034;margin:0 0 22px;max-width:840px;text-wrap:pretty;"><strong style="font-weight:500;">Who owns implementation, and what else are they doing?</strong> Software rollouts fail on ownership far more often than on capability.</p>
+      <p style="font-size:17px;font-weight:300;line-height:1.85;color:#3D4034;margin:0 0 22px;max-width:840px;text-wrap:pretty;"><strong style="font-weight:500;">How will we know in ninety days whether it worked?</strong> Define the measure before purchase, not after. Systems without a success measure are simply renewed indefinitely.</p>
+    </section>
+    <section style="margin-bottom:64px;">
+      <div style="display:grid;grid-template-columns:64px 1fr;gap:24px;border-bottom:1px solid #17190F;padding-bottom:20px;margin-bottom:32px;">
+        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:20px;color:#A33F14;line-height:1.5;">FAQ</div>
+        <h2 style="font-size:40px;line-height:1.08;letter-spacing:-0.015em;margin:0;color:#17190F;">Common questions</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:72px;">
+        <article style="border-top:1px solid #DDD8CB;padding:26px 0;">
+          <h3 style="font-size:24px;line-height:1.18;margin:0 0 11px;color:#17190F;">Which restaurant POS is best?</h3>
+          <p style="font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;margin:0;">There is no universal answer; it depends on service model, off-premise volume, number of locations and what you need to integrate. What matters more than brand is that it is configured properly, that reporting is trustworthy, and that your other systems connect to it without manual export.</p>
+        </article>
+        <article style="border-top:1px solid #DDD8CB;padding:26px 0;">
+          <h3 style="font-size:24px;line-height:1.18;margin:0 0 11px;color:#17190F;">When should a restaurant add inventory software?</h3>
+          <p style="font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;margin:0;">Once recipes are documented, receiving is consistent and counts happen on a schedule. Software will report variance accurately only if those three disciplines already exist; installing it first produces numbers nobody believes.</p>
+        </article>
+        <article style="border-top:1px solid #DDD8CB;padding:26px 0;">
+          <h3 style="font-size:24px;line-height:1.18;margin:0 0 11px;color:#17190F;">How much should a restaurant spend on technology?</h3>
+          <p style="font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;margin:0;">Less than most vendors propose, and more than most operators allocate to configuration and training. Judge each system by the manual hours it removes and the margin it protects, not by its feature list.</p>
+        </article>
+        <article style="border-top:1px solid #DDD8CB;padding:26px 0;">
+          <h3 style="font-size:24px;line-height:1.18;margin:0 0 11px;color:#17190F;">Should we use third-party delivery tablets or POS integration?</h3>
+          <p style="font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;margin:0;">Integration, wherever available. Tablet farms require manual re-entry, which produces missed and incorrect orders, and they make it far harder to see true off-premise contribution.</p>
+        </article>
+      </div>
+    </section>
+
+    <section style="margin-bottom:0;">
+      <div style="display:grid;grid-template-columns:64px 1fr;gap:24px;border-bottom:1px solid #17190F;padding-bottom:20px;margin-bottom:32px;">
+        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:20px;color:#A33F14;line-height:1.5;">&rarr;</div>
+        <h2 style="font-size:40px;line-height:1.08;letter-spacing:-0.015em;margin:0;color:#17190F;">Read next</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:#DDD8CB;border:1px solid #DDD8CB;">
+        <a href="Restaurant KPI Dashboard Guide.dc.html" style="background:#F2F0E9;padding:32px 28px;display:block;text-decoration:none;transition:background 160ms;" style-hover="background:#EAE7DC;"><span style="display:block;font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#A33F14;font-weight:600;margin-bottom:13px;">Guide</span><span style="display:block;font-family:'Instrument Serif',Georgia,serif;font-size:24px;line-height:1.14;color:#17190F;margin-bottom:9px;">Restaurant KPI Dashboard Guide</span><span style="display:block;font-size:13.5px;font-weight:300;line-height:1.7;color:#3D4034;">What the reporting layer should actually produce.</span></a>
+        <a href="Multi-unit Restaurant Systems.dc.html" style="background:#F2F0E9;padding:32px 28px;display:block;text-decoration:none;transition:background 160ms;" style-hover="background:#EAE7DC;"><span style="display:block;font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#A33F14;font-weight:600;margin-bottom:13px;">Guide</span><span style="display:block;font-family:'Instrument Serif',Georgia,serif;font-size:24px;line-height:1.14;color:#17190F;margin-bottom:9px;">Multi-unit Restaurant Systems</span><span style="display:block;font-size:13.5px;font-weight:300;line-height:1.7;color:#3D4034;">When a real technology stack becomes unavoidable.</span></a>
+        <a href="Restaurant Consulting.dc.html" style="background:#F2F0E9;padding:32px 28px;display:block;text-decoration:none;transition:background 160ms;" style-hover="background:#EAE7DC;"><span style="display:block;font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#A33F14;font-weight:600;margin-bottom:13px;">Service</span><span style="display:block;font-family:'Instrument Serif',Georgia,serif;font-size:24px;line-height:1.14;color:#17190F;margin-bottom:9px;">Restaurant Consulting</span><span style="display:block;font-size:13.5px;font-weight:300;line-height:1.7;color:#3D4034;">Technology, POS configuration and reporting as part of foundation work.</span></a>
+      </div>
+    </section>
+  </div>
+  </article>
+
+  <section style="max-width:1320px;margin:80px auto 0;padding:0 40px;">
+    <div style="background:#38452C;padding:60px 52px;display:grid;grid-template-columns:1.15fr 0.85fr;gap:52px;align-items:center;">
+      <div>
+        <h2 style="font-size:40px;line-height:1.06;letter-spacing:-0.015em;margin:0 0 16px;color:#F2F0E9;text-wrap:pretty;">Choosing systems this <span style="font-style:italic;color:#E0A87C;">year</span>?</h2>
+        <p style="font-size:16px;font-weight:300;line-height:1.8;color:rgba(242,240,233,0.88);margin:0;max-width:520px;">Tell us what you have built. We will tell you honestly where it stands. No pitch, no fee.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start;">
+        <a href="Contact.dc.html" style="font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#17190F;background:#E0A87C;padding:18px 34px;font-weight:600;" style-hover="background:#F2F0E9;">Talk to us</a>
+        <a href="mailto:info@eustressanddemeter.com" style="font-family:'Instrument Serif',Georgia,serif;font-size:22px;color:#F2F0E9;" style-hover="color:#E0A87C;">info@eustressanddemeter.com</a>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <footer style="max-width:1320px;margin:0 auto;padding:64px 40px 56px;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:56px;">
+    <div>
+      <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;">
+        <img src="assets/logo-seal.png" alt="Eustress and Demeter seal" style="width:44px;height:44px;display:block;">
+        <span style="font-family:'Instrument Serif',Georgia,serif;font-size:21px;color:#17190F;">Eustress &amp; Demeter</span>
+      </div>
+      <p style="font-size:14px;font-weight:300;line-height:1.75;color:#3D4034;margin:0;max-width:400px;">Brand expansion and franchise growth for restaurant and hospitality brands. One team, from the first P&amp;L review to the fortieth opening.</p>
+    </div>
+    <div>
+      <h2 style="font-size:10px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:#5B5F4E;margin:0 0 18px;">Services</h2>
+      <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:11px;">
+        <li><a href="Restaurant Consulting.dc.html" style="font-size:14px;font-weight:300;color:#17190F;">Restaurant Consulting</a></li>
+        <li><a href="Restaurant Catering Consulting.dc.html" style="font-size:14px;font-weight:300;color:#17190F;">Catering &amp; Off-Premise</a></li>
+        <li><a href="Local Store Marketing.dc.html" style="font-size:14px;font-weight:300;color:#17190F;">Local Store Marketing</a></li>
+        <li><a href="Franchise Consulting.dc.html" style="font-size:14px;font-weight:300;color:#17190F;">Franchise Consulting</a></li>
+        <li><a href="Franchise Readiness Assessment.dc.html" style="font-size:14px;font-weight:300;color:#17190F;">Franchise Readiness</a></li>
+        <li><a href="Franchise Sales Support.dc.html" style="font-size:14px;font-weight:300;color:#17190F;">Franchise Sales Support</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2 style="font-size:10px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:#5B5F4E;margin:0 0 18px;">Company</h2>
+      <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:11px;">
+        <li><a href="Methodology.dc.html" style="font-size:14px;font-weight:300;color:#17190F;">Methodology</a></li>
+        <li><a href="The E&D Playbook.dc.html" style="font-size:14px;font-weight:300;color:#17190F;">The E&amp;D Playbook</a></li>
+        <li><a href="E&D Clients.dc.html" style="font-size:14px;font-weight:300;color:#17190F;">Clients</a></li>
+        <li><a href="Contact.dc.html" style="font-size:14px;font-weight:300;color:#17190F;">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <div style="border-top:1px solid #CFCBBC;">
+    <div style="max-width:1320px;margin:0 auto;padding:24px 40px;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;">
+      <span style="font-size:11px;font-weight:300;color:#5B5F4E;">&copy; 2026 Eustress &amp; Demeter LLC</span>
+      <span style="font-size:11px;font-weight:300;color:#5B5F4E;">Growth is not about how fast a brand expands, but how long it succeeds.</span>
+    </div>
+  </div>
+
+</div>
+
+</x-dc>
+</body>
+</html>

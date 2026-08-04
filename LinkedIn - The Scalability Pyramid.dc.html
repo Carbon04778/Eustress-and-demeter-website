@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>The Scalability Pyramid — LinkedIn Carousel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Archivo:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; background: #17190F; }
+</style>
+</helmet>
+
+<x-import component-from-global-scope="deck-stage" from="./deck-stage.js" width="1080" height="1350" hint-size="100%,100%">
+
+  <section data-label="01 Hook" data-speaker-notes="Opening statement. The whole carousel earns this claim." style="background:#F2F0E9;padding:92px 88px;display:flex;flex-direction:column;font-family:'Archivo',system-ui,sans-serif;">
+    <div style="display:flex;align-items:center;gap:16px;">
+      <span style="width:40px;height:2px;background:#C4501E;"></span>
+      <span style="font-size:27px;letter-spacing:0.2em;text-transform:uppercase;color:#38452C;font-weight:600;">Eustress &amp; Demeter</span>
+    </div>
+    <div style="margin-top:auto;">
+      <h1 style="font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:92px;line-height:1.02;letter-spacing:-0.02em;color:#17190F;margin:0;text-wrap:pretty;">Most restaurant brands do not fail because they grow too <span style="font-style:italic;color:#38452C;">slowly</span>.</h1>
+    </div>
+    <div style="margin-top:auto;display:flex;align-items:center;justify-content:space-between;">
+      <span style="font-size:27px;font-weight:300;color:#5B5F4E;">Monica Challingsworth</span>
+      <span style="font-size:25px;letter-spacing:0.16em;text-transform:uppercase;color:#A33F14;font-weight:600;">Swipe &rsaquo;</span>
+    </div>
+  </section>
+
+  <section data-label="02 Turn" data-speaker-notes="The reversal. Keep it stark and unadorned." style="background:#17190F;padding:92px 88px;display:flex;flex-direction:column;justify-content:center;font-family:'Archivo',system-ui,sans-serif;">
+    <span style="width:40px;height:2px;background:#E0A87C;margin-bottom:44px;"></span>
+    <h2 style="font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:96px;line-height:1.02;letter-spacing:-0.02em;color:#F2F0E9;margin:0;text-wrap:pretty;">They fail because they scale before they are <span style="font-style:italic;color:#E0A87C;">ready</span>.</h2>
+    <p style="font-size:26px;font-weight:300;line-height:1.65;color:rgba(242,240,233,0.82);margin:52px 0 0;max-width:760px;">Expansion does not fix a fragile operation. It multiplies it across every market you enter.</p>
+  </section>
+
+  <section data-label="03 Growth vs scalability" data-speaker-notes="The core distinction. Two columns, no decoration." style="background:#F2F0E9;padding:88px;display:flex;flex-direction:column;justify-content:center;font-family:'Archivo',system-ui,sans-serif;">
+    <div style="display:flex;align-items:center;gap:16px;margin-bottom:36px;">
+      <span style="width:40px;height:2px;background:#C4501E;"></span>
+      <span style="font-size:26px;letter-spacing:0.2em;text-transform:uppercase;color:#38452C;font-weight:600;">The distinction</span>
+    </div>
+    <h2 style="font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:64px;line-height:1.06;letter-spacing:-0.015em;color:#17190F;margin:0 0 56px;">Growth and scalability are not the same thing</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#DDD8CB;border:1px solid #DDD8CB;">
+      <div style="background:#F2F0E9;padding:44px 40px;">
+        <div style="font-size:27px;letter-spacing:0.18em;text-transform:uppercase;color:#A33F14;font-weight:600;margin-bottom:22px;">Growth</div>
+        <p style="font-family:'Instrument Serif',Georgia,serif;font-size:38px;line-height:1.16;color:#17190F;margin:0 0 26px;">More revenue, more units, more people.</p>
+        <p style="font-size:30px;font-weight:300;line-height:1.6;color:#3D4034;margin:0;">Growth is an outcome. It can be bought, borrowed or willed into existence for a while.</p>
+      </div>
+      <div style="background:#F2F0E9;padding:44px 40px;">
+        <div style="font-size:27px;letter-spacing:0.18em;text-transform:uppercase;color:#A33F14;font-weight:600;margin-bottom:22px;">Scalability</div>
+        <p style="font-family:'Instrument Serif',Georgia,serif;font-size:38px;line-height:1.16;color:#17190F;margin:0 0 26px;">The capacity to absorb that growth without degrading.</p>
+        <p style="font-size:30px;font-weight:300;line-height:1.6;color:#3D4034;margin:0;">Scalability is a condition. It is built deliberately, before it is needed.</p>
+      </div>
+    </div>
+    <p style="font-size:24px;font-weight:300;line-height:1.7;color:#3D4034;margin:48px 0 0;max-width:820px;">A brand can grow for years without ever becoming scalable. The bill arrives at store number four.</p>
+  </section>
+
+  <section data-label="04 Five questions" data-speaker-notes="Saveable slide. Typography only." style="background:#F2F0E9;padding:88px;display:flex;flex-direction:column;justify-content:center;font-family:'Archivo',system-ui,sans-serif;">
+    <div style="display:flex;align-items:center;gap:16px;margin-bottom:36px;">
+      <span style="width:40px;height:2px;background:#C4501E;"></span>
+      <span style="font-size:26px;letter-spacing:0.2em;text-transform:uppercase;color:#38452C;font-weight:600;">Before the next location</span>
+    </div>
+    <h2 style="font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:64px;line-height:1.06;letter-spacing:-0.015em;color:#17190F;margin:0 0 48px;">Five questions every founder should answer</h2>
+    <ol style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;">
+      <li style="border-top:2px solid #17190F;padding:28px 0;display:grid;grid-template-columns:82px 1fr;gap:24px;align-items:baseline;">
+        <span style="font-size:27px;color:#A33F14;font-weight:600;font-variant-numeric:tabular-nums;">01</span>
+        <span style="font-family:'Instrument Serif',Georgia,serif;font-size:42px;line-height:1.16;color:#17190F;">Can the business run without me?</span>
+      </li>
+      <li style="border-top:1px solid #CFCBBC;padding:28px 0;display:grid;grid-template-columns:82px 1fr;gap:24px;align-items:baseline;">
+        <span style="font-size:27px;color:#A33F14;font-weight:600;font-variant-numeric:tabular-nums;">02</span>
+        <span style="font-family:'Instrument Serif',Georgia,serif;font-size:42px;line-height:1.16;color:#17190F;">Are the training systems documented?</span>
+      </li>
+      <li style="border-top:1px solid #CFCBBC;padding:28px 0;display:grid;grid-template-columns:82px 1fr;gap:24px;align-items:baseline;">
+        <span style="font-size:27px;color:#A33F14;font-weight:600;font-variant-numeric:tabular-nums;">03</span>
+        <span style="font-family:'Instrument Serif',Georgia,serif;font-size:42px;line-height:1.16;color:#17190F;">Can managers decide without calling me?</span>
+      </li>
+      <li style="border-top:1px solid #CFCBBC;padding:28px 0;display:grid;grid-template-columns:82px 1fr;gap:24px;align-items:baseline;">
+        <span style="font-size:27px;color:#A33F14;font-weight:600;font-variant-numeric:tabular-nums;">04</span>
+        <span style="font-family:'Instrument Serif',Georgia,serif;font-size:42px;line-height:1.16;color:#17190F;">Is the guest experience consistent across shifts?</span>
+      </li>
+      <li style="border-top:1px solid #CFCBBC;border-bottom:1px solid #CFCBBC;padding:28px 0;display:grid;grid-template-columns:82px 1fr;gap:24px;align-items:baseline;">
+        <span style="font-size:27px;color:#A33F14;font-weight:600;font-variant-numeric:tabular-nums;">05</span>
+        <span style="font-family:'Instrument Serif',Georgia,serif;font-size:42px;line-height:1.16;color:#17190F;">Can performance be measured the same way everywhere?</span>
+      </li>
+    </ol>
+    <p style="font-size:24px;font-weight:300;line-height:1.7;color:#3D4034;margin:44px 0 0;">Five yes answers means you are ready. Four means you have work to do first.</p>
+  </section>
+
+  <section data-label="05 Systems over speed" data-speaker-notes="The argument beneath the framework." style="background:#38452C;padding:92px 88px;display:flex;flex-direction:column;justify-content:center;font-family:'Archivo',system-ui,sans-serif;">
+    <span style="width:40px;height:2px;background:#E0A87C;margin-bottom:40px;"></span>
+    <h2 style="font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:72px;line-height:1.05;letter-spacing:-0.015em;color:#F2F0E9;margin:0 0 44px;text-wrap:pretty;">Why systems matter more than speed</h2>
+    <p style="font-size:27px;font-weight:300;line-height:1.7;color:rgba(242,240,233,0.9);margin:0 0 26px;max-width:820px;">Speed is visible. Systems are not. That asymmetry is why founders over-invest in one and under-invest in the other.</p>
+    <p style="font-size:27px;font-weight:300;line-height:1.7;color:rgba(242,240,233,0.9);margin:0 0 26px;max-width:820px;">But every store you open inherits the operation exactly as it stands the day it opens. Undocumented, it inherits improvisation. Documented, it inherits a standard.</p>
+    <p style="font-family:'Instrument Serif',Georgia,serif;font-size:38px;line-height:1.3;color:#E0A87C;margin:20px 0 0;max-width:820px;">Growth without systems creates complexity. Systems create scalable growth.</p>
+  </section>
+
+  <section data-label="06 The Scalability Pyramid" data-speaker-notes="The signature framework. This is the slide people screenshot." style="background:#F2F0E9;padding:80px 88px;display:flex;flex-direction:column;justify-content:center;font-family:'Archivo',system-ui,sans-serif;">
+    <div style="display:flex;align-items:center;gap:16px;margin-bottom:28px;">
+      <span style="width:40px;height:2px;background:#C4501E;"></span>
+      <span style="font-size:26px;letter-spacing:0.2em;text-transform:uppercase;color:#38452C;font-weight:600;">A framework</span>
+    </div>
+    <h2 style="font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:66px;line-height:1.04;letter-spacing:-0.015em;color:#17190F;margin:0 0 12px;">The Scalability Pyramid</h2>
+    <p style="font-size:31px;font-weight:300;line-height:1.55;color:#5B5F4E;margin:0 0 46px;">Each layer is only as strong as the one beneath it.</p>
+
+    <div style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+      <div style="width:38%;background:#17190F;padding:26px 20px;text-align:center;">
+        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:34px;line-height:1.1;color:#E0A87C;">Scalable Growth</div>
+      </div>
+      <div style="width:53%;background:#38452C;padding:26px 20px;text-align:center;">
+        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:34px;line-height:1.1;color:#F2F0E9;">Consistency</div>
+      </div>
+      <div style="width:68%;background:#5B6B47;padding:26px 20px;text-align:center;">
+        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:34px;line-height:1.1;color:#F2F0E9;">Leadership</div>
+      </div>
+      <div style="width:83%;background:#8A9670;padding:26px 20px;text-align:center;">
+        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:34px;line-height:1.1;color:#17190F;">Processes</div>
+      </div>
+      <div style="width:98%;background:#C9CDB4;padding:26px 20px;text-align:center;">
+        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:34px;line-height:1.1;color:#17190F;">Foundation</div>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:36px;margin-top:44px;padding-top:32px;border-top:1px solid #CFCBBC;">
+      <p style="font-size:30px;font-weight:300;line-height:1.6;color:#3D4034;margin:0;">Brands try to build from the top down: open units, then hope consistency follows.</p>
+      <p style="font-size:30px;font-weight:300;line-height:1.6;color:#3D4034;margin:0;">It only holds bottom up. Fix the foundation, and every layer above becomes achievable.</p>
+    </div>
+  </section>
+
+  <section data-label="07 Takeaways" data-speaker-notes="Summary. Three points, no more." style="background:#F2F0E9;padding:88px;display:flex;flex-direction:column;justify-content:center;font-family:'Archivo',system-ui,sans-serif;">
+    <div style="display:flex;align-items:center;gap:16px;margin-bottom:36px;">
+      <span style="width:40px;height:2px;background:#C4501E;"></span>
+      <span style="font-size:26px;letter-spacing:0.2em;text-transform:uppercase;color:#38452C;font-weight:600;">What to take away</span>
+    </div>
+    <div style="display:flex;flex-direction:column;">
+      <div style="border-top:2px solid #17190F;padding:36px 0;">
+        <div style="font-size:27px;color:#A33F14;font-weight:600;font-variant-numeric:tabular-nums;margin-bottom:14px;">01</div>
+        <p style="font-family:'Instrument Serif',Georgia,serif;font-size:46px;line-height:1.15;color:#17190F;margin:0;">Scaling exposes operational weakness. It does not solve it.</p>
+      </div>
+      <div style="border-top:1px solid #CFCBBC;padding:36px 0;">
+        <div style="font-size:27px;color:#A33F14;font-weight:600;font-variant-numeric:tabular-nums;margin-bottom:14px;">02</div>
+        <p style="font-family:'Instrument Serif',Georgia,serif;font-size:46px;line-height:1.15;color:#17190F;margin:0;">If it lives in your head, it cannot be replicated.</p>
+      </div>
+      <div style="border-top:1px solid #CFCBBC;border-bottom:1px solid #CFCBBC;padding:36px 0;">
+        <div style="font-size:27px;color:#A33F14;font-weight:600;font-variant-numeric:tabular-nums;margin-bottom:14px;">03</div>
+        <p style="font-family:'Instrument Serif',Georgia,serif;font-size:46px;line-height:1.15;color:#17190F;margin:0;">Readiness is a condition to be met, not a date to be set.</p>
+      </div>
+    </div>
+  </section>
+
+  <section data-label="08 Close" data-speaker-notes="Restrained CTA. No hard sell." style="background:#17190F;padding:92px 88px;display:flex;flex-direction:column;font-family:'Archivo',system-ui,sans-serif;">
+    <div style="margin-top:auto;">
+      <span style="width:40px;height:2px;background:#E0A87C;display:block;margin-bottom:40px;"></span>
+      <h2 style="font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:70px;line-height:1.05;letter-spacing:-0.015em;color:#F2F0E9;margin:0 0 36px;text-wrap:pretty;">If you are preparing for the next stage of growth, start by evaluating the business <span style="font-style:italic;color:#E0A87C;">underneath</span> the business.</h2>
+      <p style="font-size:26px;font-weight:300;line-height:1.7;color:rgba(242,240,233,0.85);margin:0;max-width:800px;">That is the work we do at Eustress &amp; Demeter, and it is the work worth doing before anything else.</p>
+    </div>
+    <div style="margin-top:auto;padding-top:44px;border-top:1px solid rgba(242,240,233,0.24);display:flex;align-items:flex-end;justify-content:space-between;gap:32px;">
+      <div>
+        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:34px;color:#F2F0E9;line-height:1.2;">Monica Challingsworth</div>
+        <div style="font-size:28px;font-weight:300;color:rgba(242,240,233,0.72);margin-top:10px;">Founder, Eustress &amp; Demeter</div>
+      </div>
+      <div style="text-align:right;">
+        <div style="font-size:24px;letter-spacing:0.16em;text-transform:uppercase;color:#E0A87C;font-weight:600;">eustressanddemeter.com</div>
+      </div>
+    </div>
+  </section>
+
+</x-import>
+
+</x-dc>
+</body>
+</html>

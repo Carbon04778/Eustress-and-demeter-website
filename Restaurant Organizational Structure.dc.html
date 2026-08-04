@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Restaurant Organizational Structure: Who to Hire, and When | Eustress &amp; Demeter</title>
+<meta name="description" content="How restaurant organizational structure should evolve with unit count: the hiring order from one location to thirty, span of control, and the roles operators delay too long.">
+<meta name="robots" content="index, follow">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    { "@type": "BreadcrumbList", "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.eustressanddemeter.com/" },
+      { "@type": "ListItem", "position": 2, "name": "The E&D Playbook", "item": "https://www.eustressanddemeter.com/playbook" },
+      { "@type": "ListItem", "position": 3, "name": "Restaurant Organizational Structure", "item": "https://www.eustressanddemeter.com/playbook/restaurant-organizational-structure" }
+    ] },
+    { "@type": "Article", "headline": "Restaurant Organizational Structure", "description": "How restaurant organizational structure should evolve with unit count: the hiring order from one location to thirty, span of control, and the roles operators delay too long.", "articleSection": "Restaurant Operations", "publisher": { "@id": "https://www.eustressanddemeter.com/#org" } },
+    { "@type": "FAQPage", "mainEntity": [
+        { "@type": "Question", "name": "How many restaurants can one district manager oversee?", "acceptedAnswer": { "@type": "Answer", "text": "Three to five as a rule, six if the locations are geographically close and performing well. Beyond that, visits become inspections rather than coaching and store performance separates." } },
+        { "@type": "Question", "name": "When should a restaurant group hire a director of operations?", "acceptedAnswer": { "@type": "Answer", "text": "Usually around ten to fifteen locations, when there are multiple district managers to lead and the owner can no longer split attention between operations and growth without one suffering." } },
+        { "@type": "Question", "name": "Should we promote internally or hire externally?", "acceptedAnswer": { "@type": "Answer", "text": "Internally wherever the capability genuinely exists, because it preserves culture and creates a visible path for others. But promoting someone into a job they cannot yet do is a common and costly form of kindness. Below fifteen locations most groups need to do both." } },
+        { "@type": "Question", "name": "What is the most commonly missed restaurant role?", "acceptedAnswer": { "@type": "Answer", "text": "The people function. It is treated as administration until turnover becomes a crisis, at which point the cost is already embedded in food variance, guest scores and manager burnout." } }
+    ] },
+    { "@type": "Organization", "@id": "https://www.eustressanddemeter.com/#org", "name": "Eustress & Demeter", "url": "https://www.eustressanddemeter.com/", "email": "info@eustressanddemeter.com", "telephone": "+1-213-222-3849" }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Archivo:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *{ box-sizing: border-box; }
+  body { margin: 0; background: #F2F0E9; color: #17190F; font-family: 'Archivo', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: #38452C; text-decoration: none; }
+  a:hover { color: #A33F14; }
+  h1, h2, h3 { font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; }
+  html { scroll-behavior: smooth; }
+  .ed-menu-panel { display: none; }
+  .ed-menu:hover .ed-menu-panel, .ed-menu:focus-within .ed-menu-panel { display: block; }
+  a:focus-visible, button:focus-visible, [tabindex]:focus-visible { outline: 3px solid #C4501E; outline-offset: 3px; }
+  .ed-skip { position: absolute; left: -9999px; top: 0; z-index: 200; background: #F2F0E9; color: #17190F; padding: 14px 22px; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; border: 2px solid #17190F; }
+  .ed-skip:focus { left: 12px; top: 12px; }
+  /* mobile */
+  table { display: block; overflow-x: auto; max-width: 100%; }
+  img, video { max-width: 100%; }
+  @media (max-width: 900px) {
+    header { position: static !important; }
+    header > div { height: auto !important; flex-wrap: wrap !important; padding: 12px 20px !important; gap: 10px !important; }
+    nav[aria-label="Primary"] { margin-left: 0 !important; width: 100%; overflow-x: auto; gap: 18px !important; padding-bottom: 2px; -webkit-overflow-scrolling: touch; }
+    nav[aria-label="Primary"] a { padding: 8px 0 !important; }
+    .ed-menu-panel { display: none !important; }
+    [style*="grid-template-columns"] { grid-template-columns: minmax(0,1fr) !important; }
+    [style*="max-width:1320px"] { padding-left: 20px !important; padding-right: 20px !important; }
+    h1 { font-size: clamp(32px, 8.6vw, 70px) !important; }
+    h2 { font-size: clamp(27px, 7vw, 52px) !important; }
+    h3 { font-size: clamp(20px, 5vw, 36px) !important; }
+    [style*="font-size:19px"], [style*="font-size:18px"], [style*="font-size:17px"] { font-size: 16.5px !important; }
+    [style*="padding:104px 40px"], [style*="padding:100px 40px"], [style*="padding:96px 40px"], [style*="padding:88px 40px"], [style*="padding:80px 40px"] { padding: 56px 20px !important; }
+    [style*="padding:64px 56px"], [style*="padding:64px 48px"] { padding: 40px 24px !important; }
+    [style*="padding:72px 40px"], [style*="padding:76px 40px"] { padding: 48px 20px !important; }
+    [style*="padding:38px 34px"], [style*="padding:34px 32px"], [style*="padding:34px 30px"] { padding: 26px 22px !important; }
+    [style*="gap:72px"], [style*="gap:80px"], [style*="gap:56px"] { gap: 32px !important; }
+    [style*="column-gap:80px"], [style*="column-gap:56px"], [style*="column-gap:44px"] { column-gap: 0 !important; }
+    [style*="min-height:460px"] { min-height: 260px !important; }
+    [style*="height:620px"], [style*="height:560px"], [style*="height:440px"] { height: 260px !important; }
+    figure img { height: 260px !important; }
+  }
+  @media (max-width: 560px) {
+    [style*="max-width:1320px"] { padding-left: 16px !important; padding-right: 16px !important; }
+    [style*="padding:104px 40px"], [style*="padding:100px 40px"], [style*="padding:96px 40px"], [style*="padding:88px 40px"], [style*="padding:80px 40px"] { padding: 44px 16px !important; }
+    input, select, textarea { font-size: 16px !important; }
+  }
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; } }
+</style>
+</helmet>
+
+<div id="top" style="background:#F2F0E9;">
+  <a href="#main" class="ed-skip">Skip to main content</a>
+
+<header style="position:sticky;top:0;z-index:60;background:#17190F;">
+    <div style="max-width:1320px;margin:0 auto;padding:0 40px;height:74px;display:flex;align-items:center;gap:32px;">
+      <a href="E&D Website v2.dc.html" aria-label="Eustress and Demeter, home" style="display:flex;align-items:center;gap:14px;">
+        <img src="assets/logo-seal.png" alt="Eustress and Demeter seal" style="width:38px;height:38px;display:block;filter:brightness(1.7);">
+        <span style="font-family:'Instrument Serif',Georgia,serif;font-size:19px;letter-spacing:0.01em;color:#F2F0E9;white-space:nowrap;">Eustress &amp; Demeter</span>
+      </a>
+      <nav aria-label="Primary" style="margin-left:auto;display:flex;align-items:center;gap:26px;">
+        <div class="ed-menu" style="position:relative;display:flex;align-items:center;">
+          <a href="Restaurant Consulting.dc.html" style="display:flex;align-items:center;gap:7px;font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(242,240,233,0.78);font-weight:500;white-space:nowrap;padding:26px 0;" style-hover="color:#F2F0E9;">Services<span aria-hidden="true" style="font-size:8px;line-height:1;">&#9660;</span></a>
+          <div class="ed-menu-panel" style="position:absolute;top:100%;right:0;width:340px;background:#17190F;border:1px solid rgba(242,240,233,0.22);padding:10px;z-index:80;">
+            <a href="Restaurant Consulting.dc.html" style="display:block;padding:13px 16px;text-decoration:none;transition:background 160ms;" style-hover="background:#38452C;"><span style="display:block;font-size:14px;font-weight:500;letter-spacing:0.01em;color:#F2F0E9;margin-bottom:3px;">Restaurant Consulting</span><span style="display:block;font-size:11.5px;font-weight:300;line-height:1.5;color:rgba(242,240,233,0.72);">Unit economics, operations, menu, training</span></a>
+            <a href="Restaurant Catering Consulting.dc.html" style="display:block;padding:13px 16px;text-decoration:none;transition:background 160ms;" style-hover="background:#38452C;"><span style="display:block;font-size:14px;font-weight:500;letter-spacing:0.01em;color:#F2F0E9;margin-bottom:3px;">Catering &amp; Off-Premise</span><span style="display:block;font-size:11.5px;font-weight:300;line-height:1.5;color:rgba(242,240,233,0.72);">The fastest revenue in most restaurants</span></a>
+            <a href="Local Store Marketing.dc.html" style="display:block;padding:13px 16px;text-decoration:none;transition:background 160ms;" style-hover="background:#38452C;"><span style="display:block;font-size:14px;font-weight:500;letter-spacing:0.01em;color:#F2F0E9;margin-bottom:3px;">Local Store Marketing</span><span style="display:block;font-size:11.5px;font-weight:300;line-height:1.5;color:rgba(242,240,233,0.72);">Trade-area programs and grand openings</span></a>
+            <a href="Franchise Consulting.dc.html" style="display:block;padding:13px 16px;text-decoration:none;transition:background 160ms;" style-hover="background:#38452C;"><span style="display:block;font-size:14px;font-weight:500;letter-spacing:0.01em;color:#F2F0E9;margin-bottom:3px;">Franchise Consulting</span><span style="display:block;font-size:11.5px;font-weight:300;line-height:1.5;color:rgba(242,240,233,0.72);">Build the system, then sell the territories</span></a>
+            <a href="Franchise Readiness Assessment.dc.html" style="display:block;padding:13px 16px;text-decoration:none;transition:background 160ms;" style-hover="background:#38452C;"><span style="display:block;font-size:14px;font-weight:500;letter-spacing:0.01em;color:#F2F0E9;margin-bottom:3px;">Franchise Readiness</span><span style="display:block;font-size:11.5px;font-weight:300;line-height:1.5;color:rgba(242,240,233,0.72);">The twelve-point diagnostic</span></a>
+            <a href="Franchise Sales Support.dc.html" style="display:block;padding:13px 16px;text-decoration:none;transition:background 160ms;" style-hover="background:#38452C;"><span style="display:block;font-size:14px;font-weight:500;letter-spacing:0.01em;color:#F2F0E9;margin-bottom:3px;">Franchise Sales Support</span><span style="display:block;font-size:11.5px;font-weight:300;line-height:1.5;color:rgba(242,240,233,0.72);">Qualified candidates, disciplined pacing</span></a>
+          </div>
+        </div>
+        <a href="Methodology.dc.html" style="font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(242,240,233,0.78);font-weight:500;white-space:nowrap;" style-hover="color:#F2F0E9;">Methodology</a>
+        <a href="The E&D Playbook.dc.html" style="font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(242,240,233,0.78);font-weight:500;white-space:nowrap;" style-hover="color:#F2F0E9;">Playbook</a>
+        <a href="E&D Clients.dc.html" style="font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(242,240,233,0.78);font-weight:500;white-space:nowrap;" style-hover="color:#F2F0E9;">Clients</a>
+        <a href="Contact.dc.html" style="font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:#F2F0E9;background:#A33F14;padding:14px 24px;font-weight:600;white-space:nowrap;" style-hover="background:#F2F0E9;color:#17190F;">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+
+  <article>
+  <section style="border-bottom:1px solid #17190F;">
+    <div style="max-width:1320px;margin:0 auto;padding:88px 40px 68px;">
+      <div style="display:flex;align-items:center;gap:14px;margin-bottom:34px;">
+        <span style="width:34px;height:1px;background:#C4501E;"></span>
+        <a href="The E&D Playbook.dc.html" style="font-size:10px;letter-spacing:0.24em;text-transform:uppercase;color:#38452C;font-weight:600;">The E&amp;D Playbook</a>
+        <span aria-hidden="true" style="font-size:10px;color:#8A8574;">/</span>
+        <span style="font-size:10px;letter-spacing:0.24em;text-transform:uppercase;color:#5B5F4E;font-weight:600;">Restaurant Operations</span>
+      </div>
+      <h1 style="font-size:64px;line-height:1.03;letter-spacing:-0.02em;margin:0 0 30px;color:#17190F;max-width:1000px;text-wrap:pretty;">Who to hire, and in what <span style="font-style:italic;color:#38452C;">order</span></h1>
+      <p style="font-size:19px;font-weight:300;line-height:1.8;color:#3D4034;margin:0;max-width:820px;text-wrap:pretty;">Most restaurant groups hire reactively, filling the role that broke most recently. That produces an organization shaped by past emergencies rather than by the business you are trying to run. The order below is the one that consistently works.</p>
+    </div>
+  </section>
+
+  <section style="background:#EAE7DC;border-bottom:1px solid #17190F;">
+    <div style="max-width:1320px;margin:0 auto;padding:44px 40px;display:grid;grid-template-columns:200px 1fr;gap:40px;align-items:start;">
+      <div style="font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#A33F14;font-weight:600;padding-top:6px;">The short answer</div>
+      <p style="font-size:20px;font-weight:300;line-height:1.7;color:#17190F;margin:0;max-width:900px;text-wrap:pretty;">Restaurant organizational structure should change at roughly three, seven, fifteen and thirty locations. The hiring order that works is: strong general managers first, then above-store leadership at five to seven, then functional support in operations, marketing, finance and people at around fifteen, then regional structure at thirty. The two most commonly delayed hires are the first real general manager and the first district manager, and both delays are expensive.</p>
+    </div>
+  </section>
+
+  <div style="max-width:1320px;margin:0 auto;padding:72px 40px 0;">
+    <section style="margin-bottom:64px;">
+      <div style="display:grid;grid-template-columns:64px 1fr;gap:24px;border-bottom:1px solid #17190F;padding-bottom:20px;margin-bottom:32px;">
+        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:20px;color:#A33F14;line-height:1.5;">01</div>
+        <h2 style="font-size:40px;line-height:1.08;letter-spacing:-0.015em;margin:0;color:#17190F;">The principle underneath</h2>
+      </div>
+      <p style="font-size:17px;font-weight:300;line-height:1.85;color:#3D4034;margin:0 0 22px;max-width:840px;text-wrap:pretty;">Organizational design in restaurants comes down to span of control: how many people or locations one person can genuinely lead well.</p>
+      <p style="font-size:17px;font-weight:300;line-height:1.85;color:#3D4034;margin:0 0 22px;max-width:840px;text-wrap:pretty;">A general manager can run one location. An above-store leader can hold three to five, sometimes six if they are close together and performing. A regional director can hold four to six districts. Beyond those numbers, the leader stops leading and starts triaging, and everything below them drifts.</p>
+      <p style="font-size:17px;font-weight:300;line-height:1.85;color:#3D4034;margin:0 0 22px;max-width:840px;text-wrap:pretty;">Nearly every structural failure we see traces to someone carrying a span they cannot serve, usually because adding the next layer felt premature. It rarely is.</p>
+    </section>
+    <section style="margin-bottom:64px;">
+      <div style="display:grid;grid-template-columns:64px 1fr;gap:24px;border-bottom:1px solid #17190F;padding-bottom:20px;margin-bottom:32px;">
+        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:20px;color:#A33F14;line-height:1.5;">02</div>
+        <h2 style="font-size:40px;line-height:1.08;letter-spacing:-0.015em;margin:0;color:#17190F;">One to three locations</h2>
+      </div>
+      <p style="font-size:17px;font-weight:300;line-height:1.85;color:#3D4034;margin:0 0 22px;max-width:840px;text-wrap:pretty;">The owner is still operating. The essential work is building the first layer of genuine leadership so the business is not the owner&rsquo;s attention.</p>
+      <ul style="list-style:none;margin:6px 0 22px;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:64px;">
+        <li style="border-top:1px solid #DDD8CB;padding:20px 0;"><span style="display:block;font-family:'Instrument Serif',Georgia,serif;font-size:23px;line-height:1.2;color:#17190F;margin-bottom:8px;">A real general manager per store</span><span style="display:block;font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;">Not a senior shift lead. Someone who can hold standards, develop people and run the P&amp;L without daily supervision. This is the hire operators delay longest and regret most.</span></li>
+        <li style="border-top:1px solid #DDD8CB;padding:20px 0;"><span style="display:block;font-family:'Instrument Serif',Georgia,serif;font-size:23px;line-height:1.2;color:#17190F;margin-bottom:8px;">A kitchen leader per store</span><span style="display:block;font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;">Owning food cost, specs, prep discipline and BOH training. Separate accountability from the GM, not a subordinate afterthought.</span></li>
+        <li style="border-top:1px solid #DDD8CB;padding:20px 0;"><span style="display:block;font-family:'Instrument Serif',Georgia,serif;font-size:23px;line-height:1.2;color:#17190F;margin-bottom:8px;">Bookkeeping support</span><span style="display:block;font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;">Part-time or outsourced. Owners doing their own payables at three locations is a poor use of the most expensive hour in the business.</span></li>
+        <li style="border-top:1px solid #DDD8CB;padding:20px 0;"><span style="display:block;font-family:'Instrument Serif',Georgia,serif;font-size:23px;line-height:1.2;color:#17190F;margin-bottom:8px;">Designated trainers</span><span style="display:block;font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;">Not a full role yet, but named people with the responsibility and, ideally, a pay differential.</span></li>
+      </ul>
+    </section>
+    <section style="margin-bottom:64px;">
+      <div style="display:grid;grid-template-columns:64px 1fr;gap:24px;border-bottom:1px solid #17190F;padding-bottom:20px;margin-bottom:32px;">
+        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:20px;color:#A33F14;line-height:1.5;">03</div>
+        <h2 style="font-size:40px;line-height:1.08;letter-spacing:-0.015em;margin:0;color:#17190F;">Four to seven locations</h2>
+      </div>
+      <p style="font-size:17px;font-weight:300;line-height:1.85;color:#3D4034;margin:0 0 22px;max-width:840px;text-wrap:pretty;">The owner can no longer be in every store weekly. This is the breakpoint where an above-store layer becomes unavoidable.</p>
+      <ol style="list-style:none;margin:6px 0 22px;padding:0;display:flex;flex-direction:column;">
+        <li style="border-top:1px solid #17190F;padding:22px 0;display:grid;grid-template-columns:52px 1fr 1.5fr;gap:22px;align-items:start;"><span style="font-size:11px;color:#A33F14;font-weight:600;font-variant-numeric:tabular-nums;padding-top:7px;">01</span><h3 style="font-size:23px;line-height:1.15;margin:0;color:#17190F;">District or area manager</h3><p style="font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;margin:0;">Three to five stores. Store performance, standards, GM development. The second most delayed hire in the industry and the one that most reliably pays for itself.</p></li>
+        <li style="border-top:1px solid #DDD8CB;padding:22px 0;display:grid;grid-template-columns:52px 1fr 1.5fr;gap:22px;align-items:start;"><span style="font-size:11px;color:#A33F14;font-weight:600;font-variant-numeric:tabular-nums;padding-top:7px;">02</span><h3 style="font-size:23px;line-height:1.15;margin:0;color:#17190F;">Purchasing ownership</h3><p style="font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;margin:0;">One person owning vendor relationships, order guides and the approved product list. Frequently part of the district manager role at this size.</p></li>
+        <li style="border-top:1px solid #DDD8CB;padding:22px 0;display:grid;grid-template-columns:52px 1fr 1.5fr;gap:22px;align-items:start;"><span style="font-size:11px;color:#A33F14;font-weight:600;font-variant-numeric:tabular-nums;padding-top:7px;">03</span><h3 style="font-size:23px;line-height:1.15;margin:0;color:#17190F;">Recruiting ownership</h3><p style="font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;margin:0;">Continuous hiring at this scale is a job. Usually part-time or shared, but it needs a name against it.</p></li>
+        <li style="border-top:1px solid #DDD8CB;padding:22px 0;display:grid;grid-template-columns:52px 1fr 1.5fr;gap:22px;align-items:start;"><span style="font-size:11px;color:#A33F14;font-weight:600;font-variant-numeric:tabular-nums;padding-top:7px;">04</span><h3 style="font-size:23px;line-height:1.15;margin:0;color:#17190F;">A finance relationship beyond bookkeeping</h3><p style="font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;margin:0;">Someone producing weekly numbers by store and a monthly close you can manage from, not just file.</p></li>
+      </ol>
+    </section>
+    <section style="margin-bottom:64px;">
+      <div style="display:grid;grid-template-columns:64px 1fr;gap:24px;border-bottom:1px solid #17190F;padding-bottom:20px;margin-bottom:32px;">
+        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:20px;color:#A33F14;line-height:1.5;">04</div>
+        <h2 style="font-size:40px;line-height:1.08;letter-spacing:-0.015em;margin:0;color:#17190F;">Eight to fifteen locations</h2>
+      </div>
+      <p style="font-size:17px;font-weight:300;line-height:1.85;color:#3D4034;margin:0 0 22px;max-width:840px;text-wrap:pretty;">Functions replace individuals wearing several hats. This is where groups either build an organization or stall at the size their founder can personally hold.</p>
+      <ul style="list-style:none;margin:6px 0 22px;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:64px;">
+        <li style="border-top:1px solid #DDD8CB;padding:20px 0;"><span style="display:block;font-family:'Instrument Serif',Georgia,serif;font-size:23px;line-height:1.2;color:#17190F;margin-bottom:8px;">Director of operations</span><span style="display:block;font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;">Above the district managers, entirely focused on store performance. Frees the owner for growth, capital and strategy.</span></li>
+        <li style="border-top:1px solid #DDD8CB;padding:20px 0;"><span style="display:block;font-family:'Instrument Serif',Georgia,serif;font-size:23px;line-height:1.2;color:#17190F;margin-bottom:8px;">Marketing lead</span><span style="display:block;font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;">Brand and local store marketing across a dozen trade areas. An agency alone will not do trade-area work, and managers alone will not do it consistently.</span></li>
+        <li style="border-top:1px solid #DDD8CB;padding:20px 0;"><span style="display:block;font-family:'Instrument Serif',Georgia,serif;font-size:23px;line-height:1.2;color:#17190F;margin-bottom:8px;">Controller or finance manager</span><span style="display:block;font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;">Forecasting, capital planning, location-level analysis. The monthly close is no longer sufficient information for the decisions being made.</span></li>
+        <li style="border-top:1px solid #DDD8CB;padding:20px 0;"><span style="display:block;font-family:'Instrument Serif',Georgia,serif;font-size:23px;line-height:1.2;color:#17190F;margin-bottom:8px;">People lead</span><span style="display:block;font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;">Recruitment, onboarding, retention, compliance across several hundred employees. A discipline, not an administrative task.</span></li>
+        <li style="border-top:1px solid #DDD8CB;padding:20px 0;"><span style="display:block;font-family:'Instrument Serif',Georgia,serif;font-size:23px;line-height:1.2;color:#17190F;margin-bottom:8px;">Training manager</span><span style="display:block;font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;">Owns certification, material currency and manager development. See the <a href="Restaurant Training Systems.dc.html" style="color:#38452C;border-bottom:1px solid #C4B79A;">training systems guide</a>.</span></li>
+        <li style="border-top:1px solid #DDD8CB;padding:20px 0;"><span style="display:block;font-family:'Instrument Serif',Georgia,serif;font-size:23px;line-height:1.2;color:#17190F;margin-bottom:8px;">Facilities and development</span><span style="display:block;font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;">Maintenance across fifteen buildings plus new store construction. Usually the last of the group to be hired and often the most overdue.</span></li>
+      </ul>
+    </section>
+    <section style="margin-bottom:64px;">
+      <div style="display:grid;grid-template-columns:64px 1fr;gap:24px;border-bottom:1px solid #17190F;padding-bottom:20px;margin-bottom:32px;">
+        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:20px;color:#A33F14;line-height:1.5;">05</div>
+        <h2 style="font-size:40px;line-height:1.08;letter-spacing:-0.015em;margin:0;color:#17190F;">Sixteen to thirty and beyond</h2>
+      </div>
+      <p style="font-size:17px;font-weight:300;line-height:1.85;color:#3D4034;margin:0 0 22px;max-width:840px;text-wrap:pretty;">The organization now manages managers, and communication becomes a design problem rather than a habit.</p>
+      <ul style="list-style:none;margin:6px 0 22px;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:64px;">
+        <li style="border-top:1px solid #DDD8CB;padding:20px 0;"><span style="display:block;font-family:'Instrument Serif',Georgia,serif;font-size:23px;line-height:1.2;color:#17190F;margin-bottom:8px;">Regional directors</span><span style="display:block;font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;">Over districts. Two layers between store and executive, which requires deliberate cadence and written communication.</span></li>
+        <li style="border-top:1px solid #DDD8CB;padding:20px 0;"><span style="display:block;font-family:'Instrument Serif',Georgia,serif;font-size:23px;line-height:1.2;color:#17190F;margin-bottom:8px;">Supply chain function</span><span style="display:block;font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;">Distribution agreements, redundancy, regional price variance, contingency planning. Too consequential to sit under operations.</span></li>
+        <li style="border-top:1px solid #DDD8CB;padding:20px 0;"><span style="display:block;font-family:'Instrument Serif',Georgia,serif;font-size:23px;line-height:1.2;color:#17190F;margin-bottom:8px;">Development pipeline owner</span><span style="display:block;font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;">Site selection, construction and opening as a repeatable process with an owner rather than a project run afresh each time.</span></li>
+        <li style="border-top:1px solid #DDD8CB;padding:20px 0;"><span style="display:block;font-family:'Instrument Serif',Georgia,serif;font-size:23px;line-height:1.2;color:#17190F;margin-bottom:8px;">Internal communication</span><span style="display:block;font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;">A defined channel and rhythm from executive to store. Information decays badly across three layers without one.</span></li>
+        <li style="border-top:1px solid #DDD8CB;padding:20px 0;"><span style="display:block;font-family:'Instrument Serif',Georgia,serif;font-size:23px;line-height:1.2;color:#17190F;margin-bottom:8px;">Leadership development program</span><span style="display:block;font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;">You must now produce general managers internally, because external hiring cannot keep pace with your opening schedule.</span></li>
+      </ul>
+      <div style="background:#17190F;padding:34px 38px;margin:8px 0 22px;max-width:900px;"><p style="font-family:'Instrument Serif',Georgia,serif;font-size:25px;line-height:1.4;color:#F2F0E9;margin:0;">Nearly every structural failure is one person carrying a span they cannot serve.</p></div>
+    </section>
+    <section style="margin-bottom:64px;">
+      <div style="display:grid;grid-template-columns:64px 1fr;gap:24px;border-bottom:1px solid #17190F;padding-bottom:20px;margin-bottom:32px;">
+        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:20px;color:#A33F14;line-height:1.5;">06</div>
+        <h2 style="font-size:40px;line-height:1.08;letter-spacing:-0.015em;margin:0;color:#17190F;">The roles operators delay too long</h2>
+      </div>
+      <p style="font-size:17px;font-weight:300;line-height:1.85;color:#3D4034;margin:0 0 22px;max-width:840px;text-wrap:pretty;">Three patterns recur across almost every group we work with.</p>
+      <p style="font-size:17px;font-weight:300;line-height:1.85;color:#3D4034;margin:0 0 22px;max-width:840px;text-wrap:pretty;"><strong style="font-weight:500;">The first genuine general manager.</strong> Owners promote a loyal shift lead rather than hiring someone who has done the job. The loyalty is real and the capability gap is also real, and it caps the business at whatever the owner can personally supervise.</p>
+      <p style="font-size:17px;font-weight:300;line-height:1.85;color:#3D4034;margin:0 0 22px;max-width:840px;text-wrap:pretty;"><strong style="font-weight:500;">The first district manager.</strong> Delayed because five stores feels too small to justify the salary. The cost of not having one shows up as variance between locations, and that variance almost always exceeds the salary.</p>
+      <p style="font-size:17px;font-weight:300;line-height:1.85;color:#3D4034;margin:0 0 22px;max-width:840px;text-wrap:pretty;"><strong style="font-weight:500;">The people function.</strong> Treated as administration until turnover becomes a crisis. By then the cost is embedded in food variance, guest scores and manager burnout, and it takes a year to reverse.</p>
+    </section>
+    <section style="margin-bottom:64px;">
+      <div style="display:grid;grid-template-columns:64px 1fr;gap:24px;border-bottom:1px solid #17190F;padding-bottom:20px;margin-bottom:32px;">
+        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:20px;color:#A33F14;line-height:1.5;">07</div>
+        <h2 style="font-size:40px;line-height:1.08;letter-spacing:-0.015em;margin:0;color:#17190F;">Structure and franchising</h2>
+      </div>
+      <p style="font-size:17px;font-weight:300;line-height:1.85;color:#3D4034;margin:0 0 22px;max-width:840px;text-wrap:pretty;">If franchising is the intention, organizational structure is not optional preparation, it is one of the three conditions.</p>
+      <p style="font-size:17px;font-weight:300;line-height:1.85;color:#3D4034;margin:0 0 22px;max-width:840px;text-wrap:pretty;">Franchising creates a second business on top of the first: franchisor support. Someone has to onboard franchisees, train them, visit them, enforce standards and manage the relationship. If the existing structure is already stretched serving company stores, adding franchisees does not distribute the load, it multiplies it.</p>
+      <p style="font-size:17px;font-weight:300;line-height:1.85;color:#3D4034;margin:0 0 22px;max-width:840px;text-wrap:pretty;">This is why leadership capacity sits alongside unit economics and documentation in our <a href="Franchise Readiness Assessment.dc.html" style="color:#38452C;border-bottom:1px solid #C4B79A;">readiness gate</a>. A brand with excellent economics and excellent manuals will still fail its first franchisees if nobody is available to support them.</p>
+    </section>
+    <section style="margin-bottom:64px;">
+      <div style="display:grid;grid-template-columns:64px 1fr;gap:24px;border-bottom:1px solid #17190F;padding-bottom:20px;margin-bottom:32px;">
+        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:20px;color:#A33F14;line-height:1.5;">FAQ</div>
+        <h2 style="font-size:40px;line-height:1.08;letter-spacing:-0.015em;margin:0;color:#17190F;">Common questions</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:72px;">
+        <article style="border-top:1px solid #DDD8CB;padding:26px 0;">
+          <h3 style="font-size:24px;line-height:1.18;margin:0 0 11px;color:#17190F;">How many restaurants can one district manager oversee?</h3>
+          <p style="font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;margin:0;">Three to five as a rule, six if the locations are geographically close and performing well. Beyond that, visits become inspections rather than coaching and store performance separates.</p>
+        </article>
+        <article style="border-top:1px solid #DDD8CB;padding:26px 0;">
+          <h3 style="font-size:24px;line-height:1.18;margin:0 0 11px;color:#17190F;">When should a restaurant group hire a director of operations?</h3>
+          <p style="font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;margin:0;">Usually around ten to fifteen locations, when there are multiple district managers to lead and the owner can no longer split attention between operations and growth without one suffering.</p>
+        </article>
+        <article style="border-top:1px solid #DDD8CB;padding:26px 0;">
+          <h3 style="font-size:24px;line-height:1.18;margin:0 0 11px;color:#17190F;">Should we promote internally or hire externally?</h3>
+          <p style="font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;margin:0;">Internally wherever the capability genuinely exists, because it preserves culture and creates a visible path for others. But promoting someone into a job they cannot yet do is a common and costly form of kindness. Below fifteen locations most groups need to do both.</p>
+        </article>
+        <article style="border-top:1px solid #DDD8CB;padding:26px 0;">
+          <h3 style="font-size:24px;line-height:1.18;margin:0 0 11px;color:#17190F;">What is the most commonly missed restaurant role?</h3>
+          <p style="font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;margin:0;">The people function. It is treated as administration until turnover becomes a crisis, at which point the cost is already embedded in food variance, guest scores and manager burnout.</p>
+        </article>
+      </div>
+    </section>
+
+    <section style="margin-bottom:0;">
+      <div style="display:grid;grid-template-columns:64px 1fr;gap:24px;border-bottom:1px solid #17190F;padding-bottom:20px;margin-bottom:32px;">
+        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:20px;color:#A33F14;line-height:1.5;">&rarr;</div>
+        <h2 style="font-size:40px;line-height:1.08;letter-spacing:-0.015em;margin:0;color:#17190F;">Read next</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:#DDD8CB;border:1px solid #DDD8CB;">
+        <a href="Multi-unit Restaurant Systems.dc.html" style="background:#F2F0E9;padding:32px 28px;display:block;text-decoration:none;transition:background 160ms;" style-hover="background:#EAE7DC;"><span style="display:block;font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#A33F14;font-weight:600;margin-bottom:13px;">Guide</span><span style="display:block;font-family:'Instrument Serif',Georgia,serif;font-size:24px;line-height:1.14;color:#17190F;margin-bottom:9px;">Multi-unit Restaurant Systems</span><span style="display:block;font-size:13.5px;font-weight:300;line-height:1.7;color:#3D4034;">The structural breakpoints this hiring order responds to.</span></a>
+        <a href="Restaurant Training Systems.dc.html" style="background:#F2F0E9;padding:32px 28px;display:block;text-decoration:none;transition:background 160ms;" style-hover="background:#EAE7DC;"><span style="display:block;font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#A33F14;font-weight:600;margin-bottom:13px;">Guide</span><span style="display:block;font-family:'Instrument Serif',Georgia,serif;font-size:24px;line-height:1.14;color:#17190F;margin-bottom:9px;">Restaurant Training Systems</span><span style="display:block;font-size:13.5px;font-weight:300;line-height:1.7;color:#3D4034;">How to produce the managers you will need internally.</span></a>
+        <a href="Franchise Readiness Assessment.dc.html" style="background:#F2F0E9;padding:32px 28px;display:block;text-decoration:none;transition:background 160ms;" style-hover="background:#EAE7DC;"><span style="display:block;font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#A33F14;font-weight:600;margin-bottom:13px;">Diagnostic</span><span style="display:block;font-family:'Instrument Serif',Georgia,serif;font-size:24px;line-height:1.14;color:#17190F;margin-bottom:9px;">Franchise Readiness Assessment</span><span style="display:block;font-size:13.5px;font-weight:300;line-height:1.7;color:#3D4034;">Leadership capacity is one of three conditions. Here are all twelve points.</span></a>
+      </div>
+    </section>
+  </div>
+  </article>
+
+  <section style="max-width:1320px;margin:80px auto 0;padding:0 40px;">
+    <div style="background:#38452C;padding:60px 52px;display:grid;grid-template-columns:1.15fr 0.85fr;gap:52px;align-items:center;">
+      <div>
+        <h2 style="font-size:40px;line-height:1.06;letter-spacing:-0.015em;margin:0 0 16px;color:#F2F0E9;text-wrap:pretty;">Working out the next <span style="font-style:italic;color:#E0A87C;">hire</span>?</h2>
+        <p style="font-size:16px;font-weight:300;line-height:1.8;color:rgba(242,240,233,0.88);margin:0;max-width:520px;">Tell us what you have built. We will tell you honestly where it stands. No pitch, no fee.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start;">
+        <a href="Contact.dc.html" style="font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#17190F;background:#E0A87C;padding:18px 34px;font-weight:600;" style-hover="background:#F2F0E9;">Talk to us</a>
+        <a href="mailto:info@eustressanddemeter.com" style="font-family:'Instrument Serif',Georgia,serif;font-size:22px;color:#F2F0E9;" style-hover="color:#E0A87C;">info@eustressanddemeter.com</a>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <footer style="max-width:1320px;margin:0 auto;padding:64px 40px 56px;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:56px;">
+    <div>
+      <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;">
+        <img src="assets/logo-seal.png" alt="Eustress and Demeter seal" style="width:44px;height:44px;display:block;">
+        <span style="font-family:'Instrument Serif',Georgia,serif;font-size:21px;color:#17190F;">Eustress &amp; Demeter</span>
+      </div>
+      <p style="font-size:14px;font-weight:300;line-height:1.75;color:#3D4034;margin:0;max-width:400px;">Brand expansion and franchise growth for restaurant and hospitality brands. One team, from the first P&amp;L review to the fortieth opening.</p>
+    </div>
+    <div>
+      <h2 style="font-size:10px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:#5B5F4E;margin:0 0 18px;">Services</h2>
+      <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:11px;">
+        <li><a href="Restaurant Consulting.dc.html" style="font-size:14px;font-weight:300;color:#17190F;">Restaurant Consulting</a></li>
+        <li><a href="Restaurant Catering Consulting.dc.html" style="font-size:14px;font-weight:300;color:#17190F;">Catering &amp; Off-Premise</a></li>
+        <li><a href="Local Store Marketing.dc.html" style="font-size:14px;font-weight:300;color:#17190F;">Local Store Marketing</a></li>
+        <li><a href="Franchise Consulting.dc.html" style="font-size:14px;font-weight:300;color:#17190F;">Franchise Consulting</a></li>
+        <li><a href="Franchise Readiness Assessment.dc.html" style="font-size:14px;font-weight:300;color:#17190F;">Franchise Readiness</a></li>
+        <li><a href="Franchise Sales Support.dc.html" style="font-size:14px;font-weight:300;color:#17190F;">Franchise Sales Support</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2 style="font-size:10px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:#5B5F4E;margin:0 0 18px;">Company</h2>
+      <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:11px;">
+        <li><a href="Methodology.dc.html" style="font-size:14px;font-weight:300;color:#17190F;">Methodology</a></li>
+        <li><a href="The E&D Playbook.dc.html" style="font-size:14px;font-weight:300;color:#17190F;">The E&amp;D Playbook</a></li>
+        <li><a href="E&D Clients.dc.html" style="font-size:14px;font-weight:300;color:#17190F;">Clients</a></li>
+        <li><a href="Contact.dc.html" style="font-size:14px;font-weight:300;color:#17190F;">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <div style="border-top:1px solid #CFCBBC;">
+    <div style="max-width:1320px;margin:0 auto;padding:24px 40px;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;">
+      <span style="font-size:11px;font-weight:300;color:#5B5F4E;">&copy; 2026 Eustress &amp; Demeter LLC</span>
+      <span style="font-size:11px;font-weight:300;color:#5B5F4E;">Growth is not about how fast a brand expands, but how long it succeeds.</span>
+    </div>
+  </div>
+
+</div>
+
+</x-dc>
+</body>
+</html>

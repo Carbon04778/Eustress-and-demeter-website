@@ -1,0 +1,283 @@
+<helmet>
+<title>Franchise Entity Structure: The Three-Entity Model | Eustress &amp; Demeter</title>
+<meta name="description" content="How to structure a franchise business using the three-entity model: a holdings company, an intellectual property company and an operating franchisor, and why retrofitting it later is expensive.">
+<meta name="robots" content="index, follow">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    { "@type": "BreadcrumbList", "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.eustressanddemeter.com/" },
+      { "@type": "ListItem", "position": 2, "name": "The E&D Playbook", "item": "https://www.eustressanddemeter.com/playbook" },
+      { "@type": "ListItem", "position": 3, "name": "Franchise Entity Structure Guide", "item": "https://www.eustressanddemeter.com/playbook/franchise-entity-structure" }
+    ] },
+    { "@type": "Article", "headline": "Franchise Entity Structure Guide", "description": "How to structure a franchise business using the three-entity model: a holdings company, an intellectual property company and an operating franchisor, and why retrofitting it later is expensive.", "articleSection": "Franchise Development", "publisher": { "@id": "https://www.eustressanddemeter.com/#org" } },
+    { "@type": "FAQPage", "mainEntity": [
+        { "@type": "Question", "name": "Do I need three entities to franchise a restaurant?", "acceptedAnswer": { "@type": "Answer", "text": "It is not legally required, and small systems sometimes begin with fewer. The three-entity model is used because it separates brand assets from operating liability and creates a clean licensing chain, both of which become more valuable as the system grows and are expensive to introduce later." } },
+        { "@type": "Question", "name": "Where should trademarks be held?", "acceptedAnswer": { "@type": "Answer", "text": "In a dedicated intellectual property entity, not personally and not in the company that operates restaurants. Marks held in a founder's own name or in the operating company are a common diligence finding and are exposed to operating claims." } },
+        { "@type": "Question", "name": "Can we restructure after we have started franchising?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, but it is materially harder. Existing franchise agreements name the franchisor, so changes may require franchisee consent, amended disclosure documents and refiling in registration states. It is one of the strongest arguments for structuring before the first agreement is signed." } },
+        { "@type": "Question", "name": "Who should set up the entity structure?", "acceptedAnswer": { "@type": "Answer", "text": "Franchise counsel together with a tax advisor experienced in franchise systems. We prepare the operating substance the structure holds, but formation, licensing terms and tax treatment are legal and accounting work." } }
+    ] },
+    { "@type": "Organization", "@id": "https://www.eustressanddemeter.com/#org", "name": "Eustress & Demeter", "url": "https://www.eustressanddemeter.com/", "email": "info@eustressanddemeter.com", "telephone": "+1-213-222-3849" }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Archivo:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *{ box-sizing: border-box; }
+  body { margin: 0; background: #F2F0E9; color: #17190F; font-family: 'Archivo', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: #38452C; text-decoration: none; }
+  a:hover { color: #A33F14; }
+  h1, h2, h3 { font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; }
+  html { scroll-behavior: smooth; }
+  .ed-menu-panel { display: none; }
+  .ed-menu:hover .ed-menu-panel, .ed-menu:focus-within .ed-menu-panel { display: block; }
+  a:focus-visible, button:focus-visible, [tabindex]:focus-visible { outline: 3px solid #C4501E; outline-offset: 3px; }
+  .ed-skip { position: absolute; left: -9999px; top: 0; z-index: 200; background: #F2F0E9; color: #17190F; padding: 14px 22px; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; border: 2px solid #17190F; }
+  .ed-skip:focus { left: 12px; top: 12px; }
+  /* mobile */
+  table { display: block; overflow-x: auto; max-width: 100%; }
+  img, video { max-width: 100%; }
+  @media (max-width: 900px) {
+    header { position: static !important; }
+    header > div { height: auto !important; flex-wrap: wrap !important; padding: 12px 20px !important; gap: 10px !important; }
+    nav[aria-label="Primary"] { margin-left: 0 !important; width: 100%; overflow-x: auto; gap: 18px !important; padding-bottom: 2px; -webkit-overflow-scrolling: touch; }
+    nav[aria-label="Primary"] a { padding: 8px 0 !important; }
+    .ed-menu-panel { display: none !important; }
+    [style*="grid-template-columns"] { grid-template-columns: minmax(0,1fr) !important; }
+    [style*="max-width:1320px"] { padding-left: 20px !important; padding-right: 20px !important; }
+    h1 { font-size: clamp(32px, 8.6vw, 70px) !important; }
+    h2 { font-size: clamp(27px, 7vw, 52px) !important; }
+    h3 { font-size: clamp(20px, 5vw, 36px) !important; }
+    [style*="font-size:19px"], [style*="font-size:18px"], [style*="font-size:17px"] { font-size: 16.5px !important; }
+    [style*="padding:104px 40px"], [style*="padding:100px 40px"], [style*="padding:96px 40px"], [style*="padding:88px 40px"], [style*="padding:80px 40px"] { padding: 56px 20px !important; }
+    [style*="padding:64px 56px"], [style*="padding:64px 48px"] { padding: 40px 24px !important; }
+    [style*="padding:72px 40px"], [style*="padding:76px 40px"] { padding: 48px 20px !important; }
+    [style*="padding:38px 34px"], [style*="padding:34px 32px"], [style*="padding:34px 30px"] { padding: 26px 22px !important; }
+    [style*="gap:72px"], [style*="gap:80px"], [style*="gap:56px"] { gap: 32px !important; }
+    [style*="column-gap:80px"], [style*="column-gap:56px"], [style*="column-gap:44px"] { column-gap: 0 !important; }
+    [style*="min-height:460px"] { min-height: 260px !important; }
+    [style*="height:620px"], [style*="height:560px"], [style*="height:440px"] { height: 260px !important; }
+    figure img { height: 260px !important; }
+  }
+  @media (max-width: 560px) {
+    [style*="max-width:1320px"] { padding-left: 16px !important; padding-right: 16px !important; }
+    [style*="padding:104px 40px"], [style*="padding:100px 40px"], [style*="padding:96px 40px"], [style*="padding:88px 40px"], [style*="padding:80px 40px"] { padding: 44px 16px !important; }
+    input, select, textarea { font-size: 16px !important; }
+  }
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; } }
+</style>
+</helmet>
+
+<div id="top" style="background:#F2F0E9;">
+  <a href="#main" class="ed-skip">Skip to main content</a>
+
+<header style="position:sticky;top:0;z-index:60;background:#17190F;">
+    <div style="max-width:1320px;margin:0 auto;padding:0 40px;height:74px;display:flex;align-items:center;gap:32px;">
+      <a href="E&D Website v2.dc.html" aria-label="Eustress and Demeter, home" style="display:flex;align-items:center;gap:14px;">
+        <img src="assets/logo-seal.png" alt="Eustress and Demeter seal" style="width:38px;height:38px;display:block;filter:brightness(1.7);">
+        <span style="font-family:'Instrument Serif',Georgia,serif;font-size:19px;letter-spacing:0.01em;color:#F2F0E9;white-space:nowrap;">Eustress &amp; Demeter</span>
+      </a>
+      <nav aria-label="Primary" style="margin-left:auto;display:flex;align-items:center;gap:26px;">
+        <div class="ed-menu" style="position:relative;display:flex;align-items:center;">
+          <a href="Restaurant Consulting.dc.html" style="display:flex;align-items:center;gap:7px;font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(242,240,233,0.78);font-weight:500;white-space:nowrap;padding:26px 0;" style-hover="color:#F2F0E9;">Services<span aria-hidden="true" style="font-size:8px;line-height:1;">&#9660;</span></a>
+          <div class="ed-menu-panel" style="position:absolute;top:100%;right:0;width:340px;background:#17190F;border:1px solid rgba(242,240,233,0.22);padding:10px;z-index:80;">
+            <a href="Restaurant Consulting.dc.html" style="display:block;padding:13px 16px;text-decoration:none;transition:background 160ms;" style-hover="background:#38452C;"><span style="display:block;font-size:14px;font-weight:500;letter-spacing:0.01em;color:#F2F0E9;margin-bottom:3px;">Restaurant Consulting</span><span style="display:block;font-size:11.5px;font-weight:300;line-height:1.5;color:rgba(242,240,233,0.72);">Unit economics, operations, menu, training</span></a>
+            <a href="Restaurant Catering Consulting.dc.html" style="display:block;padding:13px 16px;text-decoration:none;transition:background 160ms;" style-hover="background:#38452C;"><span style="display:block;font-size:14px;font-weight:500;letter-spacing:0.01em;color:#F2F0E9;margin-bottom:3px;">Catering &amp; Off-Premise</span><span style="display:block;font-size:11.5px;font-weight:300;line-height:1.5;color:rgba(242,240,233,0.72);">The fastest revenue in most restaurants</span></a>
+            <a href="Local Store Marketing.dc.html" style="display:block;padding:13px 16px;text-decoration:none;transition:background 160ms;" style-hover="background:#38452C;"><span style="display:block;font-size:14px;font-weight:500;letter-spacing:0.01em;color:#F2F0E9;margin-bottom:3px;">Local Store Marketing</span><span style="display:block;font-size:11.5px;font-weight:300;line-height:1.5;color:rgba(242,240,233,0.72);">Trade-area programs and grand openings</span></a>
+            <a href="Franchise Consulting.dc.html" style="display:block;padding:13px 16px;text-decoration:none;transition:background 160ms;" style-hover="background:#38452C;"><span style="display:block;font-size:14px;font-weight:500;letter-spacing:0.01em;color:#F2F0E9;margin-bottom:3px;">Franchise Consulting</span><span style="display:block;font-size:11.5px;font-weight:300;line-height:1.5;color:rgba(242,240,233,0.72);">Build the system, then sell the territories</span></a>
+            <a href="Franchise Readiness Assessment.dc.html" style="display:block;padding:13px 16px;text-decoration:none;transition:background 160ms;" style-hover="background:#38452C;"><span style="display:block;font-size:14px;font-weight:500;letter-spacing:0.01em;color:#F2F0E9;margin-bottom:3px;">Franchise Readiness</span><span style="display:block;font-size:11.5px;font-weight:300;line-height:1.5;color:rgba(242,240,233,0.72);">The twelve-point diagnostic</span></a>
+            <a href="Franchise Sales Support.dc.html" style="display:block;padding:13px 16px;text-decoration:none;transition:background 160ms;" style-hover="background:#38452C;"><span style="display:block;font-size:14px;font-weight:500;letter-spacing:0.01em;color:#F2F0E9;margin-bottom:3px;">Franchise Sales Support</span><span style="display:block;font-size:11.5px;font-weight:300;line-height:1.5;color:rgba(242,240,233,0.72);">Qualified candidates, disciplined pacing</span></a>
+          </div>
+        </div>
+        <a href="Methodology.dc.html" style="font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(242,240,233,0.78);font-weight:500;white-space:nowrap;" style-hover="color:#F2F0E9;">Methodology</a>
+        <a href="The E&D Playbook.dc.html" style="font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(242,240,233,0.78);font-weight:500;white-space:nowrap;" style-hover="color:#F2F0E9;">Playbook</a>
+        <a href="E&D Clients.dc.html" style="font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(242,240,233,0.78);font-weight:500;white-space:nowrap;" style-hover="color:#F2F0E9;">Clients</a>
+        <a href="Contact.dc.html" style="font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:#F2F0E9;background:#A33F14;padding:14px 24px;font-weight:600;white-space:nowrap;" style-hover="background:#F2F0E9;color:#17190F;">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+
+  <article>
+  <section style="border-bottom:1px solid #17190F;">
+    <div style="max-width:1320px;margin:0 auto;padding:88px 40px 68px;">
+      <div style="display:flex;align-items:center;gap:14px;margin-bottom:34px;">
+        <span style="width:34px;height:1px;background:#C4501E;"></span>
+        <a href="The E&D Playbook.dc.html" style="font-size:10px;letter-spacing:0.24em;text-transform:uppercase;color:#38452C;font-weight:600;">The E&amp;D Playbook</a>
+        <span aria-hidden="true" style="font-size:10px;color:#8A8574;">/</span>
+        <span style="font-size:10px;letter-spacing:0.24em;text-transform:uppercase;color:#5B5F4E;font-weight:600;">Franchise Development</span>
+      </div>
+      <h1 style="font-size:64px;line-height:1.03;letter-spacing:-0.02em;margin:0 0 30px;color:#17190F;max-width:1000px;text-wrap:pretty;">The three-entity model, and why you build it <span style="font-style:italic;color:#38452C;">first</span></h1>
+      <p style="font-size:19px;font-weight:300;line-height:1.8;color:#3D4034;margin:0;max-width:820px;text-wrap:pretty;">Most restaurant groups franchise out of the same company that operates their restaurants. It works until it does not, and by then the intellectual property that carries most of the brand&rsquo;s value is sitting inside an entity exposed to every operating liability the business has.</p>
+    </div>
+  </section>
+
+  <section style="background:#EAE7DC;border-bottom:1px solid #17190F;">
+    <div style="max-width:1320px;margin:0 auto;padding:44px 40px;display:grid;grid-template-columns:200px 1fr;gap:40px;align-items:start;">
+      <div style="font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#A33F14;font-weight:600;padding-top:6px;">The short answer</div>
+      <p style="font-size:20px;font-weight:300;line-height:1.7;color:#17190F;margin:0;max-width:900px;text-wrap:pretty;">A franchise system is best structured across three entities: a holdings company that owns the others and holds capital, an intellectual property company that owns the trademarks and system documentation and licenses them onward, and an operating company that acts as franchisor and delivers support. The separation protects brand assets from operating liability and clarifies the chain of rights that franchise agreements depend on. Restructuring after franchising has begun requires franchisee consent and is substantially more expensive than building it correctly at the outset.</p>
+    </div>
+  </section>
+
+  <div style="max-width:1320px;margin:0 auto;padding:72px 40px 0;">
+    <section style="margin-bottom:64px;">
+      <div style="display:grid;grid-template-columns:64px 1fr;gap:24px;border-bottom:1px solid #17190F;padding-bottom:20px;margin-bottom:32px;">
+        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:20px;color:#A33F14;line-height:1.5;">01</div>
+        <h2 style="font-size:40px;line-height:1.08;letter-spacing:-0.015em;margin:0;color:#17190F;">The problem with one entity</h2>
+      </div>
+      <p style="font-size:17px;font-weight:300;line-height:1.85;color:#3D4034;margin:0 0 22px;max-width:840px;text-wrap:pretty;">A single company that operates restaurants, owns the trademarks and acts as franchisor concentrates every risk in one place.</p>
+      <p style="font-size:17px;font-weight:300;line-height:1.85;color:#3D4034;margin:0 0 22px;max-width:840px;text-wrap:pretty;">If a guest is injured at a company-operated location, the claim reaches an entity that also owns the brand. If a franchisee sues over a disclosure issue, the same entity holds the trademarks and the operating cash. There is no separation between the asset that carries the brand&rsquo;s long-term value and the day-to-day activities most likely to generate liability.</p>
+      <p style="font-size:17px;font-weight:300;line-height:1.85;color:#3D4034;margin:0 0 22px;max-width:840px;text-wrap:pretty;">It also muddles the chain of rights. A franchise agreement grants a franchisee the right to use the marks and the system. Where those marks live matters, and where they are documented as living matters more. A clean licensing chain from owner to franchisor to franchisee is far easier to enforce, and far easier to explain in diligence, than one entity licensing to itself.</p>
+    </section>
+    <section style="margin-bottom:64px;">
+      <div style="display:grid;grid-template-columns:64px 1fr;gap:24px;border-bottom:1px solid #17190F;padding-bottom:20px;margin-bottom:32px;">
+        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:20px;color:#A33F14;line-height:1.5;">02</div>
+        <h2 style="font-size:40px;line-height:1.08;letter-spacing:-0.015em;margin:0;color:#17190F;">The three entities</h2>
+      </div>
+      <p style="font-size:17px;font-weight:300;line-height:1.85;color:#3D4034;margin:0 0 22px;max-width:840px;text-wrap:pretty;">Each has a distinct purpose, and the separation is what does the work.</p>
+      <ol style="list-style:none;margin:6px 0 22px;padding:0;display:flex;flex-direction:column;">
+        <li style="border-top:1px solid #17190F;padding:22px 0;display:grid;grid-template-columns:52px 1fr 1.5fr;gap:22px;align-items:start;"><span style="font-size:11px;color:#A33F14;font-weight:600;font-variant-numeric:tabular-nums;padding-top:7px;">01</span><h3 style="font-size:23px;line-height:1.15;margin:0;color:#17190F;">Holdings company</h3><p style="font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;margin:0;">The parent. Owns the other entities, holds capital, and is where ownership, voting rights, board composition and succession planning live. It does not trade. It exists to give the group a clean top and to keep ownership arrangements separate from operating activity.</p></li>
+        <li style="border-top:1px solid #DDD8CB;padding:22px 0;display:grid;grid-template-columns:52px 1fr 1.5fr;gap:22px;align-items:start;"><span style="font-size:11px;color:#A33F14;font-weight:600;font-variant-numeric:tabular-nums;padding-top:7px;">02</span><h3 style="font-size:23px;line-height:1.15;margin:0;color:#17190F;">Intellectual property company</h3><p style="font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;margin:0;">Owns every mark, copyrighted manual, recipe specification, trade secret and proprietary system, and licenses them to the operating company under a written agreement. Insulated from operating liability by design, because nothing that happens in a restaurant reaches it.</p></li>
+        <li style="border-top:1px solid #DDD8CB;padding:22px 0;display:grid;grid-template-columns:52px 1fr 1.5fr;gap:22px;align-items:start;"><span style="font-size:11px;color:#A33F14;font-weight:600;font-variant-numeric:tabular-nums;padding-top:7px;">03</span><h3 style="font-size:23px;line-height:1.15;margin:0;color:#17190F;">Operating company (the franchisor)</h3><p style="font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;margin:0;">The entity franchisees actually contract with. Delivers training, field support, quality control and system compliance, and sublicenses the marks it holds under license from the IP company. This is the entity that carries operating risk, and it is the one furthest from the brand assets.</p></li>
+      </ol>
+    </section>
+    <section style="margin-bottom:64px;">
+      <div style="display:grid;grid-template-columns:64px 1fr;gap:24px;border-bottom:1px solid #17190F;padding-bottom:20px;margin-bottom:32px;">
+        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:20px;color:#A33F14;line-height:1.5;">03</div>
+        <h2 style="font-size:40px;line-height:1.08;letter-spacing:-0.015em;margin:0;color:#17190F;">What sits where</h2>
+      </div>
+      <p style="font-size:17px;font-weight:300;line-height:1.85;color:#3D4034;margin:0 0 22px;max-width:840px;text-wrap:pretty;">The allocation matters as much as the structure. These are the assets that belong in the IP company rather than with the operator.</p>
+      <ul style="list-style:none;margin:6px 0 22px;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:72px;">
+        <li style="border-top:1px solid #DDD8CB;padding:22px 0;"><h3 style="font-size:23px;line-height:1.15;margin:0 0 9px;color:#17190F;">Trademarks and service marks</h3><p style="font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;margin:0;">Registered in the IP entity&rsquo;s name, not personally and not in the restaurant operating company. Marks held in a founder&rsquo;s own name are a routine and awkward finding in diligence.</p></li>
+        <li style="border-top:1px solid #DDD8CB;padding:22px 0;"><h3 style="font-size:23px;line-height:1.15;margin:0 0 9px;color:#17190F;">Copyrighted materials</h3><p style="font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;margin:0;">Operations manuals, training programs, recipe books, brand guidelines. The documented system is an asset, and it should be owned as one.</p></li>
+        <li style="border-top:1px solid #DDD8CB;padding:22px 0;"><h3 style="font-size:23px;line-height:1.15;margin:0 0 9px;color:#17190F;">Trade secrets</h3><p style="font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;margin:0;">Recipes, formulations, supplier terms and proprietary methods, with the confidentiality provisions that protect them.</p></li>
+        <li style="border-top:1px solid #DDD8CB;padding:22px 0;"><h3 style="font-size:23px;line-height:1.15;margin:0 0 9px;color:#17190F;">Proprietary systems</h3><p style="font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;margin:0;">Anything built rather than bought: a training platform, a scoring system, a configured technology stack.</p></li>
+        <li style="border-top:1px solid #DDD8CB;padding:22px 0;"><h3 style="font-size:23px;line-height:1.15;margin:0 0 9px;color:#17190F;">Brand standards</h3><p style="font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;margin:0;">The written definition of what the brand is, which is ultimately what a franchisee is licensed to reproduce.</p></li>
+      </ul>
+    </section>
+    <section style="margin-bottom:64px;">
+      <div style="display:grid;grid-template-columns:64px 1fr;gap:24px;border-bottom:1px solid #17190F;padding-bottom:20px;margin-bottom:32px;">
+        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:20px;color:#A33F14;line-height:1.5;">04</div>
+        <h2 style="font-size:40px;line-height:1.08;letter-spacing:-0.015em;margin:0;color:#17190F;">The internal license</h2>
+      </div>
+      <p style="font-size:17px;font-weight:300;line-height:1.85;color:#3D4034;margin:0 0 22px;max-width:840px;text-wrap:pretty;">The agreement between the IP company and the operating company is not a formality. It is the mechanism that makes the whole structure real.</p>
+      <p style="font-size:17px;font-weight:300;line-height:1.85;color:#3D4034;margin:0 0 22px;max-width:840px;text-wrap:pretty;">It should state what is licensed, on what terms, at what royalty, for how long, and what happens on termination. It should be priced on defensible terms, because a license priced arbitrarily invites scrutiny from tax authorities and from anyone examining the group later.</p>
+      <p style="font-size:17px;font-weight:300;line-height:1.85;color:#3D4034;margin:0 0 22px;max-width:840px;text-wrap:pretty;">It also has to permit sublicensing to franchisees, because that is the entire point. The chain runs IP company to franchisor to franchisee, and every link needs to be documented. A gap anywhere in that chain is a problem you discover at the worst moment, usually during an enforcement action or a sale.</p>
+      <p style="font-family:'Instrument Serif',Georgia,serif;font-size:28px;line-height:1.35;color:#17190F;margin:34px 0 8px;max-width:820px;border-top:2px solid #C4501E;padding-top:26px;">The licensing relationships between the entities are the foundation your franchise agreements sit on.</p>
+    </section>
+    <section style="margin-bottom:64px;">
+      <div style="display:grid;grid-template-columns:64px 1fr;gap:24px;border-bottom:1px solid #17190F;padding-bottom:20px;margin-bottom:32px;">
+        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:20px;color:#A33F14;line-height:1.5;">05</div>
+        <h2 style="font-size:40px;line-height:1.08;letter-spacing:-0.015em;margin:0;color:#17190F;">Why timing matters so much</h2>
+      </div>
+      <p style="font-size:17px;font-weight:300;line-height:1.85;color:#3D4034;margin:0 0 22px;max-width:840px;text-wrap:pretty;">Setting this up before franchising begins is straightforward. Doing it afterward is not.</p>
+      <p style="font-size:17px;font-weight:300;line-height:1.85;color:#3D4034;margin:0 0 22px;max-width:840px;text-wrap:pretty;">Once franchise agreements exist, the franchisor is a contracting party to every one of them. Moving the franchisor role to a different entity, or moving marks out from under it, may require franchisee consent, may trigger disclosure obligations, and will certainly require amended documentation and state filings where you are registered.</p>
+      <p style="font-size:17px;font-weight:300;line-height:1.85;color:#3D4034;margin:0 0 22px;max-width:840px;text-wrap:pretty;">The cost is not only legal. It consumes management attention, it creates an opportunity for franchisees to reopen other terms, and it looks like instability to candidates in the middle of your pipeline.</p>
+      <p style="font-size:17px;font-weight:300;line-height:1.85;color:#3D4034;margin:0 0 22px;max-width:840px;text-wrap:pretty;">Treat entity structure as part of the foundation work rather than an administrative task to handle once deals are flowing. It belongs in the same phase as documenting operations and validating unit economics.</p>
+    </section>
+    <section style="margin-bottom:64px;">
+      <div style="display:grid;grid-template-columns:64px 1fr;gap:24px;border-bottom:1px solid #17190F;padding-bottom:20px;margin-bottom:32px;">
+        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:20px;color:#A33F14;line-height:1.5;">06</div>
+        <h2 style="font-size:40px;line-height:1.08;letter-spacing:-0.015em;margin:0;color:#17190F;">Getting it right</h2>
+      </div>
+      <p style="font-size:17px;font-weight:300;line-height:1.85;color:#3D4034;margin:0 0 22px;max-width:840px;text-wrap:pretty;">Two cautions, stated plainly.</p>
+      <p style="font-size:17px;font-weight:300;line-height:1.85;color:#3D4034;margin:0 0 22px;max-width:840px;text-wrap:pretty;"><strong style="font-weight:500;">This is legal and tax work, and we are neither lawyers nor accountants.</strong> The three-entity model is a proven framework, but the specific implementation depends on your state, your tax position, your ownership arrangements and your growth intentions. It should be built with franchise counsel and a tax advisor who work in this field regularly.</p>
+      <p style="font-size:17px;font-weight:300;line-height:1.85;color:#3D4034;margin:0 0 22px;max-width:840px;text-wrap:pretty;"><strong style="font-weight:500;">Structure is not a substitute for substance.</strong> Three entities around a brand that has not proven its unit economics or documented its operations is expensive scaffolding around nothing. The structure protects assets worth protecting; build the assets first, or at least alongside.</p>
+      <p style="font-size:17px;font-weight:300;line-height:1.85;color:#3D4034;margin:0 0 22px;max-width:840px;text-wrap:pretty;">What we do is prepare the operating substance that sits inside the structure: the documented system, the proven economics, the support function. See <a href="Franchise Consulting.dc.html" style="color:#38452C;border-bottom:1px solid #C4B79A;">franchise consulting</a> for how that work runs, and the <a href="Franchise Readiness Assessment.dc.html" style="color:#38452C;border-bottom:1px solid #C4B79A;">readiness assessment</a> for whether you are there yet.</p>
+    </section>
+    <section style="margin-bottom:64px;">
+      <div style="display:grid;grid-template-columns:64px 1fr;gap:24px;border-bottom:1px solid #17190F;padding-bottom:20px;margin-bottom:32px;">
+        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:20px;color:#A33F14;line-height:1.5;">FAQ</div>
+        <h2 style="font-size:40px;line-height:1.08;letter-spacing:-0.015em;margin:0;color:#17190F;">Common questions</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:72px;">
+        <article style="border-top:1px solid #DDD8CB;padding:26px 0;">
+          <h3 style="font-size:24px;line-height:1.18;margin:0 0 11px;color:#17190F;">Do I need three entities to franchise a restaurant?</h3>
+          <p style="font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;margin:0;">It is not legally required, and small systems sometimes begin with fewer. The three-entity model is used because it separates brand assets from operating liability and creates a clean licensing chain, both of which become more valuable as the system grows and are expensive to introduce later.</p>
+        </article>
+        <article style="border-top:1px solid #DDD8CB;padding:26px 0;">
+          <h3 style="font-size:24px;line-height:1.18;margin:0 0 11px;color:#17190F;">Where should trademarks be held?</h3>
+          <p style="font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;margin:0;">In a dedicated intellectual property entity, not personally and not in the company that operates restaurants. Marks held in a founder&rsquo;s own name or in the operating company are a common diligence finding and are exposed to operating claims.</p>
+        </article>
+        <article style="border-top:1px solid #DDD8CB;padding:26px 0;">
+          <h3 style="font-size:24px;line-height:1.18;margin:0 0 11px;color:#17190F;">Can we restructure after we have started franchising?</h3>
+          <p style="font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;margin:0;">Yes, but it is materially harder. Existing franchise agreements name the franchisor, so changes may require franchisee consent, amended disclosure documents and refiling in registration states. It is one of the strongest arguments for structuring before the first agreement is signed.</p>
+        </article>
+        <article style="border-top:1px solid #DDD8CB;padding:26px 0;">
+          <h3 style="font-size:24px;line-height:1.18;margin:0 0 11px;color:#17190F;">Who should set up the entity structure?</h3>
+          <p style="font-size:14.5px;font-weight:300;line-height:1.75;color:#3D4034;margin:0;">Franchise counsel together with a tax advisor experienced in franchise systems. We prepare the operating substance the structure holds, but formation, licensing terms and tax treatment are legal and accounting work.</p>
+        </article>
+      </div>
+    </section>
+    <section style="margin-bottom:0;">
+      <div style="display:grid;grid-template-columns:64px 1fr;gap:24px;border-bottom:1px solid #17190F;padding-bottom:20px;margin-bottom:32px;">
+        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:20px;color:#A33F14;line-height:1.5;">&rarr;</div>
+        <h2 style="font-size:40px;line-height:1.08;letter-spacing:-0.015em;margin:0;color:#17190F;">Read next</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:#DDD8CB;border:1px solid #DDD8CB;">
+        <a href="Franchise Consulting.dc.html" style="background:#F2F0E9;padding:32px 28px;display:block;text-decoration:none;transition:background 160ms;" style-hover="background:#EAE7DC;"><span style="display:block;font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#A33F14;font-weight:600;margin-bottom:13px;">Service</span><span style="display:block;font-family:'Instrument Serif',Georgia,serif;font-size:24px;line-height:1.14;color:#17190F;margin-bottom:9px;">Franchise Consulting</span><span style="display:block;font-size:13.5px;font-weight:300;line-height:1.7;color:#3D4034;">The six stages from unit economics to first franchisee opening.</span></a>
+        <a href="Franchise Readiness Assessment.dc.html" style="background:#F2F0E9;padding:32px 28px;display:block;text-decoration:none;transition:background 160ms;" style-hover="background:#EAE7DC;"><span style="display:block;font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#A33F14;font-weight:600;margin-bottom:13px;">Diagnostic</span><span style="display:block;font-family:'Instrument Serif',Georgia,serif;font-size:24px;line-height:1.14;color:#17190F;margin-bottom:9px;">Franchise Readiness Assessment</span><span style="display:block;font-size:13.5px;font-weight:300;line-height:1.7;color:#3D4034;">Whether the substance inside the structure actually exists.</span></a>
+        <a href="Restaurant Due Diligence Checklist.dc.html" style="background:#F2F0E9;padding:32px 28px;display:block;text-decoration:none;transition:background 160ms;" style-hover="background:#EAE7DC;"><span style="display:block;font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#A33F14;font-weight:600;margin-bottom:13px;">Guide</span><span style="display:block;font-family:'Instrument Serif',Georgia,serif;font-size:24px;line-height:1.14;color:#17190F;margin-bottom:9px;">Restaurant Due Diligence Checklist</span><span style="display:block;font-size:13.5px;font-weight:300;line-height:1.7;color:#3D4034;">What a buyer examines, including where the marks are held.</span></a>
+      </div>
+    </section>
+  </div>
+  </article>
+
+  <section style="max-width:1320px;margin:80px auto 0;padding:0 40px;">
+    <div style="background:#38452C;padding:60px 52px;display:grid;grid-template-columns:1.15fr 0.85fr;gap:52px;align-items:center;">
+      <div>
+        <h2 style="font-size:40px;line-height:1.06;letter-spacing:-0.015em;margin:0 0 16px;color:#F2F0E9;text-wrap:pretty;">Structuring a franchise <span style="font-style:italic;color:#E0A87C;">system</span>?</h2>
+        <p style="font-size:16px;font-weight:300;line-height:1.8;color:rgba(242,240,233,0.88);margin:0;max-width:520px;">Tell us what you have built. We will tell you honestly where it stands. No pitch, no fee.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start;">
+        <a href="Contact.dc.html" style="font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#17190F;background:#E0A87C;padding:18px 34px;font-weight:600;" style-hover="background:#F2F0E9;">Talk to us</a>
+        <a href="mailto:info@eustressanddemeter.com" style="font-family:'Instrument Serif',Georgia,serif;font-size:22px;color:#F2F0E9;" style-hover="color:#E0A87C;">info@eustressanddemeter.com</a>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <footer style="max-width:1320px;margin:0 auto;padding:64px 40px 56px;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:56px;">
+    <div>
+      <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;">
+        <img src="assets/logo-seal.png" alt="Eustress and Demeter seal" style="width:44px;height:44px;display:block;">
+        <span style="font-family:'Instrument Serif',Georgia,serif;font-size:21px;color:#17190F;">Eustress &amp; Demeter</span>
+      </div>
+      <p style="font-size:14px;font-weight:300;line-height:1.75;color:#3D4034;margin:0;max-width:400px;">Brand expansion and franchise growth for restaurant and hospitality brands. One team, from the first P&amp;L review to the fortieth opening.</p>
+    </div>
+    <div>
+      <h2 style="font-size:10px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:#5B5F4E;margin:0 0 18px;">Services</h2>
+      <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:11px;">
+        <li><a href="Restaurant Consulting.dc.html" style="font-size:14px;font-weight:300;color:#17190F;">Restaurant Consulting</a></li>
+        <li><a href="Restaurant Catering Consulting.dc.html" style="font-size:14px;font-weight:300;color:#17190F;">Catering &amp; Off-Premise</a></li>
+        <li><a href="Local Store Marketing.dc.html" style="font-size:14px;font-weight:300;color:#17190F;">Local Store Marketing</a></li>
+        <li><a href="Franchise Consulting.dc.html" style="font-size:14px;font-weight:300;color:#17190F;">Franchise Consulting</a></li>
+        <li><a href="Franchise Readiness Assessment.dc.html" style="font-size:14px;font-weight:300;color:#17190F;">Franchise Readiness</a></li>
+        <li><a href="Franchise Sales Support.dc.html" style="font-size:14px;font-weight:300;color:#17190F;">Franchise Sales Support</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2 style="font-size:10px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:#5B5F4E;margin:0 0 18px;">Company</h2>
+      <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:11px;">
+        <li><a href="Methodology.dc.html" style="font-size:14px;font-weight:300;color:#17190F;">Methodology</a></li>
+        <li><a href="The E&D Playbook.dc.html" style="font-size:14px;font-weight:300;color:#17190F;">The E&amp;D Playbook</a></li>
+        <li><a href="E&D Clients.dc.html" style="font-size:14px;font-weight:300;color:#17190F;">Clients</a></li>
+        <li><a href="Contact.dc.html" style="font-size:14px;font-weight:300;color:#17190F;">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <div style="border-top:1px solid #CFCBBC;">
+    <div style="max-width:1320px;margin:0 auto;padding:24px 40px;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;">
+      <span style="font-size:11px;font-weight:300;color:#5B5F4E;">&copy; 2026 Eustress &amp; Demeter LLC</span>
+      <span style="font-size:11px;font-weight:300;color:#5B5F4E;">Growth is not about how fast a brand expands, but how long it succeeds.</span>
+    </div>
+  </div>
+
+
+</div>

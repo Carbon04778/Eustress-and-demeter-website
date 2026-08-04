@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+<script src="./contact-form.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Hospitality Consulting Clients | Eustress &amp; Demeter</title>
+<meta name="description" content="Explore selected restaurant, hospitality, technology, and consumer brands supported by Eustress &amp; Demeter through operations, revenue growth, catering, marketing, systems, and franchise strategy.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Archivo:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *{ box-sizing: border-box; }
+  body { margin: 0; background: #F2F0E9; color: #17190F; font-family: 'Archivo', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: #38452C; text-decoration: none; }
+  a:hover { color: #A33F14; }
+  h1, h2, h3 { font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; }
+  html { scroll-behavior: smooth; }
+  .ed-menu-panel { display: none; }
+  .ed-menu:hover .ed-menu-panel, .ed-menu:focus-within .ed-menu-panel { display: block; }
+
+  a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible, [tabindex]:focus-visible { outline: 3px solid #C4501E; outline-offset: 3px; }
+  .ed-skip { position: absolute; left: -9999px; top: 0; z-index: 200; background: #F2F0E9; color: #17190F; padding: 14px 22px; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; border: 2px solid #17190F; }
+  .ed-skip:focus { left: 12px; top: 12px; }
+  @keyframes ed-slide-left { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @keyframes ed-slide-right { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+  /* mobile */
+  table { display: block; overflow-x: auto; max-width: 100%; }
+  img, video { max-width: 100%; }
+  @media (max-width: 900px) {
+    header { position: static !important; }
+    header > div { height: auto !important; flex-wrap: wrap !important; padding: 12px 20px !important; gap: 10px !important; }
+    nav[aria-label="Primary"] { margin-left: 0 !important; width: 100%; overflow-x: auto; gap: 18px !important; padding-bottom: 2px; -webkit-overflow-scrolling: touch; }
+    nav[aria-label="Primary"] a { padding: 8px 0 !important; }
+    .ed-menu-panel { display: none !important; }
+    [style*="grid-template-columns"] { grid-template-columns: minmax(0,1fr) !important; }
+    [style*="max-width:1320px"] { padding-left: 20px !important; padding-right: 20px !important; }
+    h1 { font-size: clamp(32px, 8.6vw, 70px) !important; }
+    h2 { font-size: clamp(27px, 7vw, 52px) !important; }
+    h3 { font-size: clamp(20px, 5vw, 36px) !important; }
+    [style*="font-size:19px"], [style*="font-size:18px"], [style*="font-size:17px"] { font-size: 16.5px !important; }
+    [style*="padding:104px 40px"], [style*="padding:100px 40px"], [style*="padding:96px 40px"], [style*="padding:88px 40px"], [style*="padding:80px 40px"] { padding: 56px 20px !important; }
+    [style*="padding:64px 56px"], [style*="padding:64px 48px"] { padding: 40px 24px !important; }
+    [style*="padding:72px 40px"], [style*="padding:76px 40px"] { padding: 48px 20px !important; }
+    [style*="padding:38px 34px"], [style*="padding:34px 32px"], [style*="padding:34px 30px"] { padding: 26px 22px !important; }
+    [style*="gap:72px"], [style*="gap:80px"], [style*="gap:56px"] { gap: 32px !important; }
+    [style*="column-gap:80px"], [style*="column-gap:56px"], [style*="column-gap:44px"] { column-gap: 0 !important; }
+    [style*="min-height:460px"] { min-height: 260px !important; }
+    [style*="height:620px"], [style*="height:560px"], [style*="height:440px"] { height: 260px !important; }
+    figure img { height: 260px !important; }
+  }
+  @media (max-width: 560px) {
+    [style*="max-width:1320px"] { padding-left: 16px !important; padding-right: 16px !important; }
+    [style*="padding:104px 40px"], [style*="padding:100px 40px"], [style*="padding:96px 40px"], [style*="padding:88px 40px"], [style*="padding:80px 40px"] { padding: 44px 16px !important; }
+    input, select, textarea { font-size: 16px !important; }
+  }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+</style>
+</helmet>
+
+<div id="top" style="background:#F2F0E9;">
+  <a href="#main" class="ed-skip">Skip to main content</a>
+
+  <header style="position:sticky;top:0;z-index:60;background:#17190F;">
+    <div style="max-width:1320px;margin:0 auto;padding:0 40px;height:74px;display:flex;align-items:center;gap:32px;">
+      <a href="E&D Website v2.dc.html" aria-label="Eustress and Demeter, home" style="display:flex;align-items:center;gap:14px;">
+        <img src="assets/logo-seal.png" alt="Eustress and Demeter seal" style="width:38px;height:38px;display:block;filter:brightness(1.7);">
+        <span style="font-family:'Instrument Serif',Georgia,serif;font-size:19px;color:#F2F0E9;white-space:nowrap;">Eustress &amp; Demeter</span>
+      </a>
+      <nav aria-label="Primary" style="margin-left:auto;display:flex;align-items:center;gap:26px;">
+        <div class="ed-menu" style="position:relative;display:flex;align-items:center;">
+          <a href="Restaurant Consulting.dc.html" style="display:flex;align-items:center;gap:7px;font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(242,240,233,0.78);font-weight:500;white-space:nowrap;padding:26px 0;" style-hover="color:#F2F0E9;">Services<span aria-hidden="true" style="font-size:8px;line-height:1;">&#9660;</span></a>
+          <div class="ed-menu-panel" style="position:absolute;top:100%;right:0;width:340px;background:#17190F;border:1px solid rgba(242,240,233,0.22);padding:10px;z-index:80;">
+            <a href="Restaurant Consulting.dc.html" style="display:block;padding:13px 16px;text-decoration:none;transition:background 160ms;" style-hover="background:#38452C;"><span style="display:block;font-size:14px;font-weight:500;letter-spacing:0.01em;color:#F2F0E9;margin-bottom:3px;">Restaurant Consulting</span><span style="display:block;font-size:11.5px;font-weight:300;line-height:1.5;color:rgba(242,240,233,0.72);">Unit economics, operations, menu, training</span></a>
+            <a href="Restaurant Catering Consulting.dc.html" style="display:block;padding:13px 16px;text-decoration:none;transition:background 160ms;" style-hover="background:#38452C;"><span style="display:block;font-size:14px;font-weight:500;letter-spacing:0.01em;color:#F2F0E9;margin-bottom:3px;">Catering &amp; Off-Premise</span><span style="display:block;font-size:11.5px;font-weight:300;line-height:1.5;color:rgba(242,240,233,0.72);">The fastest revenue in most restaurants</span></a>
+            <a href="Local Store Marketing.dc.html" style="display:block;padding:13px 16px;text-decoration:none;transition:background 160ms;" style-hover="background:#38452C;"><span style="display:block;font-size:14px;font-weight:500;letter-spacing:0.01em;color:#F2F0E9;margin-bottom:3px;">Local Store Marketing</span><span style="display:block;font-size:11.5px;font-weight:300;line-height:1.5;color:rgba(242,240,233,0.72);">Trade-area programs and grand openings</span></a>
+            <a href="Franchise Consulting.dc.html" style="display:block;padding:13px 16px;text-decoration:none;transition:background 160ms;" style-hover="background:#38452C;"><span style="display:block;font-size:14px;font-weight:500;letter-spacing:0.01em;color:#F2F0E9;margin-bottom:3px;">Franchise Consulting</span><span style="display:block;font-size:11.5px;font-weight:300;line-height:1.5;color:rgba(242,240,233,0.72);">Build the system, then sell the territories</span></a>
+            <a href="Franchise Readiness Assessment.dc.html" style="display:block;padding:13px 16px;text-decoration:none;transition:background 160ms;" style-hover="background:#38452C;"><span style="display:block;font-size:14px;font-weight:500;letter-spacing:0.01em;color:#F2F0E9;margin-bottom:3px;">Franchise Readiness</span><span style="display:block;font-size:11.5px;font-weight:300;line-height:1.5;color:rgba(242,240,233,0.72);">The twelve-point diagnostic</span></a>
+            <a href="Franchise Sales Support.dc.html" style="display:block;padding:13px 16px;text-decoration:none;transition:background 160ms;" style-hover="background:#38452C;"><span style="display:block;font-size:14px;font-weight:500;letter-spacing:0.01em;color:#F2F0E9;margin-bottom:3px;">Franchise Sales Support</span><span style="display:block;font-size:11.5px;font-weight:300;line-height:1.5;color:rgba(242,240,233,0.72);">Qualified candidates, disciplined pacing</span></a>
+          </div>
+        </div>
+        <a href="E&D Clients.dc.html" aria-current="page" style="font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:#F2F0E9;font-weight:500;white-space:nowrap;">Clients</a>
+        <a href="E&D Website v2.dc.html#work" style="font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(242,240,233,0.78);font-weight:500;white-space:nowrap;" style-hover="color:#F2F0E9;">Our Work</a>
+        <a href="Contact.dc.html" style="font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:#F2F0E9;background:#A33F14;padding:14px 24px;font-weight:600;white-space:nowrap;" style-hover="background:#F2F0E9;color:#17190F;">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <nav aria-label="Breadcrumb" style="border-bottom:1px solid #DDD8CB;">
+    <ol style="list-style:none;max-width:1320px;margin:0 auto;padding:16px 40px;display:flex;gap:10px;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#5B5F4E;font-weight:500;">
+      <li><a href="E&D Website v2.dc.html" style="color:#5B5F4E;">Home</a></li>
+      <li aria-hidden="true" style="color:#A33F14;">/</li>
+      <li aria-current="page" style="color:#17190F;">Clients</li>
+    </ol>
+  </nav>
+
+  <main id="main" tabindex="-1">
+
+  <section style="position:relative;background:#17190F;overflow:hidden;">
+    <img src="https://studiohodson.s3.us-west-2.amazonaws.com/wp-content/uploads/2026/04/01185831/butcher-board-0265-960x640.jpg" alt="" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.3;">
+    <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(100deg,#17190F 0%,rgba(23,25,15,0.92) 46%,rgba(23,25,15,0.62) 100%);"></div>
+    <div style="position:relative;max-width:1320px;margin:0 auto;padding:104px 40px 96px;">
+      <div style="display:flex;align-items:center;gap:14px;margin-bottom:40px;">
+        <span style="width:34px;height:1px;background:#E0A87C;"></span>
+        <span style="font-size:10px;letter-spacing:0.26em;text-transform:uppercase;color:#E0A87C;font-weight:600;">Selected clients</span>
+      </div>
+      <h1 style="font-size:80px;line-height:1;letter-spacing:-0.02em;margin:0 0 30px;color:#F2F0E9;max-width:900px;text-wrap:pretty;">Brands we've helped <span style="font-style:italic;color:#E0A87C;">grow</span></h1>
+      <p style="font-size:19px;font-weight:300;line-height:1.75;color:rgba(242,240,233,0.9);margin:0 0 42px;max-width:680px;text-wrap:pretty;">From emerging concepts to nationally recognized brands, Eustress &amp; Demeter helps hospitality teams strengthen operations, unlock revenue, build scalable systems, and create memorable guest experiences.</p>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;margin-bottom:44px;">
+        <a href="E&D Website v2.dc.html#contact" style="font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#F2F0E9;background:#A33F14;padding:19px 38px;font-weight:600;" style-hover="background:#F2F0E9;color:#17190F;">Start a conversation</a>
+        <a href="E&D Website v2.dc.html#capabilities" style="font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#F2F0E9;border:1px solid rgba(242,240,233,0.42);padding:19px 38px;font-weight:600;white-space:nowrap;" style-hover="background:#F2F0E9;color:#17190F;">View services</a>
+      </div>
+      <p style="font-size:10px;letter-spacing:0.24em;text-transform:uppercase;color:rgba(242,240,233,0.62);font-weight:500;margin:0;">Restaurant &nbsp;&middot;&nbsp; Hospitality &nbsp;&middot;&nbsp; Technology &nbsp;&middot;&nbsp; Consumer brands</p>
+    </div>
+  </section>
+
+  <div aria-hidden="true" style="border-top:1px solid #17190F;border-bottom:1px solid #17190F;overflow:hidden;padding:18px 0;background:#EAE7DC;margin-top:0;">
+    <div style="display:flex;width:max-content;animation:ed-slide-left 150s linear infinite;">
+      <div style="display:flex;gap:30px;padding-right:30px;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#5B5F4E;white-space:nowrap;font-weight:500;align-items:center;">
+        <span>Del Taco</span><span style="color:#A33F14;">&mdash;</span><span>True Food Kitchen</span><span style="color:#A33F14;">&mdash;</span><span>Lawry&#39;s The Prime Rib</span><span style="color:#A33F14;">&mdash;</span><span>Porto&#39;s Bakery</span><span style="color:#A33F14;">&mdash;</span><span>BJ&#39;s Restaurant &amp; Brewhouse</span><span style="color:#A33F14;">&mdash;</span><span>Chili&#39;s</span><span style="color:#A33F14;">&mdash;</span><span>Darden Restaurants</span><span style="color:#A33F14;">&mdash;</span><span>Wetzel&#39;s Pretzels</span><span style="color:#A33F14;">&mdash;</span><span>Pollo Campero</span><span style="color:#A33F14;">&mdash;</span><span>Lucille&#39;s BBQ</span><span style="color:#A33F14;">&mdash;</span><span>Bottega Louie</span><span style="color:#A33F14;">&mdash;</span><span>Tocaya Organica</span><span style="color:#A33F14;">&mdash;</span><span>Fresh Brothers</span><span style="color:#A33F14;">&mdash;</span><span>Mountain Mike&#39;s Pizza</span><span style="color:#A33F14;">&mdash;</span><span>Menchie&#39;s</span><span style="color:#A33F14;">&mdash;</span><span>Miguel&#39;s Jr.</span><span style="color:#A33F14;">&mdash;</span><span>Stacked</span><span style="color:#A33F14;">&mdash;</span><span>Pizzana</span><span style="color:#A33F14;">&mdash;</span><span>Asian Box</span><span style="color:#A33F14;">&mdash;</span><span>Lemonade</span><span style="color:#A33F14;">&mdash;</span><span>Tartine</span><span style="color:#A33F14;">&mdash;</span><span>Arooga&#39;s</span><span style="color:#A33F14;">&mdash;</span><span>Alondra&#39;s</span><span style="color:#A33F14;">&mdash;</span><span>Cowford Chophouse</span><span style="color:#A33F14;">&mdash;</span><span>Urbane Cafe</span><span style="color:#A33F14;">&mdash;</span><span>Black Walnut Cafe</span><span style="color:#A33F14;">&mdash;</span><span>Chicken Maison</span><span style="color:#A33F14;">&mdash;</span><span>Rise Brands</span><span style="color:#A33F14;">&mdash;</span><span>Hummus Fit</span><span style="color:#A33F14;">&mdash;</span><span>Kayos Ramen Bar</span><span style="color:#A33F14;">&mdash;</span><span>Dink &amp; Dine Pickle Park</span><span style="color:#A33F14;">&mdash;</span><span>Nautical Bowls</span><span style="color:#A33F14;">&mdash;</span><span>Burger Boss</span><span style="color:#A33F14;">&mdash;</span><span>Schmackary&#39;s</span><span style="color:#A33F14;">&mdash;</span><span>Magee&#39;s Kitchen</span><span style="color:#A33F14;">&mdash;</span><span>Bistro 120</span><span style="color:#A33F14;">&mdash;</span><span>Google</span><span style="color:#A33F14;">&mdash;</span><span>Apple</span><span style="color:#A33F14;">&mdash;</span><span>Amazon Prime</span><span style="color:#A33F14;">&mdash;</span><span>Reef</span><span style="color:#A33F14;">&mdash;</span><span>Telenav</span><span style="color:#A33F14;">&mdash;</span><span>V10 Plus</span><span style="color:#A33F14;">&mdash;</span><span>Vitagenne</span><span style="color:#A33F14;">&mdash;</span>
+      </div>
+      <div style="display:flex;gap:30px;padding-right:30px;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#5B5F4E;white-space:nowrap;font-weight:500;align-items:center;">
+        <span>Del Taco</span><span style="color:#A33F14;">&mdash;</span><span>True Food Kitchen</span><span style="color:#A33F14;">&mdash;</span><span>Lawry&#39;s The Prime Rib</span><span style="color:#A33F14;">&mdash;</span><span>Porto&#39;s Bakery</span><span style="color:#A33F14;">&mdash;</span><span>BJ&#39;s Restaurant &amp; Brewhouse</span><span style="color:#A33F14;">&mdash;</span><span>Chili&#39;s</span><span style="color:#A33F14;">&mdash;</span><span>Darden Restaurants</span><span style="color:#A33F14;">&mdash;</span><span>Wetzel&#39;s Pretzels</span><span style="color:#A33F14;">&mdash;</span><span>Pollo Campero</span><span style="color:#A33F14;">&mdash;</span><span>Lucille&#39;s BBQ</span><span style="color:#A33F14;">&mdash;</span><span>Bottega Louie</span><span style="color:#A33F14;">&mdash;</span><span>Tocaya Organica</span><span style="color:#A33F14;">&mdash;</span><span>Fresh Brothers</span><span style="color:#A33F14;">&mdash;</span><span>Mountain Mike&#39;s Pizza</span><span style="color:#A33F14;">&mdash;</span><span>Menchie&#39;s</span><span style="color:#A33F14;">&mdash;</span><span>Miguel&#39;s Jr.</span><span style="color:#A33F14;">&mdash;</span><span>Stacked</span><span style="color:#A33F14;">&mdash;</span><span>Pizzana</span><span style="color:#A33F14;">&mdash;</span><span>Asian Box</span><span style="color:#A33F14;">&mdash;</span><span>Lemonade</span><span style="color:#A33F14;">&mdash;</span><span>Tartine</span><span style="color:#A33F14;">&mdash;</span><span>Arooga&#39;s</span><span style="color:#A33F14;">&mdash;</span><span>Alondra&#39;s</span><span style="color:#A33F14;">&mdash;</span><span>Cowford Chophouse</span><span style="color:#A33F14;">&mdash;</span><span>Urbane Cafe</span><span style="color:#A33F14;">&mdash;</span><span>Black Walnut Cafe</span><span style="color:#A33F14;">&mdash;</span><span>Chicken Maison</span><span style="color:#A33F14;">&mdash;</span><span>Rise Brands</span><span style="color:#A33F14;">&mdash;</span><span>Hummus Fit</span><span style="color:#A33F14;">&mdash;</span><span>Kayos Ramen Bar</span><span style="color:#A33F14;">&mdash;</span><span>Dink &amp; Dine Pickle Park</span><span style="color:#A33F14;">&mdash;</span><span>Nautical Bowls</span><span style="color:#A33F14;">&mdash;</span><span>Burger Boss</span><span style="color:#A33F14;">&mdash;</span><span>Schmackary&#39;s</span><span style="color:#A33F14;">&mdash;</span><span>Magee&#39;s Kitchen</span><span style="color:#A33F14;">&mdash;</span><span>Bistro 120</span><span style="color:#A33F14;">&mdash;</span><span>Google</span><span style="color:#A33F14;">&mdash;</span><span>Apple</span><span style="color:#A33F14;">&mdash;</span><span>Amazon Prime</span><span style="color:#A33F14;">&mdash;</span><span>Reef</span><span style="color:#A33F14;">&mdash;</span><span>Telenav</span><span style="color:#A33F14;">&mdash;</span><span>V10 Plus</span><span style="color:#A33F14;">&mdash;</span><span>Vitagenne</span><span style="color:#A33F14;">&mdash;</span>
+      </div>
+    </div>
+  </div>
+
+  <section style="max-width:1320px;margin:0 auto;padding:96px 40px 0;">
+    <div style="display:flex;align-items:baseline;gap:24px;border-bottom:1px solid #17190F;padding-bottom:20px;margin-bottom:44px;flex-wrap:wrap;">
+      <h2 style="font-size:48px;line-height:1.06;letter-spacing:-0.015em;margin:0;color:#17190F;">Where strategy becomes execution</h2>
+      <span style="margin-left:auto;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:#5B5F4E;font-weight:500;">Four capability areas</span>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:#17190F;border:1px solid #17190F;">
+      <article style="background:#F2F0E9;padding:42px 46px 38px;min-width:0;">
+        <div style="font-size:10px;letter-spacing:0.24em;text-transform:uppercase;color:#A33F14;font-weight:600;margin-bottom:16px;">01</div>
+        <h3 style="font-size:34px;line-height:1.06;margin:0 0 16px;color:#17190F;">Revenue Growth</h3>
+        <p style="font-size:15px;font-weight:300;line-height:1.8;color:#3D4034;margin:0 0 24px;">Catering strategy, off-premise programs, local store marketing, digital activation, sales systems, and new revenue channels.</p>
+        <p style="font-size:12.5px;font-weight:400;line-height:1.7;color:#5B5F4E;margin:0;">Where this shows up: multi-unit fast casual &middot; emerging concepts &middot; specialty bakery</p>
+      </article>
+      <article style="background:#F2F0E9;padding:42px 46px 38px;min-width:0;">
+        <div style="font-size:10px;letter-spacing:0.24em;text-transform:uppercase;color:#A33F14;font-weight:600;margin-bottom:16px;">02</div>
+        <h3 style="font-size:34px;line-height:1.06;margin:0 0 16px;color:#17190F;">Operational Excellence</h3>
+        <p style="font-size:15px;font-weight:300;line-height:1.8;color:#3D4034;margin:0 0 24px;">Operational assessments, workflow improvements, systems, accountability, guest experience, and unit-level execution.</p>
+        <p style="font-size:12.5px;font-weight:400;line-height:1.7;color:#5B5F4E;margin:0;">Where this shows up: legacy institutions &middot; multi-state groups &middot; eatertainment venues</p>
+      </article>
+      <article style="background:#F2F0E9;padding:42px 46px 38px;min-width:0;">
+        <div style="font-size:10px;letter-spacing:0.24em;text-transform:uppercase;color:#A33F14;font-weight:600;margin-bottom:16px;">03</div>
+        <h3 style="font-size:34px;line-height:1.06;margin:0 0 16px;color:#17190F;">Brand &amp; Concept Growth</h3>
+        <p style="font-size:15px;font-weight:300;line-height:1.8;color:#3D4034;margin:0 0 24px;">Concept positioning, launches, menu and service strategy, market activation, and scalable growth planning.</p>
+        <p style="font-size:12.5px;font-weight:400;line-height:1.7;color:#5B5F4E;margin:0;">Where this shows up: new concepts &middot; family-owned brands &middot; fresh-format chains</p>
+      </article>
+      <article style="background:#F2F0E9;padding:42px 46px 38px;min-width:0;">
+        <div style="font-size:10px;letter-spacing:0.24em;text-transform:uppercase;color:#A33F14;font-weight:600;margin-bottom:16px;">04</div>
+        <h3 style="font-size:34px;line-height:1.06;margin:0 0 16px;color:#17190F;">Franchise &amp; Multi-Unit Readiness</h3>
+        <p style="font-size:15px;font-weight:300;line-height:1.8;color:#3D4034;margin:0 0 24px;">Unit economics, operating systems, manuals, development infrastructure, franchise readiness, and growth support.</p>
+        <p style="font-size:12.5px;font-weight:400;line-height:1.7;color:#5B5F4E;margin:0;">Where this shows up: 25-unit systems &middot; single-unit bakeries &middot; emerging franchisors</p>
+      </article>
+    </div>
+  </section>
+
+  <section style="max-width:1320px;margin:0 auto;padding:96px 40px 0;">
+    <div style="display:flex;align-items:baseline;gap:24px;border-bottom:1px solid #17190F;padding-bottom:20px;margin-bottom:44px;flex-wrap:wrap;">
+      <h2 style="font-size:48px;line-height:1.06;letter-spacing:-0.015em;margin:0;color:#17190F;">Selected work</h2>
+      <span style="margin-left:auto;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:#5B5F4E;font-weight:500;">Client names withheld by request</span>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:#DDD8CB;border:1px solid #DDD8CB;">
+      <sc-for list="{{ stories }}" as="s" hint-placeholder-count="14">
+        <article style="background:#fff;min-width:0;padding:38px 36px 34px;display:flex;flex-direction:column;">
+          <div style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:#A33F14;font-weight:600;margin-bottom:16px;">{{ s.category }}</div>
+          <h3 style="font-size:28px;line-height:1.1;margin:0 0 20px;color:#17190F;">{{ s.clientName }}</h3>
+          <p style="font-size:14.5px;font-weight:300;line-height:1.8;color:#3D4034;margin:0 0 26px;">{{ s.summary }}</p>
+          <ul style="list-style:none;margin:auto 0 0;padding:0;display:flex;flex-wrap:wrap;gap:7px;">
+            <sc-for list="{{ s.services }}" as="tag" hint-placeholder-count="4">
+              <li style="font-size:9.5px;letter-spacing:0.13em;text-transform:uppercase;color:#38452C;border:1px solid #CFCBBC;padding:6px 10px;font-weight:500;">{{ tag }}</li>
+            </sc-for>
+          </ul>
+        </article>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="margin-top:96px;background:#38452C;">
+    <div style="max-width:1320px;margin:0 auto;padding:80px 40px;">
+      <div style="display:flex;align-items:baseline;gap:24px;border-bottom:1px solid rgba(242,240,233,0.26);padding-bottom:20px;margin-bottom:48px;flex-wrap:wrap;">
+        <h2 style="font-size:48px;line-height:1.06;letter-spacing:-0.015em;margin:0;color:#F2F0E9;">What partners say</h2>
+      </div>
+      <blockquote style="margin:0 0 48px;max-width:1000px;">
+        <div aria-hidden="true" style="font-family:'Instrument Serif',Georgia,serif;font-size:88px;line-height:0.6;color:#E0A87C;margin-bottom:18px;">&ldquo;</div>
+        <p style="font-family:'Instrument Serif',Georgia,serif;font-size:34px;line-height:1.36;color:#F2F0E9;margin:0 0 26px;text-wrap:pretty;">{{ featuredQuote }}</p>
+        <footer style="font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#E0A87C;font-weight:600;">{{ featuredAttribution }}</footer>
+      </blockquote>
+      <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;">
+        <sc-for list="{{ shortQuotes }}" as="q" hint-placeholder-count="2">
+          <blockquote style="margin:0;border:1px solid rgba(242,240,233,0.26);padding:32px 34px;min-width:0;display:flex;flex-direction:column;">
+            <p style="font-size:16px;font-weight:300;line-height:1.8;color:{{ q.color }};margin:0 0 20px;">{{ q.quote }}</p>
+            <footer style="margin-top:auto;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(242,240,233,0.68);font-weight:600;">{{ q.attribution }}</footer>
+          </blockquote>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section style="max-width:1320px;margin:96px auto 0;padding:0 40px;">
+    <div style="background:#17190F;padding:76px 64px;">
+      <div style="display:flex;align-items:center;gap:14px;margin-bottom:32px;">
+        <span style="width:34px;height:1px;background:#E0A87C;"></span>
+        <span style="font-size:10px;letter-spacing:0.24em;text-transform:uppercase;color:#E0A87C;font-weight:600;">Start here</span>
+      </div>
+      <h2 style="font-size:54px;line-height:1.04;letter-spacing:-0.015em;margin:0 0 24px;color:#F2F0E9;max-width:820px;">Ready to build what's <span style="font-style:italic;color:#E0A87C;">next</span>?</h2>
+      <p style="font-size:18px;font-weight:300;line-height:1.8;color:rgba(242,240,233,0.9);margin:0 0 20px;max-width:720px;text-wrap:pretty;">Whether you are strengthening an existing operation, opening a new concept, growing catering revenue, or preparing to scale, Eustress &amp; Demeter brings strategy and practical execution together.</p>
+      <p style="font-size:14px;font-weight:300;line-height:1.75;color:rgba(242,240,233,0.66);margin:0 0 40px;">Tell us where the business is today and where you want it to go.</p>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;">
+        <a href="E&D Website v2.dc.html#contact" style="font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#F2F0E9;background:#A33F14;padding:19px 38px;font-weight:600;" style-hover="background:#F2F0E9;color:#17190F;">Start a conversation</a>
+        <a href="E&D Website v2.dc.html#capabilities" style="font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#F2F0E9;border:1px solid rgba(242,240,233,0.42);padding:19px 38px;font-weight:600;" style-hover="background:#F2F0E9;color:#17190F;">View services</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" style="max-width:1320px;margin:96px auto 0;padding:0 40px;">
+    <div style="background:#38452C;padding:64px 64px 60px;display:grid;grid-template-columns:0.82fr 1.18fr;gap:64px;align-items:start;">
+      <div style="min-width:0;">
+        <div style="display:flex;align-items:center;gap:14px;margin-bottom:26px;">
+          <span style="width:34px;height:1px;background:#E0A87C;"></span>
+          <span style="font-size:10px;letter-spacing:0.24em;text-transform:uppercase;color:#E0A87C;font-weight:600;">Start here</span>
+        </div>
+        <h2 style="font-size:44px;line-height:1.05;letter-spacing:-0.015em;margin:0 0 20px;color:#F2F0E9;">Let's talk about your <span style="font-style:italic;color:#E0A87C;">brand</span></h2>
+        <p style="font-size:16px;font-weight:300;line-height:1.8;color:rgba(242,240,233,0.88);margin:0;">Tell us what you have built. We will tell you honestly where it stands and what growth would take. No pitch, no fee.</p>
+      </div>
+      <div style="min-width:0;">
+        <form onSubmit="{{ handleSubmit }}" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 28px;">
+          <div style="min-width:0;">
+            <label for="f-name" style="display:block;font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#E0A87C;font-weight:600;margin-bottom:9px;">Name <span aria-hidden="true">*</span></label>
+            <input type="text" id="f-name" name="name" required aria-required="true" placeholder="Your name" style="width:100%;background:transparent;border:0;border-bottom:1px solid rgba(242,240,233,0.4);color:#F2F0E9;font-family:'Archivo',system-ui,sans-serif;font-size:16px;font-weight:300;padding:8px 0 10px;">
+          </div>
+          <div style="min-width:0;">
+            <label for="f-company" style="display:block;font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#E0A87C;font-weight:600;margin-bottom:9px;">Brand <span aria-hidden="true">*</span></label>
+            <input type="text" id="f-company" name="company" required aria-required="true" placeholder="Restaurant or company" style="width:100%;background:transparent;border:0;border-bottom:1px solid rgba(242,240,233,0.4);color:#F2F0E9;font-family:'Archivo',system-ui,sans-serif;font-size:16px;font-weight:300;padding:8px 0 10px;">
+          </div>
+          <div style="min-width:0;">
+            <label for="f-email" style="display:block;font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#E0A87C;font-weight:600;margin-bottom:9px;">Email <span aria-hidden="true">*</span></label>
+            <input type="email" id="f-email" name="email" required aria-required="true" placeholder="you@company.com" style="width:100%;background:transparent;border:0;border-bottom:1px solid rgba(242,240,233,0.4);color:#F2F0E9;font-family:'Archivo',system-ui,sans-serif;font-size:16px;font-weight:300;padding:8px 0 10px;">
+          </div>
+          <div style="min-width:0;">
+            <label for="f-phone" style="display:block;font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#E0A87C;font-weight:600;margin-bottom:9px;">Phone</label>
+            <input type="tel" id="f-phone" name="phone" placeholder="Optional" style="width:100%;background:transparent;border:0;border-bottom:1px solid rgba(242,240,233,0.4);color:#F2F0E9;font-family:'Archivo',system-ui,sans-serif;font-size:16px;font-weight:300;padding:8px 0 10px;">
+          </div>
+          <div style="grid-column:1 / -1;min-width:0;">
+            <label for="f-message" style="display:block;font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#E0A87C;font-weight:600;margin-bottom:9px;">What would you like help with?</label>
+            <textarea id="f-message" name="message" rows="3" placeholder="A sentence or two is plenty." style="width:100%;background:transparent;border:0;border-bottom:1px solid rgba(242,240,233,0.4);color:#F2F0E9;font-family:'Archivo',system-ui,sans-serif;font-size:16px;font-weight:300;line-height:1.7;padding:8px 0 10px;resize:vertical;"></textarea>
+          </div>
+          <div style="grid-column:1 / -1;display:flex;align-items:center;gap:26px;flex-wrap:wrap;">
+            <button type="submit" style="font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#17190F;background:#E0A87C;border:0;padding:19px 40px;font-weight:600;font-family:'Archivo',system-ui,sans-serif;cursor:pointer;" style-hover="background:#F2F0E9;">Send inquiry</button>
+            <span style="font-size:12.5px;font-weight:300;line-height:1.6;color:rgba(242,240,233,0.72);">Or email <a href="mailto:info@eustressanddemeter.com" style="color:#E0A87C;">info@eustressanddemeter.com</a> or call <a href="tel:+12132223849" style="color:#E0A87C;">213.222.3849</a>.</span>
+          </div>
+          <p role="status" aria-live="polite" style="grid-column:1 / -1;margin:0;font-size:13.5px;font-weight:400;line-height:1.7;color:#E0A87C;min-height:22px;">{{ formStatus }}</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <footer style="max-width:1320px;margin:80px auto 0;padding:80px 40px 56px;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:56px;">
+    <div>
+      <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;">
+        <img src="assets/logo-seal.png" alt="Eustress and Demeter seal" style="width:44px;height:44px;display:block;">
+        <span style="font-family:'Instrument Serif',Georgia,serif;font-size:21px;color:#17190F;">Eustress &amp; Demeter</span>
+      </div>
+      <p style="font-size:14px;font-weight:300;line-height:1.75;color:#3D4034;margin:0;max-width:400px;">Restaurant and hospitality consulting and franchise development. We build the foundation, then stay with you through every stage of growth.</p>
+    </div>
+    <div>
+      <h2 style="font-size:10px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:#5B5F4E;margin:0 0 18px;">Services</h2>
+      <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:11px;">
+        <li><a href="Restaurant Consulting.dc.html" style="font-size:14px;font-weight:300;color:#17190F;">Restaurant Consulting</a></li>
+        <li><a href="Restaurant Catering Consulting.dc.html" style="font-size:14px;font-weight:300;color:#17190F;">Catering &amp; Off-Premise</a></li>
+        <li><a href="Local Store Marketing.dc.html" style="font-size:14px;font-weight:300;color:#17190F;">Local Store Marketing</a></li>
+        <li><a href="Franchise Consulting.dc.html" style="font-size:14px;font-weight:300;color:#17190F;">Franchise Consulting</a></li>
+        <li><a href="Franchise Readiness Assessment.dc.html" style="font-size:14px;font-weight:300;color:#17190F;">Franchise Readiness</a></li>
+        <li><a href="Franchise Sales Support.dc.html" style="font-size:14px;font-weight:300;color:#17190F;">Franchise Sales Support</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2 style="font-size:10px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:#5B5F4E;margin:0 0 18px;">Company</h2>
+      <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:11px;">
+        <li><a href="E&D Website v2.dc.html#model" style="font-size:14px;font-weight:300;color:#17190F;">The Model</a></li>
+        <li><a href="E&D Website v2.dc.html#work" style="font-size:14px;font-weight:300;color:#17190F;">Our Work</a></li>
+        <li><a href="E&D Clients.dc.html" style="font-size:14px;font-weight:300;color:#17190F;">Clients</a></li>
+        <li><a href="E&D Website v2.dc.html#faq" style="font-size:14px;font-weight:300;color:#17190F;">FAQ</a></li>
+        <li><a href="Contact.dc.html" style="font-size:14px;font-weight:300;color:#17190F;">Contact</a></li>
+        <li><a href="mailto:info@eustressanddemeter.com" style="font-size:14px;font-weight:300;color:#17190F;">info@eustressanddemeter.com</a></li>
+        <li><a href="tel:+12132223849" style="font-size:14px;font-weight:300;color:#17190F;">213.222.3849</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <div style="border-top:1px solid #CFCBBC;">
+    <div style="max-width:1320px;margin:0 auto;padding:24px 40px;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;">
+      <span style="font-size:11px;font-weight:300;color:#5B5F4E;">&copy; 2026 Eustress &amp; Demeter LLC</span>
+      <span style="font-size:11px;font-weight:300;color:#5B5F4E;">Updated February 2026</span>
+    </div>
+  </div>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1320}}">
+class Component extends DCLogic {
+  state = { caseStudies: [], testimonials: [] };
+
+  componentDidMount() {
+    import('./clients-data.js').then(m => {
+      this.setState({ caseStudies: m.caseStudies, testimonials: m.testimonials });
+    });
+  }
+
+  handleSubmit = (e) => {
+    e.preventDefault();
+    const f = e.target;
+    const g = (n) => (f.elements[n] && f.elements[n].value ? f.elements[n].value : '');
+    const fields = { name: g('name'), company: g('company'), email: g('email'), phone: g('phone'), message: g('message') };
+    const subject = 'Inquiry from ' + (g('company') || g('name') || 'website');
+    this.setState({ formStatus: 'Sending\u2026' });
+    window.EDForm.submit(fields, subject).then((result) => {
+      this.setState({
+        formStatus: result.ok
+          ? 'Thanks \u2014 that\u2019s on its way to us. We reply within one business day.'
+          : 'Your email client is opening with these details filled in. Press send there to reach us.'
+      });
+    });
+  };
+
+  renderVals() {
+
+    const stories = this.state.caseStudies.filter(s => s.approved).map(s => ({
+      clientName: s.clientName,
+      category: s.category,
+      summary: s.summary,
+      services: s.services
+    }));
+
+    const feat = this.state.testimonials.find(t => t.featured);
+    const shortQuotes = this.state.testimonials.filter(t => !t.featured).map(t => ({
+      quote: t.quote,
+      attribution: t.attribution,
+      color: t.verified ? 'rgba(242,240,233,0.92)' : 'rgba(242,240,233,0.78)'
+    }));
+
+    return {
+      handleSubmit: this.handleSubmit,
+      formStatus: this.state.formStatus || '',
+      stories,
+      shortQuotes,
+      featuredQuote: feat ? feat.quote : '',
+      featuredAttribution: feat ? feat.attribution : ''
+    };
+  }
+}
+
+</script>
+</body>
+</html>

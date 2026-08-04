@@ -1,0 +1,13 @@
+{
+  "name": "eustress-and-demeter-website",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Eustress & Demeter marketing site: static, hand-authored pages plus a Vercel serverless /api/contact function wired for Resend.",
+  "scripts": {
+    "dev": "vercel dev",
+    "start": "vercel dev"
+  },
+  "dependencies": {
+    "resend": "^4.0.1"
+  }
+}
