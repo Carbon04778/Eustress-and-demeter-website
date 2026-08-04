@@ -213,3 +213,5 @@ Listed in full in `SEO-Plan.md` §9. The two that block work:
 ---
 
 *Prepared for Eustress & Demeter, LLC · info@eustressanddemeter.com · 213.222.3849*
+#   E u s t r e s s - a n d - d e m e t e r - w e b s i t e  
+ 
