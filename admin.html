@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Admin &middot; Eustress &amp; Demeter</title>
+
+<!-- Keep this page out of Google entirely. -->
+<meta name="robots" content="noindex, nofollow, noarchive">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Archivo:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --ink:      #17190F;
+    --cream:    #F2F0E9;
+    --olive:    #38452C;
+    --rust:     #A33F14;
+    --rust-lt:  #C4501E;
+    --sand:     #E0A87C;
+    --muted:    #5B5F4E;
+    --body:     #3D4034;
+    --line:     #DDD8CB;
+    --line-dk:  #CFCBBC;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--cream);
+    color: var(--ink);
+    font-family: 'Archivo', system-ui, -apple-system, sans-serif;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3 { font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; margin: 0; }
+  a { color: var(--rust); }
+  button { font-family: 'Archivo', system-ui, sans-serif; cursor: pointer; }
+  input, textarea, select { font-family: 'Archivo', system-ui, sans-serif; font-size: 15px; }
+
+  .eyebrow {
+    font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase;
+    font-weight: 600; color: var(--olive);
+  }
+
+  /* ---------- shared controls ---------- */
+  .btn {
+    border: 1px solid var(--ink); background: var(--ink); color: var(--cream);
+    font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase;
+    font-weight: 600; padding: 13px 24px; transition: background 150ms;
+  }
+  .btn:hover  { background: var(--olive); border-color: var(--olive); }
+  .btn:disabled { opacity: 0.45; cursor: default; }
+  .btn-rust { background: var(--rust); border-color: var(--rust); }
+  .btn-rust:hover { background: var(--rust-lt); border-color: var(--rust-lt); }
+  .btn-ghost {
+    background: transparent; color: var(--muted); border: 1px solid var(--line-dk);
+  }
+  .btn-ghost:hover { background: transparent; color: var(--ink); border-color: var(--ink); }
+  .btn-sm { padding: 8px 14px; font-size: 9.5px; letter-spacing: 0.14em; }
+
+  .field { display: block; margin-bottom: 22px; }
+  .field label {
+    display: block; font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
+    font-weight: 600; color: var(--olive); margin-bottom: 9px;
+  }
+  .field input {
+    width: 100%; background: transparent; border: none;
+    border-bottom: 1px solid var(--line-dk); color: var(--ink);
+    font-weight: 300; padding: 9px 0 11px; outline: none;
+  }
+  .field input:focus { border-bottom-color: var(--rust); }
+
+  /* ---------- login ---------- */
+  #login-view {
+    min-height: 100vh; display: flex; align-items: center; justify-content: center;
+    padding: 32px 20px;
+  }
+  .login-card {
+    width: 100%; max-width: 400px; background: #fff;
+    border: 1px solid var(--line); padding: 48px 44px;
+  }
+  .seal {
+    width: 40px; height: 40px; border-radius: 50%;
+    border: 1px solid var(--line-dk); display: flex; align-items: center;
+    justify-content: center; color: var(--olive); margin-bottom: 26px;
+  }
+
+  /* ---------- app shell ---------- */
+  #app-view { display: none; min-height: 100vh; flex-direction: column; }
+  #app-view.on { display: flex; }
+
+  header.bar {
+    background: var(--ink); position: sticky; top: 0; z-index: 40;
+  }
+  .bar-inner {
+    max-width: 1320px; margin: 0 auto; padding: 0 40px; height: 74px;
+    display: flex; align-items: center; gap: 20px;
+  }
+  .bar-title {
+    font-family: 'Instrument Serif', Georgia, serif; font-size: 19px; color: var(--cream);
+  }
+  .bar-tag {
+    font-size: 9.5px; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--sand); font-weight: 600; padding-top: 3px;
+  }
+  .bar-right { margin-left: auto; display: flex; align-items: center; gap: 18px; }
+  .bar-user { font-size: 12px; color: rgba(242,240,233,0.62); }
+  .bar-link {
+    font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase;
+    color: rgba(242,240,233,0.78); background: none; border: none; font-weight: 500;
+  }
+  .bar-link:hover { color: var(--cream); }
+
+  /* ---------- toolbar ---------- */
+  .toolbar { border-bottom: 1px solid var(--line); background: var(--cream); }
+  .toolbar-inner {
+    max-width: 1320px; margin: 0 auto; padding: 20px 40px;
+    display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+  }
+  #search {
+    flex: 1; min-width: 200px; background: #fff; border: 1px solid var(--line-dk);
+    padding: 11px 14px; outline: none; color: var(--ink);
+  }
+  #search:focus { border-color: var(--olive); }
+  .tabs { display: flex; gap: 0; border: 1px solid var(--line-dk); background: #fff; }
+  .tab {
+    background: none; border: none; padding: 11px 15px; font-size: 10px;
+    letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600;
+    color: var(--muted); border-right: 1px solid var(--line-dk);
+  }
+  .tab:last-child { border-right: none; }
+  .tab.on { background: var(--olive); color: var(--cream); }
+  .tab .n { opacity: 0.65; margin-left: 5px; font-weight: 400; }
+
+  /* ---------- list ---------- */
+  main { flex: 1; max-width: 1320px; margin: 0 auto; padding: 32px 40px 80px; width: 100%; }
+  .count { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+           color: var(--muted); font-weight: 500; margin-bottom: 16px; }
+
+  .row {
+    background: #fff; border: 1px solid var(--line); border-bottom: none;
+    display: grid; grid-template-columns: 8px 1.4fr 1.6fr 0.9fr 130px;
+    gap: 18px; align-items: center; padding: 18px 22px; cursor: pointer;
+    transition: background 120ms;
+  }
+  .list .row:last-of-type { border-bottom: 1px solid var(--line); }
+  .row:hover { background: #FBFAF7; }
+  .row.unread { border-left: 3px solid var(--rust); padding-left: 19px; }
+  .dot { width: 7px; height: 7px; border-radius: 50%; background: transparent; }
+  .row.unread .dot { background: var(--rust); }
+  .r-name { font-weight: 500; font-size: 15px; color: var(--ink); }
+  .r-co   { font-size: 12.5px; color: var(--muted); margin-top: 3px; }
+  .r-msg  { font-size: 13.5px; color: var(--body); line-height: 1.5;
+            overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+  .r-page { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+  .r-date { font-size: 12px; color: var(--muted); text-align: right; }
+
+  .pill {
+    display: inline-block; font-size: 9px; letter-spacing: 0.14em;
+    text-transform: uppercase; font-weight: 600; padding: 4px 9px;
+  }
+  .pill.new      { background: var(--rust);  color: #fff; }
+  .pill.read     { background: var(--line);  color: var(--body); }
+  .pill.replied  { background: var(--olive); color: var(--cream); }
+  .pill.archived { background: transparent; color: var(--muted); border: 1px solid var(--line-dk); }
+
+  /* ---------- detail ---------- */
+  .detail { background: #fff; border: 1px solid var(--ink); border-top: none; padding: 34px 30px; }
+  .detail-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    gap: 20px 28px; margin-bottom: 30px;
+  }
+  .dl label {
+    display: block; font-size: 9.5px; letter-spacing: 0.2em; text-transform: uppercase;
+    font-weight: 600; color: var(--olive); margin-bottom: 6px;
+  }
+  .dl .v { font-size: 14.5px; color: var(--ink); word-break: break-word; }
+  .msg-box {
+    background: var(--cream); border-left: 2px solid var(--sand);
+    padding: 20px 22px; font-size: 15px; line-height: 1.75; color: var(--body);
+    white-space: pre-wrap; margin-bottom: 30px;
+  }
+  .sec-label {
+    font-size: 9.5px; letter-spacing: 0.2em; text-transform: uppercase;
+    font-weight: 600; color: var(--olive); margin-bottom: 11px;
+  }
+  .detail textarea {
+    width: 100%; min-height: 90px; background: var(--cream);
+    border: 1px solid var(--line-dk); padding: 13px; color: var(--ink);
+    font-weight: 300; line-height: 1.6; outline: none; resize: vertical;
+  }
+  .detail textarea:focus { border-color: var(--olive); }
+  .actions { display: flex; gap: 9px; flex-wrap: wrap; align-items: center; margin-top: 26px;
+             padding-top: 24px; border-top: 1px solid var(--line); }
+
+  .note { font-size: 12.5px; color: var(--muted); }
+  .err  { background: #FBEAE4; border-left: 2px solid var(--rust); padding: 12px 15px;
+          font-size: 13px; color: #7A2E0F; margin-bottom: 20px; }
+  .empty { background: #fff; border: 1px solid var(--line); padding: 70px 30px;
+           text-align: center; color: var(--muted); font-size: 15px; }
+
+  @media (max-width: 900px) {
+    .bar-inner, .toolbar-inner, main { padding-left: 20px; padding-right: 20px; }
+    .row { grid-template-columns: 8px 1fr auto; gap: 12px; }
+    .r-msg, .r-page { display: none; }
+    .bar-user { display: none; }
+    .login-card { padding: 36px 26px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= LOGIN ================= -->
+<div id="login-view">
+  <div class="login-card">
+    <div class="seal" aria-hidden="true">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+      </svg>
+    </div>
+    <div class="eyebrow" style="margin-bottom:12px;">Eustress &amp; Demeter</div>
+    <h1 style="font-size:33px;line-height:1.1;margin-bottom:10px;">Admin</h1>
+    <p class="note" style="margin:0 0 32px;line-height:1.6;">Sign in to read inquiries from the website.</p>
+
+    <div id="login-err" class="err" style="display:none;"></div>
+
+    <div class="field">
+      <label for="lg-email">Email</label>
+      <input id="lg-email" type="email" autocomplete="username" autofocus>
+    </div>
+    <div class="field" style="margin-bottom:30px;">
+      <label for="lg-pass">Password</label>
+      <input id="lg-pass" type="password" autocomplete="current-password">
+    </div>
+
+    <button id="lg-btn" class="btn btn-rust" style="width:100%;">Sign in</button>
+
+    <p style="margin:26px 0 0;font-size:12px;color:var(--muted);">
+      <a href="/" style="color:var(--muted);">&larr; Back to the website</a>
+    </p>
+  </div>
+</div>
+
+<!-- ================= APP ================= -->
+<div id="app-view">
+  <header class="bar">
+    <div class="bar-inner">
+      <span class="bar-title">Eustress &amp; Demeter</span>
+      <span class="bar-tag">Admin</span>
+      <div class="bar-right">
+        <span class="bar-user" id="who"></span>
+        <button class="bar-link" id="refresh-btn">Refresh</button>
+        <button class="bar-link" id="export-btn">Export CSV</button>
+        <button class="bar-link" id="out-btn">Sign out</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="toolbar">
+    <div class="toolbar-inner">
+      <input id="search" type="search" placeholder="Search name, email, company, message&hellip;">
+      <div class="tabs" id="tabs">
+        <button class="tab on" data-f="new">New <span class="n" id="n-new">0</span></button>
+        <button class="tab" data-f="open">Open <span class="n" id="n-open">0</span></button>
+        <button class="tab" data-f="all">All <span class="n" id="n-all">0</span></button>
+        <button class="tab" data-f="archived">Archived <span class="n" id="n-archived">0</span></button>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <div id="app-err" class="err" style="display:none;"></div>
+    <div class="count" id="count"></div>
+    <div class="list" id="list"></div>
+  </main>
+</div>
+
+<script src="./admin-config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<script>
+"use strict";
+(function () {
+
+  var cfg = window.ED_ADMIN_CONFIG || {};
+  var loginErr = document.getElementById('login-err');
+
+  if (!cfg.SUPABASE_URL || cfg.SUPABASE_URL.indexOf('PASTE') === 0) {
+    showLoginError('admin-config.js has not been filled in yet. Add your Supabase project URL and publishable key.');
+    document.getElementById('lg-btn').disabled = true;
+    return;
+  }
+
+  var sb = window.supabase.createClient(
+    cfg.SUPABASE_URL.replace(/\/+$/, ''),
+    cfg.SUPABASE_PUBLISHABLE_KEY
+  );
+
+  var state = { rows: [], filter: 'new', q: '', openId: null, token: null };
+
+  var el = {
+    login:   document.getElementById('login-view'),
+    app:     document.getElementById('app-view'),
+    email:   document.getElementById('lg-email'),
+    pass:    document.getElementById('lg-pass'),
+    btn:     document.getElementById('lg-btn'),
+    who:     document.getElementById('who'),
+    list:    document.getElementById('list'),
+    count:   document.getElementById('count'),
+    search:  document.getElementById('search'),
+    appErr:  document.getElementById('app-err')
+  };
+
+  // ---------------- auth ----------------
+
+  function showLoginError(msg) {
+    loginErr.textContent = msg;
+    loginErr.style.display = 'block';
+  }
+
+  async function signIn() {
+    var email = el.email.value.trim();
+    var pass  = el.pass.value;
+    if (!email || !pass) { showLoginError('Enter your email and password.'); return; }
+
+    el.btn.disabled = true;
+    el.btn.textContent = 'Signing in\u2026';
+    loginErr.style.display = 'none';
+
+    var res = await sb.auth.signInWithPassword({ email: email, password: pass });
+
+    el.btn.disabled = false;
+    el.btn.textContent = 'Sign in';
+
+    if (res.error) {
+      showLoginError(
+        /invalid/i.test(res.error.message)
+          ? 'That email and password combination was not recognised.'
+          : res.error.message
+      );
+      return;
+    }
+    enterApp(res.data.session);
+  }
+
+  async function enterApp(session) {
+    state.token = session.access_token;
+    el.who.textContent = session.user.email;
+    el.login.style.display = 'none';
+    el.app.classList.add('on');
+    await load();
+  }
+
+  async function signOut() {
+    await sb.auth.signOut();
+    location.reload();
+  }
+
+  el.btn.addEventListener('click', signIn);
+  [el.email, el.pass].forEach(function (i) {
+    i.addEventListener('keydown', function (e) { if (e.key === 'Enter') signIn(); });
+  });
+  document.getElementById('out-btn').addEventListener('click', signOut);
+  document.getElementById('refresh-btn').addEventListener('click', function () { load(); });
+  document.getElementById('export-btn').addEventListener('click', exportCsv);
+
+  // Restore an existing session so a refresh doesn't force a re-login.
+  sb.auth.getSession().then(function (r) {
+    if (r.data && r.data.session) enterApp(r.data.session);
+  });
+
+  // ---------------- data ----------------
+
+  async function api(method, body) {
+    var opts = {
+      method: method,
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + state.token
+      }
+    };
+    if (body) opts.body = JSON.stringify(body);
+
+    var res  = await fetch('/api/admin/inquiries', opts);
+    var data = {};
+    try { data = await res.json(); } catch (e) {}
+
+    if (res.status === 401) {
+      alert('Your session expired. Please sign in again.');
+      await signOut();
+      throw new Error('expired');
+    }
+    if (!res.ok || !data.ok) throw new Error((data && data.error) || 'Request failed');
+    return data;
+  }
+
+  async function load() {
+    el.count.textContent = 'Loading\u2026';
+    try {
+      var data = await api('GET');
+      state.rows = data.inquiries || [];
+      el.appErr.style.display = 'none';
+      render();
+    } catch (err) {
+      if (err.message === 'expired') return;
+      el.appErr.textContent = err.message;
+      el.appErr.style.display = 'block';
+      el.count.textContent = '';
+    }
+  }
+
+  async function patch(id, changes) {
+    var data = await api('PATCH', Object.assign({ id: id }, changes));
+    if (data.inquiry) {
+      for (var i = 0; i < state.rows.length; i++) {
+        if (state.rows[i].id === id) { state.rows[i] = data.inquiry; break; }
+      }
+    }
+    render();
+  }
+
+  // ---------------- rendering ----------------
+
+  function visible() {
+    var q = state.q.toLowerCase();
+    return state.rows.filter(function (r) {
+      if (state.filter === 'new'      && r.status !== 'new') return false;
+      if (state.filter === 'open'     && (r.status === 'archived')) return false;
+      if (state.filter === 'archived' && r.status !== 'archived') return false;
+      if (state.filter === 'all'      && r.status === 'archived') return false;
+      if (!q) return true;
+      return [r.name, r.email, r.company, r.message, r.source_page, r.subject, r.notes]
+        .filter(Boolean).join(' ').toLowerCase().indexOf(q) !== -1;
+    });
+  }
+
+  function counts() {
+    var c = { new: 0, open: 0, all: 0, archived: 0 };
+    state.rows.forEach(function (r) {
+      if (r.status === 'archived') { c.archived++; return; }
+      c.all++;
+      c.open++;
+      if (r.status === 'new') c.new++;
+    });
+    document.getElementById('n-new').textContent = c.new;
+    document.getElementById('n-open').textContent = c.open;
+    document.getElementById('n-all').textContent = c.all;
+    document.getElementById('n-archived').textContent = c.archived;
+  }
+
+  function render() {
+    counts();
+    var rows = visible();
+
+    el.count.textContent = rows.length === 0
+      ? ''
+      : rows.length + (rows.length === 1 ? ' inquiry' : ' inquiries');
+
+    if (rows.length === 0) {
+      el.list.innerHTML = '<div class="empty">' +
+        (state.q ? 'Nothing matches &ldquo;' + esc(state.q) + '&rdquo;.'
+                 : 'Nothing here yet.') + '</div>';
+      return;
+    }
+
+    el.list.innerHTML = rows.map(function (r) {
+      var open = r.id === state.openId;
+      return rowHtml(r) + (open ? detailHtml(r) : '');
+    }).join('');
+
+    el.list.querySelectorAll('[data-open]').forEach(function (n) {
+      n.addEventListener('click', function () { toggle(n.getAttribute('data-open')); });
+    });
+    el.list.querySelectorAll('[data-status]').forEach(function (b) {
+      b.addEventListener('click', function (e) {
+        e.stopPropagation();
+        patch(b.getAttribute('data-id'), { status: b.getAttribute('data-status') });
+      });
+    });
+    var save = el.list.querySelector('[data-save]');
+    if (save) {
+      save.addEventListener('click', function () {
+        var ta = el.list.querySelector('[data-notes]');
+        save.disabled = true;
+        save.textContent = 'Saving\u2026';
+        patch(save.getAttribute('data-save'), { notes: ta.value }).catch(function () {
+          save.disabled = false;
+          save.textContent = 'Save note';
+        });
+      });
+    }
+  }
+
+  function toggle(id) {
+    var wasOpen = state.openId === id;
+    state.openId = wasOpen ? null : id;
+
+    // Opening a new inquiry marks it read — the natural moment, and it
+    // means the New tab reflects what you've actually looked at.
+    if (!wasOpen) {
+      var row = state.rows.find(function (r) { return r.id === id; });
+      if (row && row.status === 'new') { patch(id, { status: 'read' }); return; }
+    }
+    render();
+  }
+
+  function rowHtml(r) {
+    return '' +
+      '<div class="row' + (r.status === 'new' ? ' unread' : '') + '" data-open="' + r.id + '">' +
+        '<span class="dot"></span>' +
+        '<div>' +
+          '<div class="r-name">' + esc(r.name || '\u2014') + '</div>' +
+          '<div class="r-co">' + esc(r.company || r.email || '') + '</div>' +
+        '</div>' +
+        '<div class="r-msg">' + esc(r.message || r.subject || '') + '</div>' +
+        '<div class="r-page">' + esc(r.source_page || '') + '</div>' +
+        '<div class="r-date">' +
+          '<span class="pill ' + esc(r.status) + '">' + esc(r.status) + '</span>' +
+          '<div style="margin-top:6px;">' + when(r.created_at) + '</div>' +
+        '</div>' +
+      '</div>';
+  }
+
+  function detailHtml(r) {
+    var extras = '';
+    var known = ['name', 'email', 'company', 'phone', 'message'];
+    if (r.fields && typeof r.fields === 'object') {
+      Object.keys(r.fields).forEach(function (k) {
+        if (known.indexOf(k) !== -1) return;
+        if (!r.fields[k]) return;
+        extras += dl(label(k), esc(String(r.fields[k])));
+      });
+    }
+
+    return '' +
+      '<div class="detail">' +
+        '<div class="detail-grid">' +
+          dl('Name', esc(r.name || '\u2014')) +
+          dl('Email', '<a href="mailto:' + esc(r.email) + '">' + esc(r.email) + '</a>') +
+          dl('Company', esc(r.company || '\u2014')) +
+          dl('Phone', r.phone ? '<a href="tel:' + esc(r.phone) + '">' + esc(r.phone) + '</a>' : '\u2014') +
+          extras +
+          dl('Received', esc(full(r.created_at))) +
+          dl('From page', esc(r.source_page || '\u2014')) +
+        '</div>' +
+
+        (r.message
+          ? '<div class="sec-label">Message</div><div class="msg-box">' + esc(r.message) + '</div>'
+          : '') +
+
+        '<div class="sec-label">Your notes</div>' +
+        '<textarea data-notes placeholder="Call outcome, next step, anything worth remembering\u2026">' +
+          esc(r.notes || '') + '</textarea>' +
+        '<div style="margin-top:11px;">' +
+          '<button class="btn btn-ghost btn-sm" data-save="' + r.id + '">Save note</button>' +
+        '</div>' +
+
+        '<div class="actions">' +
+          '<a class="btn btn-rust btn-sm" style="text-decoration:none;" href="mailto:' + esc(r.email) +
+            '?subject=' + encodeURIComponent('Re: ' + (r.subject || 'your inquiry')) + '">Reply by email</a>' +
+          btn(r, 'read', 'Mark unread\u2192read') +
+          btn(r, 'replied', 'Mark replied') +
+          btn(r, 'archived', 'Archive') +
+          (r.status === 'archived' ? btn(r, 'new', 'Restore') : '') +
+        '</div>' +
+      '</div>';
+  }
+
+  function btn(r, status, text) {
+    if (r.status === status) return '';
+    if (status === 'read' && r.status !== 'new') return '';
+    return '<button class="btn btn-ghost btn-sm" data-id="' + r.id + '" data-status="' + status + '">' +
+             text.replace('Mark unread\u2192read', 'Mark read') + '</button>';
+  }
+
+  function dl(k, v) {
+    return '<div class="dl"><label>' + k + '</label><div class="v">' + v + '</div></div>';
+  }
+
+  function label(k) {
+    return esc(k.charAt(0).toUpperCase() + k.slice(1).replace(/_/g, ' '));
+  }
+
+  // ---------------- filters ----------------
+
+  document.getElementById('tabs').addEventListener('click', function (e) {
+    var t = e.target.closest('.tab');
+    if (!t) return;
+    document.querySelectorAll('.tab').forEach(function (x) { x.classList.remove('on'); });
+    t.classList.add('on');
+    state.filter = t.getAttribute('data-f');
+    state.openId = null;
+    render();
+  });
+
+  el.search.addEventListener('input', function () {
+    state.q = el.search.value.trim();
+    render();
+  });
+
+  // ---------------- csv ----------------
+
+  function exportCsv() {
+    var cols = ['created_at', 'name', 'email', 'company', 'phone', 'source_page', 'status', 'message', 'notes'];
+    var lines = [cols.join(',')];
+    visible().forEach(function (r) {
+      lines.push(cols.map(function (c) { return csv(r[c]); }).join(','));
+    });
+    var blob = new Blob(['\ufeff' + lines.join('\r\n')], { type: 'text/csv;charset=utf-8;' });
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'ed-inquiries-' + new Date().toISOString().slice(0, 10) + '.csv';
+    a.click();
+    URL.revokeObjectURL(a.href);
+  }
+
+  function csv(v) {
+    if (v == null) return '';
+    var s = String(v).replace(/"/g, '""');
+    return '"' + s + '"';
+  }
+
+  // ---------------- utils ----------------
+
+  function esc(s) {
+    return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+
+  function when(iso) {
+    if (!iso) return '';
+    var d = new Date(iso), now = new Date();
+    var mins = Math.round((now - d) / 60000);
+    if (mins < 1)   return 'just now';
+    if (mins < 60)  return mins + 'm ago';
+    if (mins < 1440) return Math.round(mins / 60) + 'h ago';
+    if (mins < 10080) return Math.round(mins / 1440) + 'd ago';
+    return d.toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
+  }
+
+  function full(iso) {
+    if (!iso) return '\u2014';
+    return new Date(iso).toLocaleString(undefined, {
+      weekday: 'short', year: 'numeric', month: 'short', day: 'numeric',
+      hour: 'numeric', minute: '2-digit'
+    });
+  }
+
+})();
+</script>
+</body>
+</html>
